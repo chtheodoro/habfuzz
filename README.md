@@ -81,12 +81,14 @@ Therefore, it is advised to install the specific additional software to ensure t
 No specific installation of the software is required. Just copy the HABFUZZ folder to your hard disk and double-click habfuzz.exe to run the program. The HABFUZZ folder includes:  
 
 1. The ‘habfuzz’ subfolder, which contains all the code files of HABFUZZ, which are  
+
 a. The fdeclarations.f95 module containing the number of input arrays and all the variables and parameters necessary to run the program.  
 b. The fuzzifier.f95 subroutine containing the code to apply the fuzzification process (see the ‘usage’ section)  
 c. The smod.f95, swors.f95 and sopt.f95 subroutines containing the IF-THEN rules according to the management scenario to be implemented (see the ‘usage’ section)  
 d. The centroid.f95, meanmax.f95, waver.f95 and maxmem.f95 subroutines containing the code to apply the ‘centroid’, ‘mean-max membership’, ‘weighted average’ and ‘maximum membership’ defuzzification processes.  
 
 2. The ‘bin’ subfolder, which includes three necessary .dll files to run the software  
+
 If the user needs to change the code in one of these files, compilation is necessary prior to running the program. With the gfortran compiler installed, the user can either type the necessary commands
 
       gfortran -c fdeclarations.f95  
@@ -97,13 +99,18 @@ or just run the compile.bat file (included in the ‘habfuzz’ subfolder) to co
 
 ### 4. Usage
 
-4.1. Input and output data  
+4.1. Input and output data 
+
 To run HABFUZZ, three different .txt files are required as input, containing the flow velocity values in m/s, the depths in m and substrate types, according to the Manning’s n as depicted in the table. These files should be located in the ‘habfuzz’ subfolder and named velocities.txt, depths.txt and substrates.txt accordingly. Normally, such files (after proper manipulation) are the outputs of a hydrodynamic (hydraulic) simulation, where a specific river reach is numerically simulated through a computational grid. The simulation assigns a value for flow velocity, depth and substrate type at each node of the grid. However, the user can still create his/her own files to use in HABFUZZ. All values at each file should be arranged in a single column, where the first row denotes the number of elements in the row and the rest of the values being the actual data. An example of the three input files containing 10 values (nodes) is shown below.
 
 ![fig2](https://cloud.githubusercontent.com/assets/21544603/18668374/b04f156e-7f3d-11e6-81b6-17751808d9b7.png)
 
-
+![8](https://cloud.githubusercontent.com/assets/21544603/18668406/e04a97e8-7f3d-11e6-9a19-bae1072c71f4.png)
 
 The output of HABFUZZ is a .txt file named suitability.exe containing a single column with all the habitat suitabilities (ranging from 0 - unsuitable to 1 - suitable) calculated for each input element (node) in the same order as with the input files. This file is placed by the program in the ‘habfuzz’ subfolder.  
 The habitat suitability is initially a combination of fuzzy membership functions (five classes of suitability - bad, poor, moderate, good and high) and through the defuzzification process it is converted into a crisp output ranging from 0 to 1.
+
+4.2. Running HABFUZZ  
+
+After having the input files ready, double click habfuzz.exe. The command prompt opens and the software asks for the management scenario to be implemented.
 
