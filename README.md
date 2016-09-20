@@ -65,7 +65,9 @@ iv. Mean of maximum - This method resembles the ‘maximum membership’ method.
 
 where,  
 xa is the first value reaching the highest membership degree of the class with the highest membership and  
-xb is the last value with the highest membership degree of the class with the highest membership
+xb is the last value with the highest membership degree of the class with the highest membership  
+  
+![figure_2](https://cloud.githubusercontent.com/assets/21544603/18667963/7fb858b8-7f3b-11e6-86f9-1304e3892253.png)
 
 ### 2. Dependencies
   
@@ -74,4 +76,23 @@ HABFUZZ was developed using:
 •	the Geany text editor (download at www.geany.org)  
 •	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
 Therefore, it is advised to install the specific additional software to ensure that HABFUZZ is working properly.
- 
+
+### 3. Installing
+No specific installation of the software is required. Just copy the HABFUZZ folder to your hard disk and double-click habfuzz.exe to run the program. The HABFUZZ folder includes:  
+
+1. The ‘habfuzz’ subfolder, which contains all the code files of HABFUZZ, which are  
+a. The fdeclarations.f95 module containing the number of input arrays and all the variables and parameters necessary to run the program.  
+b. The fuzzifier.f95 subroutine containing the code to apply the fuzzification process (see the ‘usage’ section)  
+c. The smod.f95, swors.f95 and sopt.f95 subroutines containing the IF-THEN rules according to the management scenario to be implemented (see the ‘usage’ section)  
+d. The centroid.f95, meanmax.f95, waver.f95 and maxmem.f95 subroutines containing the code to apply the ‘centroid’, ‘mean-max membership’, ‘weighted average’ and ‘maximum membership’ defuzzification processes.  
+
+2. The ‘bin’ subfolder, which includes three necessary .dll files to run the software  
+If the user needs to change the code in one of these files, compilation is necessary prior to running the program. With the gfortran compiler installed, the user can either type the necessary commands
+
+      gfortran -c fdeclarations.f95  
+      gfortran -c habfuzz.f95 fdeclarations.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95  
+      gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95  
+
+or just run the compile.bat file (included in the ‘habfuzz’ subfolder) to compile (in this case, don’t change the names of files!!!). The compiler will then create the new habfuzz.exe and some .o files, which can be discarded by the user.
+
+
