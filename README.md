@@ -28,4 +28,15 @@ c. Aggregation of outputs
 
 In this step, the derived habitat suitability membership functions from each rule are combined into one fuzzy set. Usually, the OR (max) operator is applied to aggregate the same output fuzzy sets of the previous step. For example, the f4 (hs) is derived in the previous example two times by the IF-THEN rules. The final fuzzy set representing each habitat suitability class Fj would be
 
+![2](https://cloud.githubusercontent.com/assets/21544603/18667370/f0c043fc-7f38-11e6-9f21-ffd84db5a963.png)
+
+d. Defuzzification
+
+This final step is applied to derive one single habitat suitability value, by combining the membership degrees of all fuzzy habitat suitability classes. Among the various defuzzification methods, the ‘centroid’, ‘maximum membership’, ‘weighted average’ and ‘mean-max membership methods’ are described below.
+
+
+i. Centroid defuzzification:
+
+Usually called the ‘center of gravity’ or ‘center of area’. It can be defined by the algebraic expression
+
 
