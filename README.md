@@ -119,4 +119,12 @@ There are three available scenarios based on the method used for deriving the ou
 
 After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, HABFUZZ calls the relevant FORTRAN subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
 
+![9](https://cloud.githubusercontent.com/assets/21544603/18668730/c8fadf2e-7f3f-11e6-9a49-8402269a5fa1.png)
+
+4.3. Modifying the code according to the user preferences
+While the software is developed to quickly apply the fuzzy inference process for the calculation of the habitat suitability, the user can change the code according to his/her requirements in order to apply the fuzzy inference process for other topics requiring the implementation of fuzzy logic. Possible changes can be applied at specific HABFUZZ processes mentioned below:
+
+1. INPUT ARRAY SIZE - The current limit of input array size (the number of rows at each file and therefore the number of nodes in the computational grid) is set at 3000. However, the user can change this value by changing accordingly the ‘rsize’ parameter in the fdeclarations.f95 file.
+
+2. FUZZIFICATION - The fuzzification process of HABFUZZ is included in the subroutine fuzzifier.f95. It converts the crisp inputs of flow velocity and water depth to fuzzy sets (membership functions). The program creates five trapezoidal-shaped flow velocity functions (five classes of flow velocity), (a) very low, (b) low, (c) moderate, (d) high and (e) very high and five classes of water depth (a) very shallow, (b) shallow, (c) moderate, (d) deep and (e) very deep. The substrate type is treated as a crisp input throughout the process since the types of substrate are well defined and there is no need to be fuzzified. The user can either change the values at each membership function included in the fdeclarations.f95 file (marked as A. PARAMETERS OF THE FUZZIFICATION PROCESS), which results in changing the trapezoidal vertices of each membership function (Fig. 5) or change the whole membership function.
 
