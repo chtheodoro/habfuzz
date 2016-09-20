@@ -53,3 +53,11 @@ ii. Maximum membership defuzzification - This is the maximum membership degree o
 ![5](https://cloud.githubusercontent.com/assets/21544603/18667664/30fee6e8-7f3a-11e6-8f7f-43ee3928802c.png)
 
 iii. Weighted average - This method can be used only for symmetrical output membership functions and is calculated by weighting each output membership function by its largest membership degree:
+
+![6](https://cloud.githubusercontent.com/assets/21544603/18667732/7ffba75e-7f3a-11e6-9d3d-566e7cf69b7a.png)
+
+where,
+f(xi) is the membership degree at the average value xi of each membership function 
+
+iv. Mean of maximum - This method resembles the ‘maximum membership’ method. However, the maximum membership degree may not be unique but a range of degrees, from which the mean value is derived: 
+
