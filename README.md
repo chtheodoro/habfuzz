@@ -50,4 +50,6 @@ f(xi) is the membership degree at value xi
 
 ii. Maximum membership defuzzification - This is the maximum membership degree observed by the aggregation step:
 
+![5](https://cloud.githubusercontent.com/assets/21544603/18667664/30fee6e8-7f3a-11e6-8f7f-43ee3928802c.png)
 
+iii. Weighted average - This method can be used only for symmetrical output membership functions and is calculated by weighting each output membership function by its largest membership degree:
