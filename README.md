@@ -41,11 +41,12 @@ Usually called the ‘center of gravity’ or ‘center of area’. It can be de
 
 ![3](https://cloud.githubusercontent.com/assets/21544603/18667467/5b1d364c-7f39-11e6-9a3f-d54895c8bfe9.png)
 
-which can be numerically approximated by  
+which can be numerically approximated by
 
+![4](https://cloud.githubusercontent.com/assets/21544603/18667566/cf67178e-7f39-11e6-87ab-d050e6e49c13.png)
 
 where,  
-f(x) is the membership degree at value x  
+f(xi) is the membership degree at value xi  
 
 ii. Maximum membership defuzzification - This is the maximum membership degree observed by the aggregation step:
 
