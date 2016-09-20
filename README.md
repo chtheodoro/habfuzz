@@ -113,10 +113,9 @@ The habitat suitability is initially a combination of fuzzy membership functions
 
 After having the input files ready, double click habfuzz.exe. The command prompt opens and the software asks for the management scenario to be implemented.
 
-
+![8](https://cloud.githubusercontent.com/assets/21544603/18668688/734f3bec-7f3f-11e6-8796-ab9088083e53.png)
 
 There are three available scenarios based on the method used for deriving the outcome of each IF-THEN rule from the reference conditions of the program, (i) the moderate scenario, where the different suitability values for the same combinations of flow velocity, water depth and substrate type are averaged to derive the final suitability, (ii) the worst scenario, where the final suitability is derived from the minimum observed suitability and (iii) the optimum scenario where the final suitability is derived by the maximum observed suitability. A default scenario is also present (the moderate scenario). Note that if a specific combination in the observed data does not match a combination in the reference data, the program returns a value of ‘-1’ for the habitat suitability.  
-
 After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, HABFUZZ calls the relevant FORTRAN subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
 
 
