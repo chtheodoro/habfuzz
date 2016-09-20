@@ -39,4 +39,14 @@ i. Centroid defuzzification:
 
 Usually called the ‘center of gravity’ or ‘center of area’. It can be defined by the algebraic expression
 
+![3](https://cloud.githubusercontent.com/assets/21544603/18667467/5b1d364c-7f39-11e6-9a3f-d54895c8bfe9.png)
+
+which can be numerically approximated by  
+
+
+where,  
+f(x) is the membership degree at value x  
+
+ii. Maximum membership defuzzification - This is the maximum membership degree observed by the aggregation step:
+
 
