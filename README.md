@@ -144,3 +144,29 @@ Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John W
 
 Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
+### Contact Information
+
+Hellenic Centre for Marine Research  
+Institute of Marine Biological Resources and Inland Waters  
+46.7 km Athens-Sounio ave.  
+19013  
+Anavyssos  
+Greece  
+Tel. +30 22910 76335  
+Fax. +30 22910 76419  
+Email. ctheodor@hcmr.gr  
+URL. http://www.hcmr.gr/en/  
+
+National Technical University of Athens  
+Department of Water Resources and Environmental Engineering  
+Iroon Polytechniou 5  
+15780  
+Athens  
+Greece  
+Tel. +30 210 7722809  
+Fax. +30 210 7722814  
+Email. stamou@central.ntua.gr  
+URL. https://www.hydro.ntua.gr/?set_language=en  
+
+##### To report errors, bugs, possible amendments or anything else you would like to indicate, please contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr
+
