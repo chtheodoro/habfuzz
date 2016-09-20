@@ -61,3 +61,17 @@ f(xi) is the membership degree at the average value xi of each membership functi
 
 iv. Mean of maximum - This method resembles the ‘maximum membership’ method. However, the maximum membership degree may not be unique but a range of degrees, from which the mean value is derived: 
 
+![7](https://cloud.githubusercontent.com/assets/21544603/18667853/e8ce89a4-7f3a-11e6-8af5-dca47e97c25e.png)
+
+where,  
+xa is the first value reaching the highest membership degree of the class with the highest membership and  
+xb is the last value with the highest membership degree of the class with the highest membership
+
+### 2. Dependencies
+  
+All the necessary files to run HABFUZZ are included in the program’s folder. However, to modify the code, users will need to have a FORTRAN text editor and a FORTRAN compiler installed.  
+HABFUZZ was developed using:  
+•	the Geany text editor (download at www.geany.org)  
+•	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
+Therefore, it is advised to install the specific additional software to ensure that HABFUZZ is working properly.
+ 
