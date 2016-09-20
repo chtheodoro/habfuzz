@@ -132,4 +132,16 @@ While the software is developed to quickly apply the fuzzy inference process for
 
 3. IF-THEN RULES - The user can also apply modifications to the IF-THEN rules of the smod.f95, swors.f95 and sopt.f95 subroutines. As already mentioned, the reference conditions are currently derived by an extended sampling campaign, which took place in 9 sampling sites in Greece and resulted in a set of 380 reference microhabitats (combinations of flow velocity, water depth and substrate type). If the user needs to apply his/her own reference data, changes should be applied to one of the abovementioned subroutines. However, if for example, the smod.f95 file is modified, the user should also change the column number of the arrays, which are used by smod.f95 (in B. INTERNAL PARAMETERS TO FACILITATE THE IMPLICATION AND AGGREGATION STEPS, marked as ‘Used by smod.f95’), which are the arrays g, h, m, p, b. The modification should be such that the column number is the same as the times that a combination in the smod.f95 file results to a specific result. If you see for example, ‘g’ is the outcome of 26 combinations and so the column number for ‘g’ in the fdeclarations.f95 file is also 26.
 
+![fig6](https://cloud.githubusercontent.com/assets/21544603/18668804/550c5916-7f40-11e6-8050-1ebe2afd0497.png)
+
+It is not advised to make any changes in the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced FORTRAN user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of HABFUZZ, re-compilation is necessary as described in section 3.
+
+### 5. References
+
+Mamdani E.H. and Assilian S. 1975. An experiment in linguistic synthesis with a fuzzy logic
+Controller. International Journal of Man-Machine Studies 7: 1-13.
+
+Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John Wiley and Sons, UK.
+
+Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
