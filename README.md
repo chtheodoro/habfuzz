@@ -6,21 +6,26 @@ HABFUZZ is a FORTRAN 95 code, which implements the Mamdani - Assilian fuzzy infe
 
 As initially proposed by Zadeh (1965) and described in detail by Ross (2010), the process of deriving the fuzzy-based habitat suitability, given the flow velocity, water depth and substrate type, can be summarized in four steps (Fig. 1):
 
-  a. Fuzzification of the input variables
+a. Fuzzification of the input variables
   
-  In this step, the user defines categories (membership functions) for each input variable and the input values of flow velocity, water depth and substrate type are assigned to one or more membership functions. By this procedure, crisp numerical values of each input variable are converted to a fuzzy ‘degree of membership’, ranging from 0 to 1 for each membership function. For example, a depth value of 14 cm may derive a membership degree of 0.7 for the ‘shallow’ membership function and 0.28 for the ‘very shallow’ membership function.
+In this step, the user defines categories (membership functions) for each input variable and the input values of flow velocity, water depth and substrate type are assigned to one or more membership functions. By this procedure, crisp numerical values of each input variable are converted to a fuzzy ‘degree of membership’, ranging from 0 to 1 for each membership function. For example, a depth value of 14 cm may derive a membership degree of 0.7 for the ‘shallow’ membership function and 0.28 for the ‘very shallow’ membership function.
 
-  b. Application of a fuzzy operator (AND or OR) in the antecedent (IF-THEN rules)
+b. Application of a fuzzy operator (AND or OR) in the antecedent (IF-THEN rules)
   
-  According to the reference data for the target aquatic community, the AND (min) or OR (max) operator is applied to each combination of variables (membership functions since step 1) and the derived value is assigned to the membership function of the output variable (defined in step 1), in this case the habitat suitability. For example, if the user defines five membership functions for habitat suitability (bad, poor, moderate, good, high), then the application of the fuzzy operator would result in,
+According to the reference data for the target aquatic community, the AND (min) or OR (max) operator is applied to each combination of variables (membership functions since step 1) and the derived value is assigned to the membership function of the output variable (defined in step 1), in this case the habitat suitability. For example, if the user defines five membership functions for habitat suitability (bad, poor, moderate, good, high), then the application of the fuzzy operator would result in,
 
 ![1](https://cloud.githubusercontent.com/assets/21544603/18666875/c7f1fcce-7f36-11e6-8da5-9a8c657c6eea.png)
 
-  where,
+where,
 fi denotes for the membership function of each input and output variable  
 V is the flow velocity  
 D is the water depth  
 hs is the habitat suitability  
 etc., until all possible combinations of fuzzy inputs are assigned to an output membership function, based on the rationale that, for example,  
-IF flow velocity is f3 (moderate) AND water depth is f2 (shallow) THEN habitat suitability is f4 (good).  
+IF flow velocity is f3 (moderate) AND water depth is f2 (shallow) THEN habitat suitability is f4 (good).
+
+c. Aggregation of outputs
+
+In this step, the derived habitat suitability membership functions from each rule are combined into one fuzzy set. Usually, the OR (max) operator is applied to aggregate the same output fuzzy sets of the previous step. For example, the f4 (hs) is derived in the previous example two times by the IF-THEN rules. The final fuzzy set representing each habitat suitability class Fj would be
+
 
