@@ -120,7 +120,8 @@ After selecting the desired scenario, the user is asked to select the defuzzific
 
 ![9](https://cloud.githubusercontent.com/assets/21544603/18668730/c8fadf2e-7f3f-11e6-9a49-8402269a5fa1.png)
 
-4.3. Modifying the code according to the user preferences
+4.3. Modifying the code according to the user preferences  
+
 While the software is developed to quickly apply the fuzzy inference process for the calculation of the habitat suitability, the user can change the code according to his/her requirements in order to apply the fuzzy inference process for other topics requiring the implementation of fuzzy logic. Possible changes can be applied at specific HABFUZZ processes mentioned below:
 
 a. INPUT ARRAY SIZE - The current limit of input array size (the number of rows at each file and therefore the number of nodes in the computational grid) is set at 3000. However, the user can change this value by changing accordingly the ‘rsize’ parameter in the fdeclarations.f95 file.
