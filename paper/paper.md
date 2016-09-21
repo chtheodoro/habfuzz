@@ -19,7 +19,7 @@ bibliography: paper.bib
 ---
 
 # Summary
-Habfuzz is a Fortran stand-alone software, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) to calculate the instream habitat suitability, given the flow velocity, the water depth and the substrate type of a hydraulically simulated river reach. While it is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability, it can be applied to wider research topics requiring fuzzy logic to be addressed.
+Habfuzz is a Fortran stand-alone software, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) to calculate the instream habitat suitability, given the flow velocity, the water depth and the substrate type of a hydraulically simulated river reach. While it is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability for freshwater macroinvertebrates, it can be applied to wider research topics requiring fuzzy logic to be addressed.
 
 The main Habfuzz routine reads in three files containing the flow velocities (V), water depths (D) and substrate types (S), as derived from a hydrodynamic/hydraulic simulation of the river reach (each node of the computational grid being an array element) and two additional user-defined parameters (the management scenario and the defuzzification method) and calls the relevant subroutines to implement the fuzzy inference process. The output of Habfuzz is a single file containing an array with the habitat suitabilities for each node of the initial computational grid of the hydrodynamic simulation.
 
