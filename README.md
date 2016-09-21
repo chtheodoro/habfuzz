@@ -66,7 +66,7 @@ where,
 xa is the first value reaching the highest membership degree of the class with the highest membership and  
 xb is the last value with the highest membership degree of the class with the highest membership  
   
-
+![figure_2](https://cloud.githubusercontent.com/assets/21544603/18706143/7f3e39fc-7ff9-11e6-8712-aaea188f8bc6.png)
 
 ### 2. Dependencies
   
