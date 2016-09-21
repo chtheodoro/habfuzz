@@ -32,11 +32,3 @@ As described in detail by Ross (2010) and implemented in Habfuzz, the process of
 ![figure_2](https://cloud.githubusercontent.com/assets/21544603/18706143/7f3e39fc-7ff9-11e6-8712-aaea188f8bc6.png)
 
 # References
-Adams, J.C., Brainerd, W.S., Martin, J.T., Smith, B.T., Wagener, J.L., 1997. Fortran 95 Handbook. Complete ISO/ANSI Reference. The MIT Press. Cambridge, Massachusetts, London, England.
-
-Mamdani, E.H., Assilian, S., 1975. An experiment in linguistic synthesis with a fuzzy logic
-Controller. International Journal of Man-Machine Studies 7: 1-13.
-
-Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John Wiley and Sons, UK.
-
-Theodoropoulos, C., Skoulikidis, N., Stamou, A., 2016. Habfuzz: a FORTRAN tool to calculate the instream habitat suitability based on fuzzy logic.  
