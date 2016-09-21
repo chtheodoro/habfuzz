@@ -1,5 +1,5 @@
-# HABFUZZ
-HABFUZZ is a FORTRAN 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
+# Habfuzz
+Habfuzz is a FORTRAN 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
 
 ### 1. Overview of the fuzzy inference process
 
@@ -70,16 +70,16 @@ xb is the last value with the highest membership degree of the class with the hi
 
 ### 2. Dependencies
   
-All the necessary files to run HABFUZZ are included in the program’s folder. However, to modify the code, users will need to have a FORTRAN text editor and a FORTRAN compiler installed.  
-HABFUZZ was developed using:  
+All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a FORTRAN text editor and a FORTRAN compiler installed.  
+Habfuzz was developed using:  
 •	the Geany text editor (download at www.geany.org)  
 •	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
-Therefore, it is advised to install the specific additional software to ensure that HABFUZZ is working properly.
+Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly.
 
 ### 3. Installing
-No specific installation of the software is required. Just copy the HABFUZZ folder to your hard disk and double-click habfuzz.exe to run the program. The HABFUZZ folder includes:  
+No specific installation of the software is required. Just copy the habfuzz folder to your hard disk and double-click habfuzz.exe to run the program. The habfuzz folder includes:  
 
-1. The ‘habfuzz’ subfolder, which contains all the code files of HABFUZZ, which are
+1. The ‘habfuzz’ subfolder, which contains all the code files of Habfuzz, which are
 a. The fdeclarations.f95 module containing the number of input arrays and all the variables and parameters necessary to run the program.
 b. The fuzzifier.f95 subroutine containing the code to apply the fuzzification process (see the ‘usage’ section)
 c. The smod.f95, swors.f95 and sopt.f95 subroutines containing the IF-THEN rules according to the management scenario to be implemented (see the ‘usage’ section)
@@ -99,16 +99,16 @@ or just run the compile.bat file (included in the ‘habfuzz’ subfolder) to co
 
 4.1. Input and output data 
 
-To run HABFUZZ, three different .txt files are required as input, containing the flow velocity values in m/s, the depths in m and substrate types, according to the Manning’s n as depicted in the table. These files should be located in the ‘habfuzz’ subfolder and named velocities.txt, depths.txt and substrates.txt accordingly. Normally, such files (after proper manipulation) are the outputs of a hydrodynamic (hydraulic) simulation, where a specific river reach is numerically simulated through a computational grid. The simulation assigns a value for flow velocity, depth and substrate type at each node of the grid. However, the user can still create his/her own files to use in HABFUZZ. All values at each file should be arranged in a single column, where the first row denotes the number of elements in the row and the rest of the values being the actual data. An example of the three input files containing 10 values (nodes) is shown below.
+To run Habfuzz, three different .txt files are required as input, containing the flow velocity values in m/s, the depths in m and substrate types, according to the Manning’s n as depicted in the table. These files should be located in the ‘habfuzz’ subfolder and named velocities.txt, depths.txt and substrates.txt accordingly. Normally, such files (after proper manipulation) are the outputs of a hydrodynamic (hydraulic) simulation, where a specific river reach is numerically simulated through a computational grid. The simulation assigns a value for flow velocity, depth and substrate type at each node of the grid. However, the user can still create his/her own files to use in Habfuzz. All values at each file should be arranged in a single column, where the first row denotes the number of elements in the row and the rest of the values being the actual data. An example of the three input files containing 10 values (nodes) is shown below.
 
 ![fig2](https://cloud.githubusercontent.com/assets/21544603/18668374/b04f156e-7f3d-11e6-81b6-17751808d9b7.png)
 
 ![8](https://cloud.githubusercontent.com/assets/21544603/18668406/e04a97e8-7f3d-11e6-9a19-bae1072c71f4.png)
 
-The output of HABFUZZ is a .txt file named suitability.exe containing a single column with all the habitat suitabilities (ranging from 0 - unsuitable to 1 - suitable) calculated for each input element (node) in the same order as with the input files. This file is placed by the program in the ‘habfuzz’ subfolder.  
+The output of Habfuzz is a .txt file named suitability.exe containing a single column with all the habitat suitabilities (ranging from 0 - unsuitable to 1 - suitable) calculated for each input element (node) in the same order as with the input files. This file is placed by the program in the ‘habfuzz’ subfolder.  
 The habitat suitability is initially a combination of fuzzy membership functions (five classes of suitability - bad, poor, moderate, good and high) and through the defuzzification process it is converted into a crisp output ranging from 0 to 1.
 
-4.2. Running HABFUZZ  
+4.2. Running Habfuzz  
 
 After having the input files ready, double click habfuzz.exe. The command prompt opens and the software asks for the management scenario to be implemented.
 
@@ -116,17 +116,17 @@ After having the input files ready, double click habfuzz.exe. The command prompt
 
 There are three available scenarios based on the method used for deriving the outcome of each IF-THEN rule from the reference conditions of the program, (i) the moderate scenario, where the different suitability values for the same combinations of flow velocity, water depth and substrate type are averaged to derive the final suitability, (ii) the worst scenario, where the final suitability is derived from the minimum observed suitability and (iii) the optimum scenario where the final suitability is derived by the maximum observed suitability. A default scenario is also present (the moderate scenario). Note that if a specific combination in the observed data does not match a combination in the reference data, the program returns a value of ‘-1’ for the habitat suitability.    
 
-After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, HABFUZZ calls the relevant FORTRAN subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
+After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, Habfuzz calls the relevant FORTRAN subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
 
 ![9](https://cloud.githubusercontent.com/assets/21544603/18668730/c8fadf2e-7f3f-11e6-9a49-8402269a5fa1.png)
 
 4.3. Modifying the code according to the user preferences  
 
-While the software is developed to quickly apply the fuzzy inference process for the calculation of the habitat suitability, the user can change the code according to his/her requirements in order to apply the fuzzy inference process for other topics requiring the implementation of fuzzy logic. Possible changes can be applied at specific HABFUZZ processes mentioned below:
+While the software is developed to quickly apply the fuzzy inference process for the calculation of the habitat suitability, the user can change the code according to his/her requirements in order to apply the fuzzy inference process for other topics requiring the implementation of fuzzy logic. Possible changes can be applied at specific Habfuzz processes mentioned below:
 
 a. INPUT ARRAY SIZE - The current limit of input array size (the number of rows at each file and therefore the number of nodes in the computational grid) is set at 3000. However, the user can change this value by changing accordingly the ‘rsize’ parameter in the fdeclarations.f95 file.
 
-a. FUZZIFICATION - The fuzzification process of HABFUZZ is included in the subroutine fuzzifier.f95. It converts the crisp inputs of flow velocity and water depth to fuzzy sets (membership functions). The program creates five trapezoidal-shaped flow velocity functions (five classes of flow velocity), (a) very low, (b) low, (c) moderate, (d) high and (e) very high and five classes of water depth (a) very shallow, (b) shallow, (c) moderate, (d) deep and (e) very deep. The substrate type is treated as a crisp input throughout the process since the types of substrate are well defined and there is no need to be fuzzified. The user can either change the values at each membership function included in the fdeclarations.f95 file (marked as A. PARAMETERS OF THE FUZZIFICATION PROCESS), which results in changing the trapezoidal vertices of each membership function or change the whole membership function.
+a. FUZZIFICATION - The fuzzification process of Habfuzz is included in the subroutine fuzzifier.f95. It converts the crisp inputs of flow velocity and water depth to fuzzy sets (membership functions). The program creates five trapezoidal-shaped flow velocity functions (five classes of flow velocity), (a) very low, (b) low, (c) moderate, (d) high and (e) very high and five classes of water depth (a) very shallow, (b) shallow, (c) moderate, (d) deep and (e) very deep. The substrate type is treated as a crisp input throughout the process since the types of substrate are well defined and there is no need to be fuzzified. The user can either change the values at each membership function included in the fdeclarations.f95 file (marked as A. PARAMETERS OF THE FUZZIFICATION PROCESS), which results in changing the trapezoidal vertices of each membership function or change the whole membership function.
 
 ![fig5](https://cloud.githubusercontent.com/assets/21544603/18668781/325aad78-7f40-11e6-90c8-acf60eaac17b.png)
 
@@ -134,7 +134,7 @@ c. IF-THEN RULES - The user can also apply modifications to the IF-THEN rules of
 
 ![fig6](https://cloud.githubusercontent.com/assets/21544603/18668804/550c5916-7f40-11e6-8050-1ebe2afd0497.png)
 
-It is not advised to make any changes in the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced FORTRAN user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of HABFUZZ, re-compilation is necessary as described in section 3.
+It is not advised to make any changes in the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced FORTRAN user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
 
 ### 5. References
 
