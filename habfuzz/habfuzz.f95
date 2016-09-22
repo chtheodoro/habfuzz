@@ -59,7 +59,7 @@ end do
 !CALLING SUBROUTINES
 print *, 'Fuzzifying...'
 call fuzzifier
-print *, 'Fuzzification succesful.'
+print *, 'Fuzzification successful.'
 print *, ' '
 
 print *, 'Applying IF-THEN rules...'
