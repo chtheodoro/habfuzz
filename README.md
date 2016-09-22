@@ -1,5 +1,5 @@
 # Habfuzz
-Habfuzz is a FORTRAN 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability for freshwater macroinvertebrates along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
+Habfuzz is a Fortran 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability for freshwater macroinvertebrates along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
 
 ### 1. Overview of the fuzzy inference process
 
@@ -70,7 +70,7 @@ xb is the last value with the highest membership degree of the class with the hi
 
 ### 2. Dependencies
   
-All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a FORTRAN text editor and a FORTRAN compiler installed.  
+All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a Fortran text editor and a Fortran compiler installed.  
 Habfuzz was developed using:  
 •	the Geany text editor (download at www.geany.org)  
 •	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
@@ -169,5 +169,5 @@ Fax. +30 210 7722814
 Email. stamou@central.ntua.gr  
 URL. https://www.hydro.ntua.gr/?set_language=en  
 
-##### To report errors, bugs, possible amendments or anything else you would like to indicate, please contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr
+##### To report bugs, possible amendments or anything else you would like to discuss, please contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr
 
