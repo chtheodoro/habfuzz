@@ -118,7 +118,7 @@ There are three available scenarios based on the method used for deriving the ou
 
 After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, Habfuzz calls the relevant FORTRAN subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
 
-![9](https://cloud.githubusercontent.com/assets/21544603/18668730/c8fadf2e-7f3f-11e6-9a49-8402269a5fa1.png)
+![9](https://cloud.githubusercontent.com/assets/21544603/18738401/027f675a-80a4-11e6-8608-10ebeca67071.png)
 
 4.3. Modifying the code according to the user preferences  
 
