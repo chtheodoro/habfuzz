@@ -148,6 +148,11 @@ Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John W
 
 Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
+### What's next
+1. Triangular-shaped membership functions
+2. Graphical User Interface
+
+
 ### Contact Information
 
 Hellenic Centre for Marine Research  
