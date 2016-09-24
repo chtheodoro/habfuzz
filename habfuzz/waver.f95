@@ -6,7 +6,7 @@ implicit none
 
 do i=1,n
 hs(i)=max(high(i),good(i),moderate(i),poor(i),bad(i))
-if (hs(i)>=0) then
+if (hs(i)>0) then
 
 if (bad(i)<=0) then
 xbad(i)=0

@@ -1,5 +1,8 @@
 # Habfuzz
-Habfuzz is a FORTRAN 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability for freshwater macroinvertebrates along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
+Habfuzz is a Fortran 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability for fish or freshwater macroinvertebrates along a 2D hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.  
+
+### Why Habfuzz?
+Instead of Habfuzz, you can use the nonfree MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase the MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short-legthed tutorial to enable them quickly run a tool for a specific part of their project. 
 
 ### 1. Overview of the fuzzy inference process
 
@@ -70,7 +73,7 @@ xb is the last value with the highest membership degree of the class with the hi
 
 ### 2. Dependencies
   
-All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a FORTRAN text editor and a FORTRAN compiler installed.  
+All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a Fortran text editor and a Fortran compiler installed.  
 Habfuzz was developed using:  
 •	the Geany text editor (download at www.geany.org)  
 •	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
@@ -116,9 +119,9 @@ After having the input files ready, double click habfuzz.exe. The command prompt
 
 There are three available scenarios based on the method used for deriving the outcome of each IF-THEN rule from the reference conditions of the program, (i) the moderate scenario, where the different suitability values for the same combinations of flow velocity, water depth and substrate type are averaged to derive the final suitability, (ii) the worst scenario, where the final suitability is derived from the minimum observed suitability and (iii) the optimum scenario where the final suitability is derived by the maximum observed suitability. A default scenario is also present (the moderate scenario). Note that if a specific combination in the observed data does not match a combination in the reference data, the program returns a value of ‘-1’ for the habitat suitability.    
 
-After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, Habfuzz calls the relevant FORTRAN subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
+After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, Habfuzz calls the relevant Fortran subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
 
-![9](https://cloud.githubusercontent.com/assets/21544603/18668730/c8fadf2e-7f3f-11e6-9a49-8402269a5fa1.png)
+![9](https://cloud.githubusercontent.com/assets/21544603/18738401/027f675a-80a4-11e6-8608-10ebeca67071.png)
 
 4.3. Modifying the code according to the user preferences  
 
@@ -130,11 +133,11 @@ a. FUZZIFICATION - The fuzzification process of Habfuzz is included in the subro
 
 ![fig5](https://cloud.githubusercontent.com/assets/21544603/18668781/325aad78-7f40-11e6-90c8-acf60eaac17b.png)
 
-c. IF-THEN RULES - The user can also apply modifications to the IF-THEN rules of the smod.f95, swors.f95 and sopt.f95 subroutines. As already mentioned, the reference conditions are currently derived for freshwater macroinvertebrates, sampled in extended sampling campaign, which took place in 9 sampling sites in Greece and resulted in a set of 380 reference microhabitats (combinations of flow velocity, water depth and substrate type). If the user needs to apply his/her own reference data (probably for other biotic elements of the aquatic ecosystem or even in a totally different application), changes should be applied to one of the abovementioned subroutines. However, if for example, the smod.f95 file is modified, the user should also change the column number of the arrays, which are used by smod.f95 (in B. INTERNAL PARAMETERS TO FACILITATE THE IMPLICATION AND AGGREGATION STEPS, marked as ‘Used by smod.f95’), which are the arrays g, h, m, p, b. The modification should be such that the column number is the same as the times that a combination in the smod.f95 file results to a specific result. If you see for example, ‘g’ is the outcome of 26 combinations and so the column number for ‘g’ in the fdeclarations.f95 file is also 26.
+c. IF-THEN RULES - The user can also apply modifications to the IF-THEN rules of the smod.f95, swors.f95 and sopt.f95 subroutines. As already mentioned, the reference conditions are currently derived using freshwater macroinvertebrates, sampled in an extended sampling campaign, which took place at 9 sampling sites in Greece and resulted in a set of 380 reference microhabitats (combinations of flow velocity, water depth and substrate type). If the user needs to apply his/her own reference data (probably for fish or other biotic elements of the aquatic ecosystem or even in a totally different application), changes should be applied to one of the abovementioned subroutines. However, if for example, the smod.f95 file is modified, the user should also change the column number of the arrays, which are used by smod.f95 (in B. INTERNAL PARAMETERS TO FACILITATE THE IMPLICATION AND AGGREGATION STEPS, marked as ‘Used by smod.f95’), which are the arrays g, h, m, p, b. The modification should be such that the column number is the same as the times that a combination in the smod.f95 file results to a specific result. If you see for example, ‘g’ is the outcome of 26 combinations and so the column number for ‘g’ in the fdeclarations.f95 file is also 26.
 
 ![fig6](https://cloud.githubusercontent.com/assets/21544603/18668804/550c5916-7f40-11e6-8050-1ebe2afd0497.png)
 
-It is not advised to make any changes in the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced FORTRAN user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
+It is not advised to make any changes in the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced Fortran user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
 
 ### 5. References
 
@@ -169,5 +172,5 @@ Fax. +30 210 7722814
 Email. stamou@central.ntua.gr  
 URL. https://www.hydro.ntua.gr/?set_language=en  
 
-##### To report errors, bugs, possible amendments or anything else you would like to indicate, please contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr
+##### To report bugs, possible amendments or anything else you would like to discuss, please contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr
 
