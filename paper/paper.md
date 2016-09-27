@@ -1,5 +1,5 @@
 ---
-title: 'Habfuzz: a FORTRAN tool to calculate the instream hydraulic habitat suitability based on fuzzy logic'
+title: 'Habfuzz: a Fortran tool to calculate the instream hydraulic habitat suitability based on fuzzy logic'
 tags:
   - Fortran
   - habitat
