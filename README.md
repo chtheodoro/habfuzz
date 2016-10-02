@@ -89,7 +89,7 @@ c. The smod.f95, swors.f95 and sopt.f95 subroutines containing the IF-THEN rules
 d. The centroid.f95, meanmax.f95, waver.f95 and maxmem.f95 subroutines containing the code to apply the ‘centroid’, ‘mean-max membership’, ‘weighted average’ and ‘maximum membership’ defuzzification processes.
 
 2. The ‘bin’ subfolder, which includes three necessary .dll files to run the software
-If the user needs to change the code in one of these files, compilation is necessary prior to running the program. With the gfortran compiler installed, the user can either type the necessary commands
+If the user needs to change the code in one of the program's files, compilation is necessary prior to running the program. With the gfortran compiler installed, the user can either type the necessary commands
 
 
       gfortran -c fdeclarations.f95  
