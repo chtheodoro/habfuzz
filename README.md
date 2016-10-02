@@ -137,7 +137,7 @@ c. IF-THEN RULES - The user can also apply modifications to the IF-THEN rules of
 
 ![fig6](https://cloud.githubusercontent.com/assets/21544603/18668804/550c5916-7f40-11e6-8050-1ebe2afd0497.png)
 
-It is not advised to make any changes in the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced Fortran user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
+It is not advised to make any changes to the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced Fortran user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
 
 ### 5. References
 
