@@ -74,7 +74,7 @@ xb is the last value with the highest membership degree of the class with the hi
 ### 2. Dependencies
   
 All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a Fortran text editor and a Fortran compiler installed.  
-Habfuzz was developed using:  
+Habfuzz has been developed using:  
 •	the Geany text editor (download at www.geany.org)  
 •	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
 Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly.
