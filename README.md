@@ -2,7 +2,7 @@
 Habfuzz is a Fortran 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability for fish or freshwater macroinvertebrates along a 2D hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.  
 
 ### Why Habfuzz?
-Instead of Habfuzz, you can use the nonfree MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase the MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short-legthed tutorial to enable them quickly run a tool for a specific part of their project. 
+Instead of Habfuzz, you can use the nonfree MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project. 
 
 ### 1. Overview of the fuzzy inference process
 
@@ -74,13 +74,13 @@ xb is the last value with the highest membership degree of the class with the hi
 ### 2. Dependencies
   
 All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a Fortran text editor and a Fortran compiler installed.  
-Habfuzz was developed using:  
+Habfuzz has been developed using:  
 •	the Geany text editor (download at www.geany.org)  
 •	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
 Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly.
 
 ### 3. Installing
-No specific installation of the software is required. Just copy the habfuzz folder to your hard disk and double-click habfuzz.exe to run the program. The habfuzz folder includes:  
+Habfuzz has been developed to run on 32-bit and 64-bit Windows operating systems, including Windows XP, Vista, 7/8 and 10. No specific installation of the software is required. Just copy the habfuzz folder to your hard disk and double-click habfuzz.exe to run the program. The habfuzz folder includes:  
 
 1. The ‘habfuzz’ subfolder, which contains all the code files of Habfuzz, which are
 a. The fdeclarations.f95 module containing the number of input arrays and all the variables and parameters necessary to run the program.
@@ -89,7 +89,7 @@ c. The smod.f95, swors.f95 and sopt.f95 subroutines containing the IF-THEN rules
 d. The centroid.f95, meanmax.f95, waver.f95 and maxmem.f95 subroutines containing the code to apply the ‘centroid’, ‘mean-max membership’, ‘weighted average’ and ‘maximum membership’ defuzzification processes.
 
 2. The ‘bin’ subfolder, which includes three necessary .dll files to run the software
-If the user needs to change the code in one of these files, compilation is necessary prior to running the program. With the gfortran compiler installed, the user can either type the necessary commands
+If the user needs to change the code in one of the program's files, compilation is necessary prior to running the program. With the gfortran compiler installed, the user can either type the necessary commands
 
 
       gfortran -c fdeclarations.f95  
@@ -102,7 +102,7 @@ or just run the compile.bat file (included in the ‘habfuzz’ subfolder) to co
 
 4.1. Input and output data 
 
-To run Habfuzz, three different .txt files are required as input, containing the flow velocity values in m/s, the depths in m and substrate types, according to the Manning’s n as depicted in the table. These files should be located in the ‘habfuzz’ subfolder and named velocities.txt, depths.txt and substrates.txt accordingly. Normally, such files (after proper manipulation) are the outputs of a hydrodynamic (hydraulic) simulation, where a specific river reach is numerically simulated through a computational grid. The simulation assigns a value for flow velocity, depth and substrate type at each node of the grid. However, the user can still create his/her own files to use in Habfuzz. All values at each file should be arranged in a single column, where the first row denotes the number of elements in the row and the rest of the values being the actual data. An example of the three input files containing 10 values (nodes) is shown below.
+To run Habfuzz, three different .txt files are required as input, containing the flow velocity values in m/s, the depths in m and substrate types, according to the Manning’s n as depicted in the table. These files should be located in the ‘habfuzz’ subfolder and named velocities.txt, depths.txt and substrates.txt accordingly. Normally, such files (after proper manipulation) are the outputs of a hydrodynamic (hydraulic) simulation, where a specific river reach is numerically simulated through a computational grid. The simulation assigns a value for flow velocity, depth and substrate type at each node of the grid. However, the user can still create his/her own files to use in Habfuzz. All values at each file should be arranged in a single column, where the first row denotes the number of elements in the column and the rest of the values being the actual data. An example of the three input files containing 10 values (nodes) is shown below.
 
 ![fig2](https://cloud.githubusercontent.com/assets/21544603/18668374/b04f156e-7f3d-11e6-81b6-17751808d9b7.png)
 
@@ -137,7 +137,7 @@ c. IF-THEN RULES - The user can also apply modifications to the IF-THEN rules of
 
 ![fig6](https://cloud.githubusercontent.com/assets/21544603/18668804/550c5916-7f40-11e6-8050-1ebe2afd0497.png)
 
-It is not advised to make any changes in the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced Fortran user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
+It is not advised to make any changes to the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced Fortran user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
 
 ### 5. References
 
@@ -147,6 +147,11 @@ Controller. International Journal of Man-Machine Studies 7: 1-13.
 Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John Wiley and Sons, UK.
 
 Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
+
+### What's next
+1. Triangular-shaped membership functions
+2. Graphical User Interface
+
 
 ### Contact Information
 
