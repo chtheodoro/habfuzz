@@ -80,7 +80,7 @@ Habfuzz has been developed using:
 Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly.
 
 ### 3. Installing
-No specific installation of the software is required. Just copy the habfuzz folder to your hard disk and double-click habfuzz.exe to run the program. The habfuzz folder includes:  
+Habfuzz has been developed to run on 32-bit and 64-bit Windows operating systems, including Windows XP, Vista, 7/8 and 10. No specific installation of the software is required. Just copy the habfuzz folder to your hard disk and double-click habfuzz.exe to run the program. The habfuzz folder includes:  
 
 1. The ‘habfuzz’ subfolder, which contains all the code files of Habfuzz, which are
 a. The fdeclarations.f95 module containing the number of input arrays and all the variables and parameters necessary to run the program.
