@@ -1,10 +1,17 @@
 # Habfuzz
-Habfuzz is a Fortran 95 code, which implements the Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975). It is specifically structured to quickly calculate the fuzzy-logic-based instream habitat suitability for fish or freshwater macroinvertebrates along a 2D hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.  
+Habfuzz is a Fortran tool, which implements two separate inference processes for the calculation of the hydraulic habitat suitability:  
+1.	The Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
+2.	The Bayesian joint probability inference method as described in Brookes et al. (2010), but with fuzzified inputs.
+
+It is specifically structured to quickly calculate the fuzzy-logic- (or fuzzy-Bayesian)-based instream habitat suitability for fish or freshwater macroinvertebrates along a 2D hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
+  
 
 ### Why Habfuzz?
-Instead of Habfuzz, you can use the nonfree MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project. 
+Instead of Habfuzz, you can use the nonfree MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project. Moreover, if you are planning to apply a fuzzy Bayesian inference process, Habfuzz is the only option available.
+ 
 
-### 1. Overview of the fuzzy inference process
+### 1. Overview
+### 1.1. The fuzzy inference process
 
 As initially proposed by Zadeh (1965) and described in detail by Ross (2010), the process of deriving the fuzzy-based habitat suitability, given the flow velocity, water depth and substrate type, can be summarized in four steps:
 
@@ -76,7 +83,7 @@ xb is the last value with the highest membership degree of the class with the hi
 All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a Fortran text editor and a Fortran compiler installed.  
 Habfuzz has been developed using:  
 •	the Geany text editor (download at www.geany.org)  
-•	the GFortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
+•	the GNU Fortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
 Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly.
 
 ### 3. Installing
