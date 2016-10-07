@@ -1,3 +1,4 @@
+### Under development
 # Habfuzz
 Habfuzz is a Fortran tool, which implements two separate inference processes for the calculation of the hydraulic habitat suitability:  
 1.	The Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
