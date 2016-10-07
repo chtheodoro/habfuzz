@@ -78,6 +78,35 @@ xb is the last value with the highest membership degree of the class with the hi
   
 ![figure_2](https://cloud.githubusercontent.com/assets/21544603/18706143/7f3e39fc-7ff9-11e6-8712-aaea188f8bc6.png)
 
+1.2. The fuzzy Bayesian inference process
+The fuzzy Bayesian inference process is briefly described in Brooks et al. (2010) and can be summarized in three steps:
+
+	Fuzzification of the input variables
+This step is the same as in the fuzzy inference process and results in the conversion of crisp numerical values to fuzzy ‘degrees of membership’, ranging from 0 to 1 for each membership function.
+
+	Calculation of the Bayesian joint probability
+The joint probability for interdependent events is calculated as
+
+P(A∩B) = P(A|B)P(B) = P(B|A)P(A)
+
+where,
+P(A∩B) is the probability of event A and event B occurring together
+P(A|B) is the conditional probability of event A occurring given the event B occurred
+P(B|A) is the conditional probability of event B occurring given the event A occurred
+
+In our case, flow velocity, depth and substrate type are considered independent of each other and the joint probability is calculated by replacing P(A|B) with P(A). For example, the joint probability of the flow velocity being 0.5 m/s and the water depth being 0.2 m, given their probabilities P(V:0.5=0.8) and P(D:0.2=0.3) is 0.8x0.3=0.24.
+
+	Classification of the outcome in habitat suitability classes
+This is done by using the ‘expected utility’ equation
+
+
+
+where,
+EU(A) is the expected utility of action or event A
+P(xi|A) is the probability of action or event A
+U(xi) is a utility weight to convert a state to numerical values
+
+
 ### 2. Dependencies
   
 All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a Fortran text editor and a Fortran compiler installed.  
