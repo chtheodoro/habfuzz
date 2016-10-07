@@ -20,6 +20,7 @@ implicit none
 
 !A welcome message
 write(*,*) 'Welcome to HABFUZZ!'
+write(*,*) ' '
 write(*,*) 'Now you can calculate the hydraulic habitat suitability'
 write(*,*) 'using fuzzy logic or the fuzzy Bayesian joint probability'
 write(*,*) 'Press ENTER to start'
