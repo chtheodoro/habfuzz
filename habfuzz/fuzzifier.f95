@@ -3,11 +3,7 @@ use fdeclarations
 
 implicit none
 
-!-------------------------------------------------------------------------------------------------------------
-!THE CRISP INPUT VALUES ARE FUZZIFIED ACCORDING TO THE FUZZIFICATION PARAMETERS DEFINED IN 'fdeclarations.f95'
-!-------------------------------------------------------------------------------------------------------------
-
-!The trapezoidal membership function for flow velocity
+!Flow velocity fuzzyfication
 do i=1,n
 if (u(i)<=uvla) then
 uvlow=1
@@ -57,14 +53,14 @@ else
 uvhigh=1
 end if
 
-cuvlow(i) = uvlow
-culow(i) = ulow
-cumoderate(i) = umoderate
-cuhigh(i) = uhigh
-cuvhigh(i) = uvhigh
+uvl(i) = uvlow
+ul(i) = ulow
+um(i) = umoderate
+uh(i) = uhigh
+uvh(i) = uvhigh
 end do
                                            
-!The trapezoidal membership function for water depth
+!Water depth fuzzyfication
 do i=1,n
 if (d(i)<=dvla) then
 dvshallow=1
@@ -95,36 +91,36 @@ dmoderate=(dmd-d(i))/(dmd-dmc)
 else
 dmoderate=0
 end if
-if (d(i)<=dha) then
+if (d(i)<=dda) then
 ddeep=0
-else if (d(i)>dha .and. d(i)<dhb) then
-ddeep=(d(i)-dha)/(dhb-dha)
-else if (d(i)>=dhb .and. d(i)<dhc) then
+else if (d(i)>dda .and. d(i)<ddb) then
+ddeep=(d(i)-dda)/(ddb-dda)
+else if (d(i)>=ddb .and. d(i)<ddc) then
 ddeep=1
-else if (d(i)>=dhc .and. d(i)<dhd) then
-ddeep=(dhd-d(i))/(dhd-dhc)
+else if (d(i)>=ddc .and. d(i)<ddd) then
+ddeep=(ddd-d(i))/(ddd-ddc)
 else
 ddeep=0
 end if
-if (d(i)<=dvha) then
+if (d(i)<=dvda) then
 dvdeep=0
-else if (d(i)>=dvha .and. d(i)<=dvhb) then
-dvdeep=(d(i)-dvha)/(dvhb-dvha)
+else if (d(i)>=dvda .and. d(i)<=dvdb) then
+dvdeep=(d(i)-dvda)/(dvdb-dvda)
 else
 dvdeep=1
 end if
 
-cdvshallow(i) = dvshallow
-cdshallow(i) = dshallow
-cdmoderate(i) = dmoderate
-cddeep(i) = ddeep
-cdvdeep(i) = dvdeep
+dvs(i) = dvshallow
+ds(i) = dshallow
+dm(i) = dmoderate
+dd(i) = ddeep
+dvd(i) = dvdeep
 end do
 
 !Substrate type is not fuzzified and treated as a crisp value
 do i=1,n
 if (sub(i)==0.070) then
-boulders(i)=1
+bld(i)=1
 else if (sub(i)==0.050) then
 ls(i)=1
 else if (sub(i)==0.040) then
