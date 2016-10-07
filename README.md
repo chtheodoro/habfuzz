@@ -145,7 +145,9 @@ To run Habfuzz, three different .txt files are required as input, containing the
 ![8](https://cloud.githubusercontent.com/assets/21544603/18668406/e04a97e8-7f3d-11e6-9a19-bae1072c71f4.png)
 
 The output of Habfuzz is a .txt file named suitability.exe containing a single column with all the habitat suitabilities (ranging from 0 - unsuitable to 1 - suitable) calculated for each input element (node) in the same order as with the input files. This file is placed by the program in the ‘habfuzz’ subfolder.  
-The habitat suitability is initially a combination of fuzzy membership functions (five classes of suitability - bad, poor, moderate, good and high) and through the defuzzification process it is converted into a crisp output ranging from 0 to 1.
+In the fuzzy inference process, the habitat suitability is initially a combination of fuzzy membership functions (five classes of suitability - bad, poor, moderate, good and high) and through the defuzzification process it is converted into a crisp output ranging from 0 to 1. The inputs and the output of Habfuzz are depicted in Fig. 1.
+In the fuzzy Bayesian inference process, habitat suitability is again expressed in the same five classes. Each class is assigned with a utility weight (high: 0.9, good: 0.7, moderate: 0.5, poor:0.3, bad:0.1) and multiplied by the joint probability of each combination observed.
+
 
 4.2. Running Habfuzz  
 
