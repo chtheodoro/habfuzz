@@ -81,10 +81,10 @@ xb is the last value with the highest membership degree of the class with the hi
 1.2. The fuzzy Bayesian inference process
 The fuzzy Bayesian inference process is briefly described in Brooks et al. (2010) and can be summarized in three steps:
 
-	Fuzzification of the input variables
+a. Fuzzification of the input variables
 This step is the same as in the fuzzy inference process and results in the conversion of crisp numerical values to fuzzy ‘degrees of membership’, ranging from 0 to 1 for each membership function.
 
-	Calculation of the Bayesian joint probability
+b. Calculation of the Bayesian joint probability
 The joint probability for interdependent events is calculated as
 
 P(A∩B) = P(A|B)P(B) = P(B|A)P(A)
@@ -94,12 +94,12 @@ P(A∩B) is the probability of event A and event B occurring together
 P(A|B) is the conditional probability of event A occurring given the event B occurred
 P(B|A) is the conditional probability of event B occurring given the event A occurred
 
-In our case, flow velocity, depth and substrate type are considered independent of each other and the joint probability is calculated by replacing P(A|B) with P(A). For example, the joint probability of the flow velocity being 0.5 m/s and the water depth being 0.2 m, given their probabilities P(V:0.5=0.8) and P(D:0.2=0.3) is 0.8x0.3=0.24.
+In Habfuzz, flow velocity, depth and substrate type are considered independent of each other and the joint probability is calculated by replacing P(A|B) with P(A). For example, the joint probability of the flow velocity being 0.5 m/s and the water depth being 0.2 m, given their probabilities P(V:0.5=0.8) and P(D:0.2=0.3) is 0.8x0.3=0.24.
 
-	Classification of the outcome in habitat suitability classes
+c. Classification of the outcome in habitat suitability classes
 This is done by using the ‘expected utility’ equation
 
-
+![10](https://cloud.githubusercontent.com/assets/21544603/19186081/34960c5e-8c8d-11e6-97f9-2fd23361c88a.png)
 
 where,
 EU(A) is the expected utility of action or event A
