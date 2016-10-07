@@ -38,22 +38,30 @@ real :: dvshallow, dshallow, dmoderate, ddeep, dvdeep
 real, dimension(rsize) :: dvs, ds, dm, dd, dvd
 integer :: proc, scenario, dfuzz
 real, dimension(rsize) :: high, good, moderate, poor, bad, hs
+real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs, bayh1, bayg1, baym1, bayp1, bayb1
+
+!Used by smod.f95
 real, dimension(rsize,4) :: h
 real, dimension(rsize,26) :: g
 real, dimension(rsize,32) :: m
 real, dimension(rsize,11) :: p
 real, dimension(rsize,1) :: b
+
+!Used by swors.f95
 real, dimension(rsize,3) :: h2
 real, dimension(rsize,5) :: g2
 real, dimension(rsize,28) :: m2
 real, dimension(rsize,33) :: p2
 real, dimension(rsize,4) :: b2
+
+!Used by sopt.f95
 real, dimension(rsize,29) :: h3
 real, dimension(rsize,14) :: g3
 real, dimension(rsize,20) :: m3
 real, dimension(rsize,9) :: p3
 real, dimension(rsize,1) :: b3
-real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs, bayh1, bayg1, baym1, bayp1, bayb1
+
+!Used by rules.f95
 real, dimension(rsize,30) :: bayh
 real, dimension(rsize,37) :: bayg
 real, dimension(rsize,48) :: baym
