@@ -78,7 +78,8 @@ xb is the last value with the highest membership degree of the class with the hi
   
 ![figure_2](https://cloud.githubusercontent.com/assets/21544603/18706143/7f3e39fc-7ff9-11e6-8712-aaea188f8bc6.png)
 
-1.2. The fuzzy Bayesian inference process
+1.2. The fuzzy Bayesian inference process  
+
 The fuzzy Bayesian inference process is briefly described in Brooks et al. (2010) and can be summarized in three steps:
 
 a. Fuzzification of the input variables
