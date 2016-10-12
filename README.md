@@ -1,185 +1,74 @@
-### Under development
 # Habfuzz
-Habfuzz is a Fortran tool, which implements two separate inference processes for the calculation of the hydraulic habitat suitability:  
-1.	The Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
-2.	The Bayesian joint probability inference method as described in Brookes et al. (2010), but with fuzzified inputs.
+Habfuzz is a FORTRAN tool, which calculates the hydraulic habitat suitability by utilizing
 
-It is specifically structured to quickly calculate the fuzzy-logic- (or fuzzy-Bayesian)-based instream habitat suitability for fish or freshwater macroinvertebrates along a 2D hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
-  
+1.	Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and
+2.	The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.
+
+It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bayesian-based instream habitat suitability for fish or freshwater macroinvertebrates along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
 
 ### Why Habfuzz?
-Instead of Habfuzz, you can use the nonfree MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project. Moreover, if you are planning to apply a fuzzy Bayesian inference process, Habfuzz is the only option available.
+Instead of Habfuzz, you can use the non-free MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project. Moreover, if you are planning to apply a fuzzy Bayesian inference process, Habfuzz is the only option available.
  
+##### A quick overview of the methods applied in Habfuzz is provided in the program's user's guide  
+##### https://github.com/chtheodoro/habfuzz/tree/master/documentation
 
-### 1. Overview
-### 1.1. The fuzzy inference process
+##### It is strongly advised to consult the aforementioned manual prior to running Habfuzz. 
 
-As initially proposed by Zadeh (1965) and described in detail by Ross (2010), the process of deriving the fuzzy-based habitat suitability, given the flow velocity, water depth and substrate type, can be summarized in four steps:
-
-a. Fuzzification of the input variables
+### Dependencies
   
-In this step, the user defines categories (membership functions) for each input variable and the input values of flow velocity, water depth and substrate type are assigned to one or more membership functions. By this procedure, crisp numerical values of each input variable are converted to a fuzzy ‘degree of membership’, ranging from 0 to 1 for each membership function. For example, a depth value of 14 cm may derive a membership degree of 0.7 for the ‘shallow’ membership function and 0.28 for the ‘very shallow’ membership function.
-
-b. Application of a fuzzy operator (AND or OR) in the antecedent (IF-THEN rules)
-  
-According to the reference data for the target aquatic community, the AND (min) or OR (max) operator is applied to each combination of variables (membership functions since step 1) and the derived value is assigned to the membership function of the output variable (defined in step 1), in this case the habitat suitability. For example, if the user defines five membership functions for habitat suitability (bad, poor, moderate, good, high), then the application of the fuzzy operator would result in,
-
-![1](https://cloud.githubusercontent.com/assets/21544603/18666875/c7f1fcce-7f36-11e6-8da5-9a8c657c6eea.png)
-
-where,
-fi denotes for the membership function of each input and output variable  
-V is the flow velocity  
-D is the water depth  
-hs is the habitat suitability  
-etc., until all possible combinations of fuzzy inputs are assigned to an output membership function, based on the rationale that, for example,  
-IF flow velocity is f3 (moderate) AND water depth is f2 (shallow) THEN habitat suitability is f4 (good).
-
-c. Aggregation of outputs
-
-In this step, the derived habitat suitability membership functions from each rule are combined into one fuzzy set. Usually, the OR (max) operator is applied to aggregate the same output fuzzy sets of the previous step. For example, the f4 (hs) is derived in the previous example two times by the IF-THEN rules. The final fuzzy set representing each habitat suitability class Fj would be
-
-![2](https://cloud.githubusercontent.com/assets/21544603/18667370/f0c043fc-7f38-11e6-9f21-ffd84db5a963.png)
-
-d. Defuzzification
-
-This final step is applied to derive one single habitat suitability value, by combining the membership degrees of all fuzzy habitat suitability classes. Among the various defuzzification methods, the ‘centroid’, ‘maximum membership’, ‘weighted average’ and ‘mean-max membership methods’ are described below.
+Habfuzz was developed using:
+•	the Geany text editor (available at www.geany.org)
+•	the GNU Fortran Compiler (available at https://gcc.gnu.org/wiki/GFortranBinaries)
+Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly. Mac users should also install Xcode (available at https://developer.apple.com/xcode/), ideally with its relevant Command Line Tools to enable compiling through the GNU Fortran Compiler.
 
 
-i. Centroid defuzzification:
+### Installing
+Habfuzz has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run Habfuzz.
 
-Usually called the ‘center of gravity’ or ‘center of area’. It can be defined by the algebraic expression
+#### Windows users
+If you only need to run Habfuzz without modifications, just double-click the habfuzz.exe located in the ‘habfuzz’ subfolder. If you need to modify the source code of Habfuzz (which is very probable), re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands:
 
-![3](https://cloud.githubusercontent.com/assets/21544603/18667467/5b1d364c-7f39-11e6-9a3f-d54895c8bfe9.png)
+gfortran -c fdeclarations.f95
 
-which can be numerically approximated by
+gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
 
-![4](https://cloud.githubusercontent.com/assets/21544603/18667566/cf67178e-7f39-11e6-87ab-d050e6e49c13.png)
+habfuzz.exe will then be replaced by the newly compiled one, being ready to run.
 
-where,  
-f(xi) is the membership degree at value xi  
+#### Linux users
+Open the terminal and navigate to the ‘habfuzz’ subfolder. If you don’t have the GNU Fortran Compiler, you need to be a root user (administrator) and type
 
-ii. Maximum membership defuzzification - This is the maximum membership degree observed by the aggregation step:
+sudo apt-get install gfortran 
 
-![5](https://cloud.githubusercontent.com/assets/21544603/18667664/30fee6e8-7f3a-11e6-8f7f-43ee3928802c.png)
+to install the compiler. Having gfortran installed, the commands necessary to compile are the following:
 
-iii. Weighted average - This method can be used only for symmetrical output membership functions and is calculated by weighting each output membership function by its largest membership degree:
+gfortran -c fdeclarations.f95
 
-![6](https://cloud.githubusercontent.com/assets/21544603/18667732/7ffba75e-7f3a-11e6-9d3d-566e7cf69b7a.png)
+gfortran fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95 –o habfuzz
 
-where,
-f(xi) is the membership degree at the average value xi of each membership function 
+Be careful to write exactly the abovementioned commands, arranging the source files in the order given above. Then you can run habfuzz by typing:
 
-iv. Mean of maximum - This method resembles the ‘maximum membership’ method. However, the maximum membership degree may not be unique but a range of degrees, from which the mean value is derived: 
+./habfuzz
 
-![7](https://cloud.githubusercontent.com/assets/21544603/18667853/e8ce89a4-7f3a-11e6-8af5-dca47e97c25e.png)
+#### Mac OS X users
+You need to have Xcode installed together with the GNU Fortran Compiler and be a root user to enable compilation. Open the terminal and navigate to the ‘habfuzz’ subfolder. To compile, you can either run the mcompile.sh file (which automatically applies the compilation commands) by typing:
 
-where,  
-xa is the first value reaching the highest membership degree of the class with the highest membership and  
-xb is the last value with the highest membership degree of the class with the highest membership  
-  
-![figure_2](https://cloud.githubusercontent.com/assets/21544603/18706143/7f3e39fc-7ff9-11e6-8712-aaea188f8bc6.png)
+./mcompile.sh
 
-1.2. The fuzzy Bayesian inference process  
+or manually type the commands:
 
-The fuzzy Bayesian inference process is briefly described in Brooks et al. (2010) and can be summarized in three steps:
+gfortran -c fdeclarations.f95
 
-a. Fuzzification of the input variables
-This step is the same as in the fuzzy inference process and results in the conversion of crisp numerical values to fuzzy ‘degrees of membership’, ranging from 0 to 1 for each membership function.
+gfortran -o habfuzz fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
 
-b. Calculation of the Bayesian joint probability
-The joint probability for interdependent events is calculated as
+Habfuzz can then be executed from the command line by typing
 
-P(A∩B) = P(A|B)P(B) = P(B|A)P(A)
+./habfuzz
 
-where,
-P(A∩B) is the probability of event A and event B occurring together
-P(A|B) is the conditional probability of event A occurring given the event B occurred
-P(B|A) is the conditional probability of event B occurring given the event A occurred
-
-In Habfuzz, flow velocity, depth and substrate type are considered independent of each other and the joint probability is calculated by replacing P(A|B) with P(A). For example, the joint probability of the flow velocity being 0.5 m/s and the water depth being 0.2 m, given their probabilities P(V:0.5=0.8) and P(D:0.2=0.3) is 0.8x0.3=0.24.
-
-c. Classification of the outcome in habitat suitability classes
-This is done by using the ‘expected utility’ equation
-
-![10](https://cloud.githubusercontent.com/assets/21544603/19186081/34960c5e-8c8d-11e6-97f9-2fd23361c88a.png)
-
-where,
-EU(A) is the expected utility of action or event A
-P(xi|A) is the probability of action or event A
-U(xi) is a utility weight to convert a state to numerical values
-
-
-### 2. Dependencies
-  
-All the necessary files to run Habfuzz are included in the program’s folder. However, to modify the code, users will need to have a Fortran text editor and a Fortran compiler installed.  
-Habfuzz has been developed using:  
-•	the Geany text editor (download at www.geany.org)  
-•	the GNU Fortran compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries)  
-Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly.
-
-### 3. Installing
-Habfuzz has been developed to run on 32-bit and 64-bit Windows operating systems, including Windows XP, Vista, 7/8 and 10. No specific installation of the software is required. Just copy the habfuzz folder to your hard disk and double-click habfuzz.exe to run the program. The habfuzz folder includes:  
-
-1. The ‘habfuzz’ subfolder, which contains all the code files of Habfuzz, which are
-a. The fdeclarations.f95 module containing the number of input arrays and all the variables and parameters necessary to run the program.
-b. The fuzzifier.f95 subroutine containing the code to apply the fuzzification process (see the ‘usage’ section)
-c. The smod.f95, swors.f95 and sopt.f95 subroutines containing the IF-THEN rules according to the management scenario to be implemented (see the ‘usage’ section)
-d. The centroid.f95, meanmax.f95, waver.f95 and maxmem.f95 subroutines containing the code to apply the ‘centroid’, ‘mean-max membership’, ‘weighted average’ and ‘maximum membership’ defuzzification processes.
-
-2. The ‘bin’ subfolder, which includes three necessary .dll files to run the software
-If the user needs to change the code in one of the program's files, compilation is necessary prior to running the program. With the gfortran compiler installed, the user can either type the necessary commands
-
-
-      gfortran -c fdeclarations.f95  
-      gfortran -c habfuzz.f95 fdeclarations.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95  
-      gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95  
-
-or just run the compile.bat file (included in the ‘habfuzz’ subfolder) to compile (in this case, don’t change the names of files!!!). The compiler will then create the new habfuzz.exe and some .o files, which can be discarded by the user.
-
-### 4. Usage
-
-4.1. Input and output data 
-
-To run Habfuzz, three different .txt files are required as input, containing the flow velocity values in m/s, the depths in m and substrate types, according to the Manning’s n as depicted in the table. These files should be located in the ‘habfuzz’ subfolder and named velocities.txt, depths.txt and substrates.txt accordingly. Normally, such files (after proper manipulation) are the outputs of a hydrodynamic (hydraulic) simulation, where a specific river reach is numerically simulated through a computational grid. The simulation assigns a value for flow velocity, depth and substrate type at each node of the grid. However, the user can still create his/her own files to use in Habfuzz. All values at each file should be arranged in a single column, where the first row denotes the number of elements in the column and the rest of the values being the actual data. An example of the three input files containing 10 values (nodes) is shown below.
-
-![fig2](https://cloud.githubusercontent.com/assets/21544603/18668374/b04f156e-7f3d-11e6-81b6-17751808d9b7.png)
-
-![8](https://cloud.githubusercontent.com/assets/21544603/18668406/e04a97e8-7f3d-11e6-9a19-bae1072c71f4.png)
-
-The output of Habfuzz is a .txt file named suitability.exe containing a single column with all the habitat suitabilities (ranging from 0 - unsuitable to 1 - suitable) calculated for each input element (node) in the same order as with the input files. This file is placed by the program in the ‘habfuzz’ subfolder.  
-In the fuzzy inference process, the habitat suitability is initially a combination of fuzzy membership functions (five classes of suitability - bad, poor, moderate, good and high) and through the defuzzification process it is converted into a crisp output ranging from 0 to 1. The inputs and the output of Habfuzz are depicted in Fig. 1.
-In the fuzzy Bayesian inference process, habitat suitability is again expressed in the same five classes. Each class is assigned with a utility weight (high: 0.9, good: 0.7, moderate: 0.5, poor:0.3, bad:0.1) and multiplied by the joint probability of each combination observed.
-
-
-4.2. Running Habfuzz  
-
-After having the input files ready, double click habfuzz.exe. The command prompt opens and the software asks for the management scenario to be implemented.
-
-![8](https://cloud.githubusercontent.com/assets/21544603/18668688/734f3bec-7f3f-11e6-8796-ab9088083e53.png)
-
-There are three available scenarios based on the method used for deriving the outcome of each IF-THEN rule from the reference conditions of the program, (i) the moderate scenario, where the different suitability values for the same combinations of flow velocity, water depth and substrate type are averaged to derive the final suitability, (ii) the worst scenario, where the final suitability is derived from the minimum observed suitability and (iii) the optimum scenario where the final suitability is derived by the maximum observed suitability. A default scenario is also present (the moderate scenario). Note that if a specific combination in the observed data does not match a combination in the reference data, the program returns a value of ‘-1’ for the habitat suitability.    
-
-After selecting the desired scenario, the user is asked to select the defuzzification method (see section 1). A default method (centroid) is also available. After selecting the defuzzification method, Habfuzz calls the relevant Fortran subroutines to perform the tasks selected. The program informs the user when the process is completed and indicates the suitability.txt file created where the suitability values are stored. The file is located in the ‘habfuzz’ subfolder.
-
-![9](https://cloud.githubusercontent.com/assets/21544603/18738401/027f675a-80a4-11e6-8608-10ebeca67071.png)
-
-4.3. Modifying the code according to the user preferences  
-
-While the software is developed to quickly apply the fuzzy inference process for the calculation of the habitat suitability, the user can change the code according to his/her requirements in order to apply the fuzzy inference process for other topics requiring the implementation of fuzzy logic. Possible changes can be applied at specific Habfuzz processes mentioned below:
-
-a. INPUT ARRAY SIZE - The current limit of input array size (the number of rows at each file and therefore the number of nodes in the computational grid) is set at 3000. However, the user can change this value by changing accordingly the ‘rsize’ parameter in the fdeclarations.f95 file.
-
-a. FUZZIFICATION - The fuzzification process of Habfuzz is included in the subroutine fuzzifier.f95. It converts the crisp inputs of flow velocity and water depth to fuzzy sets (membership functions). The program creates five trapezoidal-shaped flow velocity functions (five classes of flow velocity), (a) very low, (b) low, (c) moderate, (d) high and (e) very high and five classes of water depth (a) very shallow, (b) shallow, (c) moderate, (d) deep and (e) very deep. The substrate type is treated as a crisp input throughout the process since the types of substrate are well defined and there is no need to be fuzzified. The user can either change the values at each membership function included in the fdeclarations.f95 file (marked as A. PARAMETERS OF THE FUZZIFICATION PROCESS), which results in changing the trapezoidal vertices of each membership function or change the whole membership function.
-
-![fig5](https://cloud.githubusercontent.com/assets/21544603/18668781/325aad78-7f40-11e6-90c8-acf60eaac17b.png)
-
-c. IF-THEN RULES - The user can also apply modifications to the IF-THEN rules of the smod.f95, swors.f95 and sopt.f95 subroutines. As already mentioned, the reference conditions are currently derived using freshwater macroinvertebrates, sampled in an extended sampling campaign, which took place at 9 sampling sites in Greece and resulted in a set of 380 reference microhabitats (combinations of flow velocity, water depth and substrate type). If the user needs to apply his/her own reference data (probably for fish or other biotic elements of the aquatic ecosystem or even in a totally different application), changes should be applied to one of the abovementioned subroutines. However, if for example, the smod.f95 file is modified, the user should also change the column number of the arrays, which are used by smod.f95 (in B. INTERNAL PARAMETERS TO FACILITATE THE IMPLICATION AND AGGREGATION STEPS, marked as ‘Used by smod.f95’), which are the arrays g, h, m, p, b. The modification should be such that the column number is the same as the times that a combination in the smod.f95 file results to a specific result. If you see for example, ‘g’ is the outcome of 26 combinations and so the column number for ‘g’ in the fdeclarations.f95 file is also 26.
-
-![fig6](https://cloud.githubusercontent.com/assets/21544603/18668804/550c5916-7f40-11e6-8050-1ebe2afd0497.png)
-
-It is not advised to make any changes to the ‘defuzzification’ subroutines as they do not depend on the array size of other files and they don’t require any changes to work properly even if the abovementioned modifications are applied. Still, an experienced Fortran user can modify the defuzzification subroutines according to his/her needs. After each modification in the files of Habfuzz, re-compilation is necessary as described in section 3.
+### Usage
+Please consult the Habfuzz manual located in the 'documentation' folder or available at https://github.com/chtheodoro/habfuzz/tree/master/documentation
 
 ### 5. References
+Brooks C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada. Available at http://www.iemss.org/iemss2010/papers/S20/S.20.07.Model%20selection%20and%20uncertainty%20A%20comparison%20of%20Fuzzy,%20Bayesian%20and%20Weighted%20Average%20formulations%20of%20an%20instream%20habitat%20suitability%20model%20-%20CHRISTOPHER%20BROOKES.pdf
 
 Mamdani E.H. and Assilian S. 1975. An experiment in linguistic synthesis with a fuzzy logic
 Controller. International Journal of Man-Machine Studies 7: 1-13.
@@ -191,7 +80,6 @@ Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 ### What's next
 1. Triangular-shaped membership functions
 2. Graphical User Interface
-
 
 ### Contact Information
 
