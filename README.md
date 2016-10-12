@@ -25,35 +25,35 @@ Therefore, it is advised to install the specific additional software to ensure t
 Habfuzz has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run Habfuzz.
 
 #### Windows users
-If you only need to run Habfuzz without modifications, just double-click the habfuzz.exe located in the ‘habfuzz’ subfolder. If you need to modify the source code of Habfuzz (which is very probable), re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands:
+If you only need to run Habfuzz without modifications, just double-click the habfuzz.exe located in the ‘habfuzz’ subfolder. If you need to modify the source code of Habfuzz (which is very probable), re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands
 
 ###### gfortran -c fdeclarations.f95
 
 ###### gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
 
-###### habfuzz.exe will then be replaced by the newly compiled one, being ready to run.
+habfuzz.exe will then be replaced by the newly compiled one, being ready to run.
 
 #### Linux users
 Open the terminal and navigate to the ‘habfuzz’ subfolder. If you don’t have the GNU Fortran Compiler, you need to be a root user (administrator) and type
 
 ###### sudo apt-get install gfortran 
 
-to install the compiler. Having gfortran installed, the commands necessary to compile are the following:
+to install the compiler. Having gfortran installed, the commands necessary to compile are the following
 
 ###### gfortran -c fdeclarations.f95
 
 ###### gfortran fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95 –o habfuzz
 
-Be careful to write exactly the abovementioned commands, arranging the source files in the order given above. Then you can run habfuzz by typing:
+Be careful to write exactly the abovementioned commands, arranging the source files in the order given above. Then you can run habfuzz by typing
 
 ###### ./habfuzz
 
 #### Mac OS X users
-You need to have Xcode installed together with the GNU Fortran Compiler and be a root user to enable compilation. Open the terminal and navigate to the ‘habfuzz’ subfolder. To compile, you can either run the mcompile.sh file (which automatically applies the compilation commands) by typing:
+You need to have Xcode installed together with the GNU Fortran Compiler and be a root user to enable compilation. Open the terminal and navigate to the ‘habfuzz’ subfolder. To compile, you can either run the mcompile.sh file (which automatically applies the compilation commands) by typing
 
 ###### ./mcompile.sh
 
-or manually type the commands:
+or manually type the commands
 
 ###### gfortran -c fdeclarations.f95
 
@@ -66,7 +66,7 @@ Habfuzz can then be executed from the command line by typing
 ### Usage
 Please consult the Habfuzz manual located in the 'documentation' folder or available at https://github.com/chtheodoro/habfuzz/tree/master/documentation
 
-### 5. References
+### References
 Brooks C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada. Available at http://www.iemss.org/iemss2010/papers/S20/S.20.07.Model%20selection%20and%20uncertainty%20A%20comparison%20of%20Fuzzy,%20Bayesian%20and%20Weighted%20Average%20formulations%20of%20an%20instream%20habitat%20suitability%20model%20-%20CHRISTOPHER%20BROOKES.pdf
 
 Mamdani E.H. and Assilian S. 1975. An experiment in linguistic synthesis with a fuzzy logic
