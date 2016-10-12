@@ -10,6 +10,7 @@ Instead of Habfuzz, you can use the non-free MATLAB Fuzzy Logic Toolbox (http://
  
 A quick overview of the methods applied in Habfuzz is provided in the program's user's guide
 https://github.com/chtheodoro/habfuzz/tree/master/documentation  
+
 It is strongly advised to consult the aforementioned manual prior to running Habfuzz. 
 
 ### Dependencies
@@ -25,7 +26,7 @@ Therefore, it is advised to install the specific additional software to ensure t
 Habfuzz has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run Habfuzz.
 
 #### Windows users
-If you only need to run Habfuzz without modifications, just double-click the habfuzz.exe located in the ‘habfuzz’ subfolder. If you need to modify the source code of Habfuzz (which is very probable), re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands
+If you only need to run Habfuzz without modifications, just double-click the habfuzz.exe located in the ‘habfuzz’ subfolder. If you need to modify the source code of Habfuzz (which is very probable), re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file (which automatically applies the compilation commands), or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands
 
 ###### gfortran -c fdeclarations.f95
 
