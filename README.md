@@ -8,10 +8,9 @@ It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bay
 ### Why Habfuzz?
 Instead of Habfuzz, you can use the non-free MATLAB Fuzzy Logic Toolbox (http://www.mathworks.com/products/fuzzy-logic/) or the free CASiMiR 2D software upon request (http://www.casimir-software.de/ENG/habitate_eng.html). However, Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. For those researchers who can't afford to purchase MATLAB (because it does everything, but they only need a small amount of its capabilities). And for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project. Moreover, if you are planning to apply a fuzzy Bayesian inference process, Habfuzz is the only option available.
  
-##### A quick overview of the methods applied in Habfuzz is provided in the program's user's guide  
-##### https://github.com/chtheodoro/habfuzz/tree/master/documentation
-
-##### It is strongly advised to consult the aforementioned manual prior to running Habfuzz. 
+A quick overview of the methods applied in Habfuzz is provided in the program's user's guide
+https://github.com/chtheodoro/habfuzz/tree/master/documentation  
+It is strongly advised to consult the aforementioned manual prior to running Habfuzz. 
 
 ### Dependencies
   
