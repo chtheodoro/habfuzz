@@ -153,6 +153,36 @@ end if
 print *, 'Rule application successful.'
 print *, ' '
 
+write (29,*) ' '
+write (29,*) ' High habitat suitability membership'
+do i=1,n
+write(29,10) (high(i))
+end do
+
+write (29,*) ' '
+write (29,*) ' Good habitat suitability membership'
+do i=1,n
+write(29,10) (good(i))
+end do
+
+write (29,*) ' '
+write (29,*) ' Moderate habitat suitability membership'
+do i=1,n
+write(29,10) (moderate(i))
+end do
+
+write (29,*) ' '
+write (29,*) ' Poor habitat suitability membership'
+do i=1,n
+write(29,10) (poor(i))
+end do
+
+write (29,*) ' '
+write (29,*) ' Bad habitat suitability membership'
+do i=1,n
+write(29,10) (bad(i))
+end do
+
 print *, 'Defuzzifying...'
 if (dfuzz==1) then
 call centroid
