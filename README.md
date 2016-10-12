@@ -14,9 +14,10 @@ It is strongly advised to consult the aforementioned manual prior to running Hab
 
 ### Dependencies
   
-Habfuzz was developed using:
-•	the Geany text editor (available at www.geany.org)
-•	the GNU Fortran Compiler (available at https://gcc.gnu.org/wiki/GFortranBinaries)
+Habfuzz was developed using:  
+•	the Geany text editor (available at www.geany.org)  
+•	the GNU Fortran Compiler (available at https://gcc.gnu.org/wiki/GFortranBinaries)  
+
 Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly. Mac users should also install Xcode (available at https://developer.apple.com/xcode/), ideally with its relevant Command Line Tools to enable compiling through the GNU Fortran Compiler.
 
 
@@ -26,41 +27,41 @@ Habfuzz has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubu
 #### Windows users
 If you only need to run Habfuzz without modifications, just double-click the habfuzz.exe located in the ‘habfuzz’ subfolder. If you need to modify the source code of Habfuzz (which is very probable), re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands:
 
-gfortran -c fdeclarations.f95
+###### gfortran -c fdeclarations.f95
 
-gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
+###### gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
 
-habfuzz.exe will then be replaced by the newly compiled one, being ready to run.
+###### habfuzz.exe will then be replaced by the newly compiled one, being ready to run.
 
 #### Linux users
 Open the terminal and navigate to the ‘habfuzz’ subfolder. If you don’t have the GNU Fortran Compiler, you need to be a root user (administrator) and type
 
-sudo apt-get install gfortran 
+###### sudo apt-get install gfortran 
 
 to install the compiler. Having gfortran installed, the commands necessary to compile are the following:
 
-gfortran -c fdeclarations.f95
+###### gfortran -c fdeclarations.f95
 
-gfortran fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95 –o habfuzz
+###### gfortran fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95 –o habfuzz
 
 Be careful to write exactly the abovementioned commands, arranging the source files in the order given above. Then you can run habfuzz by typing:
 
-./habfuzz
+###### ./habfuzz
 
 #### Mac OS X users
 You need to have Xcode installed together with the GNU Fortran Compiler and be a root user to enable compilation. Open the terminal and navigate to the ‘habfuzz’ subfolder. To compile, you can either run the mcompile.sh file (which automatically applies the compilation commands) by typing:
 
-./mcompile.sh
+###### ./mcompile.sh
 
 or manually type the commands:
 
-gfortran -c fdeclarations.f95
+###### gfortran -c fdeclarations.f95
 
-gfortran -o habfuzz fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
+###### gfortran -o habfuzz fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
 
 Habfuzz can then be executed from the command line by typing
 
-./habfuzz
+###### ./habfuzz
 
 ### Usage
 Please consult the Habfuzz manual located in the 'documentation' folder or available at https://github.com/chtheodoro/habfuzz/tree/master/documentation
