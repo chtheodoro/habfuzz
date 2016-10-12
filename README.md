@@ -1,5 +1,5 @@
 # Habfuzz
-Habfuzz is a FORTRAN tool, which calculates the hydraulic habitat suitability by utilizing  
+Habfuzz is a FORTRAN tool, which calculates the instream hydraulic habitat suitability by utilizing  
 1.	Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
 2.	The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.
 
