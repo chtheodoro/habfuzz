@@ -105,5 +105,6 @@ Fax. +30 210 7722814
 Email. stamou@central.ntua.gr  
 URL. https://www.hydro.ntua.gr/?set_language=en  
 
-##### To report bugs, possible amendments or anything else you would like to discuss, please contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr
+### Contributing
+To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
 
