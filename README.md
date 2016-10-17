@@ -17,12 +17,9 @@ It is strongly advised to consult the aforementioned manual prior to running Hab
 
 ### Dependencies
   
-Habfuzz was developed using:  
-•	the Geany text editor (available at www.geany.org)  
-•	the GNU Fortran Compiler (available at https://gcc.gnu.org/wiki/GFortranBinaries)  
+It is advised to install the GNU Fortran Compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries) to quickly compile Habfuzz through the relevant Windows and OS X files (however, experienced users may also use their preferred compilers).
 
-Therefore, it is advised to install the specific additional software to ensure that Habfuzz is working properly. Mac users should also install Xcode (available at https://developer.apple.com/xcode/), ideally with its relevant Command Line Tools to enable compiling through the GNU Fortran Compiler.
-
+For Mac users, Xcode (download at https://developer.apple.com/xcode/) with its relevant Command Line Tools should be installed to enable compiling through the GNU Fortran Compiler.
 
 ### Installing
 Habfuzz has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run Habfuzz.
