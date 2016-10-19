@@ -10,7 +10,7 @@ if (hs(i)>0) then
 
 if (hs(i)==high(i)) then
 x1high(i)=high(i)*hm-high(i)*ha+ha
-x2high(i)=high(i)-high(i)*hb+high(i)*hm
+x2high(i)=hb-high(i)*hb+high(i)*hm
 suitability(i)=(x1high(i)+x2high(i))/2
 else if (hs(i)==good(i)) then
 x1good(i)=good(i)*gm-good(i)*ga+ga
