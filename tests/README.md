@@ -7,8 +7,8 @@ To apply the tests you need
 Test application instructions:
 
 1. Put the test (e.g. test_centroid.f95), along with its relevant driver file (test_centroid_driver.f95) in a separate folder of your choice  
-2. Copy the files fdeclarations.f95 and the relevant subroutine (e.g. centroid) from the 'habfuzz' subfolder and paste them to the previous folder  
-3. Copy and paste fruit.f95 from the 'tests' sunfolder to the previous folder  
+2. Copy the files fdeclarations.f95 and the relevant subroutine (e.g. centroid.f95) from the 'habfuzz' subfolder and paste them to the previous folder  
+3. Copy and paste fruit.f95 from the 'tests' subfolder to the previous folder  
 
 You should have all the files in the same folder (e.g. fdeclarations.f95, centroid.f95, fruit.f95, test_centroid.f95, test_centroid_driver.f95)
 
