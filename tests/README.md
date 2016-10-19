@@ -18,4 +18,6 @@ gfortran -o test_centroid fdeclarations.f95 fruit.f95 test_centroid.f95 test_cen
 Or in a more general style
 gfortran -o filename fdeclarations.f95 fruit.f95 test_XXXX.f95 test_XXXX_driver.f95 XXXX.f95
 
+ONLY for 'fuzzifier' subroutine, you also need to copy the files 'velocities.txt', 'substrates.txt' and 'depths.txt' from the 'tests_input_10' subfolder and paste them to your folder together with the other files.
+
 If all asserts pass, then your subroutine is ready to go!
