@@ -1,0 +1,21 @@
+Each test has been named according to the FORTRAN subroutine, which is tested.
+To apply the tests you need
+
+1. The FRUIT unit test framework (download at https://sourceforge.net/projects/fortranxunit/)  
+2. Optionally, Ruby and Rake (however, the tests are written in order to be applied without Ruby and Rake)
+
+Test application instructions:
+
+1. Put the test (e.g. test_centroid.f95), along with its relevant driver file (test_centroid_driver.f95) in a separate folder of your choice  
+2. Copy the files fdeclarations.f95 and the relevant subroutine (e.g. centroid) from the 'habfuzz' subfolder and paste them to the previous folder  
+3. Copy and paste fruit.f95 from the 'tests' sunfolder to the previous folder  
+
+You should have all the files in the same folder (e.g. fdeclarations.f95, centroid.f95, fruit.f95, test_centroid.f95, test_centroid_driver.f95)
+
+Compile the files in the following order (using gfortran and naming your executable e.g. test_centroid):
+gfortran -o test_centroid fdeclarations.f95 fruit.f95 test_centroid.f95 test_centroid_driver.f95 centroid.f95
+
+Or in a more general style
+gfortran -o filename fdeclarations.f95 fruit.f95 test_XXXX.f95 test_XXXX_driver.f95 XXXX.f95
+
+If all asserts pass, then your subroutine is ready to go!
