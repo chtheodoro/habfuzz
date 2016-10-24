@@ -9,9 +9,9 @@ subroutine sum_of_fuzzified_values_should_be_1
 real :: totalu, totald, totalsub
 real :: ref=1
 
-open (unit=99, file='depths.txt', status='old', action='read')
-open (unit=89, file='velocities.txt', status='old', action='read')
-open (unit=79, file='substrates.txt', status='old', action='read')
+open (unit=99, file='../tests_input/depths.txt', status='old', action='read')
+open (unit=89, file='../tests_input/velocities.txt', status='old', action='read')
+open (unit=79, file='../tests_input/substrates.txt', status='old', action='read')
 read(99, *) n
 read(89, *) n
 read(79, *) n

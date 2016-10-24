@@ -1,0 +1,23 @@
+all: test_rules clean
+
+vpath %.f95 ../habfuzz
+
+FCOM=gfortran
+SOURCES=test_rules_driver.f95 rules.f95
+MODSRCS=fdeclarations.f95 fruit.f95 test_rules.f95
+EXE=test_rules
+OBJS=$(SOURCES:.f95=.o)
+MODS=$(MODSRCS:.f95=.o)
+FFLAGS=-c
+
+$(EXE):$(MODS) $(OBJS)
+	$(FCOM) -o $@ $^
+
+$(MODS):$(MODSRCS)
+	$(FCOM) $(FFLAGS) $^
+
+$(OBJS):$(SOURCES)
+	$(FCOM) $(FFLAGS) $^
+	
+clean:
+	-del -f *.o *.mod

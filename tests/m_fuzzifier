@@ -1,0 +1,23 @@
+all: test_fuzzifier clean
+
+vpath %.f95 ../habfuzz
+
+FCOM=gfortran
+SOURCES=test_fuzzifier_driver.f95 fuzzifier.f95
+MODSRCS=fdeclarations.f95 fruit.f95 test_fuzzifier.f95
+EXE=test_fuzzifier
+OBJS=$(SOURCES:.f95=.o)
+MODS=$(MODSRCS:.f95=.o)
+FFLAGS=-c
+
+$(EXE):$(MODS) $(OBJS)
+	$(FCOM) -o $@ $^
+
+$(MODS):$(MODSRCS)
+	$(FCOM) $(FFLAGS) $^
+
+$(OBJS):$(SOURCES)
+	$(FCOM) $(FFLAGS) $^
+	
+clean:
+	-del -f *.o *.mod
