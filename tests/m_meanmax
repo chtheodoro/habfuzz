@@ -20,4 +20,4 @@ $(OBJS):$(SOURCES)
 	$(FCOM) $(FFLAGS) $^
 	
 clean:
-	-del -f *.o *.mod
+	-@del -f *.o *.mod || -@rm -f *.o *.mod
