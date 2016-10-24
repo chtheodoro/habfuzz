@@ -105,5 +105,5 @@ Email. stamou@central.ntua.gr
 URL. https://www.hydro.ntua.gr/?set_language=en  
 
 ### Contributing
-To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
+To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed. Unit tests are available in the 'tests' subfolder.
 
