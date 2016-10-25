@@ -1,8 +1,6 @@
 The GNU Make tool (https://www.gnu.org/software/make/) is necessary to apply the automated unit tests.
 
-For the subroutine 'fuzzifier', the test calculates the sum of of the fuzzified inputs (V, D and S)  giving a 'pass' if the sum equals 1.
-
-For the subroutine 'rules', the test calculates the total probability of all observations (VxDxSxHS) giving a 'pass' if the sum of all probability observations equals 1.
+For the subroutine 'fuzzifier', the test calculates the sum of of the fuzzified inputs (V, D and S)  giving a 'pass' if the sum equals 1. For the subroutine 'rules', the test calculates the total probability of all observations (VxDxSxHS) giving a 'pass' if the sum of all probability observations equals 1.
 
 All other tests, apply given input values and assign a 'pass' when the output is the one expected by the test.
 
