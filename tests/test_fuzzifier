@@ -20,4 +20,7 @@ $(OBJS):$(SOURCES)
 	$(FCOM) $(FFLAGS) $^
 	
 clean:
-	-@del -f *.o *.mod || -@rm -f *.o *.mod
+	-@rm -f *.o *.mod null 2> ../tests/null || echo > ../tests/null
+	-@del -f *.o *.mod null 2> ../tests/null || echo > ../tests/null
+
+	./test_fuzzifier

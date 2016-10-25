@@ -118,23 +118,11 @@
   0.000
   0.000
   
-  Joint probability of High suitability class
-  0.295
-  0.000
-  0.280
-  0.546
+  High habitat suitability membership
   0.000
   0.000
   0.000
   0.000
-  0.000
-  0.000
-  
-  Joint probability of Good suitability class
-  0.324
-  0.000
-  0.440
-  0.274
   0.000
   0.000
   0.000
@@ -142,35 +130,47 @@
   0.000
   0.000
   
-  Joint probability of Moderate suitability class
-  0.324
-  0.700
-  0.230
-  0.090
+  Good habitat suitability membership
+  0.800
   0.000
+  0.000
+  1.000
+  0.000
+  0.000
+  0.000
+  0.000
+  0.000
+  0.000
+  
+  Moderate habitat suitability membership
+  0.200
+  0.600
+  1.000
+  0.000
+  0.000
+  0.000
+  0.000
+  0.000
+  0.800
+  1.000
+  
+  Poor habitat suitability membership
+  0.000
+  0.000
+  0.000
+  0.000
+  1.000
   0.000
   0.000
   0.667
-  0.900
-  1.000
-  
-  Joint probability of Poor suitability class
-  0.057
-  0.300
-  0.050
   0.000
-  1.000
-  0.000
-  0.000
-  0.000
-  0.100
   0.000
   
-  Joint probability of Bad suitability class
+  Bad habitat suitability membership
   0.000
   0.000
   0.000
-  0.090
+  0.000
   0.000
   0.000
   0.000
