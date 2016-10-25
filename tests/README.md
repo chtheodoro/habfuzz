@@ -19,4 +19,6 @@ All other tests, apply given input values and assign a 'pass' when the output is
 2. Navigate to the habfuzz/tests directory
 3. Type 'make -f t_xxxx' (without the quotes) to run each test. For example, if you want to run the centroid unit test type 'make -f t_centroid'
 
-If all asserts pass, your subroutine is ready to go!
+If all asserts pass, your subroutine is ready to go!  
+
+WARNING! The test for the subroutine 'fuzzifier' uses the three input files located in the tests_input folder, so don't change anything in that folder 
