@@ -9,12 +9,16 @@ tags:
 authors:
  - name: Christos Theodoropoulos
    orcid: 0000-0002-5395-0347
-   affiliation 1: Hellenic Centre for Marine Research
-   affiliation 2: National Technical University of Athens
+   affiliation: 1, 2
  - name: Nikolaos Skoulikidis
-   affiliation: Hellenic Centre for Marine Research
+   affiliation: 1
  - name: Anastasios Stamou
-   affiliation: National Technical University of Athens
+   affiliation: 2
+affiliations:
+ - name: Hellenic Centre for Marine Research
+   index: 1
+ - name: National Technical University of Athens
+   index: 2
 date: 21 September 2016
 bibliography: paper.bib
 ---
