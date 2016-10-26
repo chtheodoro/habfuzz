@@ -12,6 +12,7 @@ authors:
    affiliation: 1, 2
  - name: Nikolaos Skoulikidis
    affiliation: 1
+   orcid: 0000-0002-3527-4883
  - name: Anastasios Stamou
    orcid: 0000-0002-8650-4175
    affiliation: 2
