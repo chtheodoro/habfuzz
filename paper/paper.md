@@ -14,6 +14,7 @@ authors:
  - name: Nikolaos Skoulikidis
    affiliation: Hellenic Centre for Marine Research
  - name: Anastasios Stamou
+   orcid: 0000-0002-8650-4175
    affiliation: National Technical University of Athens
 date: 21 September 2016
 bibliography: paper.bib
