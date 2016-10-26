@@ -13,6 +13,7 @@ authors:
  - name: Nikolaos Skoulikidis
    affiliation: 1
  - name: Anastasios Stamou
+   orcid: 0000-0002-8650-4175
    affiliation: 2
 affiliations:
  - name: Hellenic Centre for Marine Research
