@@ -4,6 +4,7 @@
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
 ![](https://img.shields.io/hexpm/l/plug.svg)
+![](https://img.shields.io/badge/topic-Habitat modelling-blue.svg)
 
 Habfuzz is a FORTRAN tool, which calculates the instream hydraulic habitat suitability by utilizing  
 1.	Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
@@ -110,4 +111,3 @@ URL. https://www.hydro.ntua.gr/?set_language=en
 
 ### Contributing
 To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed. Unit tests are available in the 'tests' subfolder.
-
