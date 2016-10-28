@@ -1,6 +1,6 @@
 #![onlinelogomaker-101416-1201-6434](https://cloud.githubusercontent.com/assets/21544603/19381943/a169dd32-9206-11e6-8207-055b982a6031.jpg)
 
-
+https://img.shields.io/badge/research app-habitat suitability-red.svg
 [![DOI](https://zenodo.org/badge/68698452.svg)](https://zenodo.org/badge/latestdoi/68698452)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
