@@ -78,31 +78,31 @@ print *, ' '
 write (29,*) ' '
 write (29,*) ' Joint probability of High suitability class'
 do i=1,n
-write(29,10) (bayh1(i))
+write(29,10) (bayh2(i))
 end do
 
 write (29,*) ' '
 write (29,*) ' Joint probability of Good suitability class'
 do i=1,n
-write(29,10) (bayg1(i))
+write(29,10) (bayg2(i))
 end do
 
 write (29,*) ' '
 write (29,*) ' Joint probability of Moderate suitability class'
 do i=1,n
-write(29,10) (baym1(i))
+write(29,10) (baym2(i))
 end do
 
 write (29,*) ' '
 write (29,*) ' Joint probability of Poor suitability class'
 do i=1,n
-write(29,10) (bayp1(i))
+write(29,10) (bayp2(i))
 end do
 
 write (29,*) ' '
 write (29,*) ' Joint probability of Bad suitability class'
 do i=1,n
-write(29,10) (bayb1(i))
+write(29,10) (bayb2(i))
 end do
 
 print *, 'Calculating suitability'
@@ -110,7 +110,7 @@ print *, ' '
 
 do i=1,n
 hs(i)=bhigh(i)+bgood(i)+bmoderate(i)+bpoor(i)+bbad(i)
-if (hs(i)<=0) then
+if (bayg1(i)<=0 .and. bayh1(i)<=0 .and. baym1(i)<=0 .and. bayp1(i)<=0 .and. bayb1(i)<=0) then
 suitability(i)=-1
 else
 suitability(i)=hs(i)

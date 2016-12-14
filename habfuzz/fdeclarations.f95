@@ -39,6 +39,7 @@ real, dimension(rsize) :: dvs, ds, dm, dd, dvd
 integer :: proc, scenario, dfuzz
 real, dimension(rsize) :: high, good, moderate, poor, bad, hs
 real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs, bayh1, bayg1, baym1, bayp1, bayb1
+real, dimension(rsize) :: bayh2, bayg2, baym2, bayp2, bayb2
 
 !Used by smod.f95
 real, dimension(rsize,4) :: h

@@ -172,6 +172,7 @@ bayp(i,30)=uvh(i)*ds(i)*mg(i)*1
 bayp(i,31)=uvh(i)*dm(i)*bld(i)*0.5
 bayp(i,32)=uvh(i)*dm(i)*ls(i)*0.5
 bayp(i,33)=uvh(i)*dm(i)*ss(i)*1
+end do
 
 bayg1=sum(bayg, dim=2)
 baym1=sum(baym, dim=2)
@@ -179,11 +180,18 @@ bayh1=sum(bayh, dim=2)
 bayp1=sum(bayp, dim=2)
 bayb1=sum(bayb, dim=2)
 
-bgood=0.7*bayg1
-bmoderate=0.5*baym1
-bhigh=0.9*bayh1
-bpoor=0.3*bayp1
-bbad=0.1*bayb1
+do i=1,n
+bayh2(i)=bayh1(i)/(bayh1(i)+bayg1(i)+baym1(i)+bayp1(i)+bayb1(i))
+bayg2(i)=bayg1(i)/(bayh1(i)+bayg1(i)+baym1(i)+bayp1(i)+bayb1(i))
+baym2(i)=baym1(i)/(bayh1(i)+bayg1(i)+baym1(i)+bayp1(i)+bayb1(i))
+bayp2(i)=bayp1(i)/(bayh1(i)+bayg1(i)+baym1(i)+bayp1(i)+bayb1(i))
+bayb2(i)=bayb1(i)/(bayh1(i)+bayg1(i)+baym1(i)+bayp1(i)+bayb1(i))
 end do
+
+bgood=0.7*bayg2
+bmoderate=0.5*baym2
+bhigh=0.9*bayh2
+bpoor=0.3*bayp2
+bbad=0.1*bayb2
 
 end subroutine rules
