@@ -8,8 +8,7 @@
 IMPORTANT  
 Some antivirus software may falsely alarm you or prevent you from installing.
 But no, you will find no malware here.  
-Just add Habfuzz in your antivirus' trusted files
-
+Just add Habfuzz in your antivirus' trusted files.
 Habfuzz is a FORTRAN tool, which calculates the instream hydraulic habitat suitability by utilizing  
 1.	Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
 2.	The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.
