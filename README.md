@@ -6,7 +6,7 @@
 ![](https://img.shields.io/badge/topic-Hydraulic Habitat Modelling-blue.svg)
   
 IMPORTANT  
-Some antivirus software may faulsely alarm you or prevent you from installing.
+Some antivirus software may falsely alarm you or prevent you from installing.
 But no, you will find no malware here.  
 Just add Habfuzz in your antivirus' trusted files
 
