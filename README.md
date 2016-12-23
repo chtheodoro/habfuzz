@@ -1,4 +1,4 @@
-![habfuzz_dos_logo](https://cloud.githubusercontent.com/assets/21544603/21456690/b692bc84-c932-11e6-81db-c2e3faf02808.png)
+![habfuzz_dos_small](https://cloud.githubusercontent.com/assets/21544603/21458353/8a983ab2-c93e-11e6-8170-f33bc2c45703.png)
 
 
 [![DOI](https://zenodo.org/badge/68698452.svg)](https://zenodo.org/badge/latestdoi/68698452)
