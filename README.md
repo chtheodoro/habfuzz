@@ -7,7 +7,7 @@
   
 IMPORTANT  
 Some antivirus software may faulsely alarm you or prevent you from installing.
-But, no, you will find no malware here.  
+But no, you will find no malware here.  
 Just add Habfuzz in your antivirus' trusted files
 
 Habfuzz is a FORTRAN tool, which calculates the instream hydraulic habitat suitability by utilizing  
