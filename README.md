@@ -7,12 +7,13 @@
 ![](https://img.shields.io/badge/topic-Habitat Modelling-blue.svg)
 
 ### What’s new on version 2.0?
-Habfuzz is now fully automated! Just input your data and get the results! No need for rule files. The software is data-driven and calculates everything it needs internally! 
+a. Habfuzz is now fully automated! Just input your data and get the results! No need for rule files. The software is data-driven and calculates everything it needs internally! 
 
-Ten-fold cross validation is also internally applied to calculate model performance as the percentage of correctly classified instances.
+b. Ten-fold cross validation is also internally applied to calculate model performance as the percentage of correctly classified instances.
 
 ### Why Habfuzz?
 Habfuzz is a fully automated software, which calculates the instream habitat suitability by utilizing
+
 a. Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and
 
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
@@ -74,6 +75,7 @@ Habfuzz can then be executed from the command line by typing
 
 ### Usage
 Please consult the Habfuzz manual.
+
 ### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
 
