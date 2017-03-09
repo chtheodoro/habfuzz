@@ -69,8 +69,7 @@ Habfuzz can then be executed from the command line by typing
 ###### ./habfuzz
 
 ### Usage
-Please consult the Habfuzz manual located in the 'documentation' folder or available at https://github.com/chtheodoro/habfuzz/tree/master/documentation
-
+Please consult the Habfuzz manual.
 ### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada. Available at http://www.iemss.org/iemss2010/papers/S20/S.20.07.Model%20selection%20and%20uncertainty%20A%20comparison%20of%20Fuzzy,%20Bayesian%20and%20Weighted%20Average%20formulations%20of%20an%20instream%20habitat%20suitability%20model%20-%20CHRISTOPHER%20BROOKES.pdf
 
