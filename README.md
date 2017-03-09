@@ -27,11 +27,14 @@ For Mac users, Xcode (download at https://developer.apple.com/xcode/) with its r
 Habfuzz has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run Habfuzz.
 
 #### Windows users
-If you only need to run Habfuzz without modifications, just double-click the habfuzz.exe located in the ‘habfuzz’ subfolder. If you need to modify the source code of Habfuzz (which is very probable), re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file (which automatically applies the compilation commands), or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands
+If the user needs to modify the source code of Habfuzz, re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands:
 
 ###### gfortran -c fdeclarations.f95
 
-###### gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
+###### gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 tester.f95 ftester.f95 performance.f95
+
+###### del *.o
+###### del *.mode
 
 habfuzz.exe will then be replaced by the newly compiled one, being ready to run.
 
@@ -44,7 +47,7 @@ to install the compiler. Having gfortran installed, the commands necessary to co
 
 ###### gfortran -c fdeclarations.f95
 
-###### gfortran fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95 –o habfuzz
+###### gfortran habfuzz.f95 fdeclarations.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 tester.f95 ftester.f95 performance.f95 –o habfuzz
 
 Be careful to write exactly the abovementioned commands, arranging the source files in the order given above. Then you can run habfuzz by typing
 
@@ -59,7 +62,7 @@ or manually type the commands
 
 ###### gfortran -c fdeclarations.f95
 
-###### gfortran -o habfuzz fdeclarations.f95 habfuzz.f95 hfbayes.f95 rules.f95 fuzzifier.f95 smod.f95 swors.f95 sopt.f95 centroid.f95 maxmem.f95 waver.f95 meanmax.f95
+###### gfortran -o habfuzz fdeclarations.f95 habfuzz.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 tester.f95 ftester.f95 performance.f95
 
 Habfuzz can then be executed from the command line by typing
 
@@ -77,11 +80,6 @@ Controller. International Journal of Man-Machine Studies 7: 1-13.
 Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John Wiley and Sons, UK.
 
 Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
-
-### What's next
-
-1. Upcoming version 2.0 with fully automated interface and k-fold cross validation
-2. Triangular-shaped membership functions
 
 ### Contact Information
 
@@ -108,4 +106,4 @@ Email. stamou@central.ntua.gr
 URL. https://www.hydro.ntua.gr/?set_language=en  
 
 ### Contributing
-To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed. Unit tests are available in the 'tests' subfolder.
+To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
