@@ -3,9 +3,8 @@
 [![DOI](https://zenodo.org/badge/68698452.svg)](https://zenodo.org/badge/latestdoi/68698452)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/topic-Hydrodynamic Habitat Modelling-blue.svg)
-
 ![](https://img.shields.io/badge/version-2.0-red.svg)
+![](https://img.shields.io/badge/topic-Hydrodynamic Habitat Modelling-blue.svg)
 
 ### What’s new on version 2.0?
 A.	Habfuzz is now fully automated! Just input your data and get the results! No need for rule files. The software is data-driven and calculates everything it needs internally!  
