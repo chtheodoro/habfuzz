@@ -5,6 +5,8 @@
 ![](http://www.repostatus.org/badges/latest/active.svg)
 ![](https://img.shields.io/badge/topic-Hydrodynamic Habitat Modelling-blue.svg)
 
+![](https://img.shields.io/badge/version-2.0-red.svg)
+
 ### What’s new on version 2.0?
 A.	Habfuzz is now fully automated! Just input your data and get the results! No need for rule files. The software is data-driven and calculates everything it needs internally!  
 B.	Ten-fold cross validation is also internally applied to calculate model performance as the percentage of correctly classified instances.
