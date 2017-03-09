@@ -7,14 +7,15 @@
 ![](https://img.shields.io/badge/topic-Habitat Modelling-blue.svg)
 
 ### What’s new on version 2.0?
-1. Habfuzz is now fully automated! Just input your data and get the results! No need for rule files. The software is data-driven and calculates everything it needs internally!  
-2. Ten-fold cross validation is also internally applied to calculate model performance as the percentage of correctly classified instances.
+Habfuzz is now fully automated! Just input your data and get the results! No need for rule files. The software is data-driven and calculates everything it needs internally! 
+
+Ten-fold cross validation is also internally applied to calculate model performance as the percentage of correctly classified instances.
 
 ### Why Habfuzz?
-Habfuzz is a fully automated software, which calculates the instream habitat suitability by utilizing. 
+Habfuzz is a fully automated software, which calculates the instream habitat suitability by utilizing
 
-1. Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
-2. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
+a. Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
+b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
 It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bayesian-based instream habitat suitability for fish or freshwater macroinvertebrates along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
 
