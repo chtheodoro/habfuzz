@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/68698452.svg)](https://zenodo.org/badge/latestdoi/68698452)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/version-2.0-orange.svg)
+![](https://img.shields.io/badge/version-2.0-black.svg)
 ![](https://img.shields.io/badge/topic-Habitat Modelling-blue.svg)
 
 ### What’s new on version 2.0?
@@ -22,8 +22,8 @@ It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bay
 
 Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. Or for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project.
 
-### Dependencies
-  
+### Dependencie
+  
 It is advised to install the GNU Fortran Compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries) to quickly compile Habfuzz through the relevant Windows and OS X files (however, experienced users may also use their preferred compilers).
 
 For Mac users, Xcode (download at https://developer.apple.com/xcode/) with its relevant Command Line Tools should be installed to enable compiling through the GNU Fortran Compiler.
