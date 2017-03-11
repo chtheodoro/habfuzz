@@ -22,7 +22,7 @@ It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bay
 
 Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. Or for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project.
 
-### Dependencie
+### Dependencies
   
 It is advised to install the GNU Fortran Compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries) to quickly compile Habfuzz through the relevant Windows and OS X files (however, experienced users may also use their preferred compilers).
 
