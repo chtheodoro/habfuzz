@@ -113,5 +113,5 @@ URL. https://www.hydro.ntua.gr/?set_language=en
 To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
 
 ### Credits
-Software logo: http://www.onlinelogomaker.com
-Software ico: <a href='http://www.freepik.com/free-vector/water-drop-logo_797590.htm'>Designed by Freepik</a>
+Software logo designed using http://www.onlinelogomaker.com  
+Software ico <a href='http://www.freepik.com/free-vector/water-drop-logo_797590.htm'>Designed by Freepik</a>
