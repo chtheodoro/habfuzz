@@ -30,7 +30,7 @@ x2bad(i)=bb-bad(i)*bb+bad(i)*bm
 aa(i,zz)=((x1bad(i)+x2bad(i))/2)/5
 end if
 else
-aa(i,zz)=-1
+aa(i,zz)=aa(i-1,zz)
 end if
 end do
 
