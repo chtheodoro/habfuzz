@@ -20,7 +20,7 @@ aa(i,zz)=0.1
 end if
 
 else
-aa(i,zz)=-1
+aa(i,zz)=aa(i-1,zz)
 end if
 end do
 
