@@ -265,7 +265,7 @@ end do
 do i=1,z
 hs(i)=bhigh(i)+bgood(i)+bmoderate(i)+bpoor(i)+bbad(i)
 if (bayg1(i)<=0 .and. bayh1(i)<=0 .and. baym1(i)<=0 .and. bayp1(i)<=0 .and. bayb1(i)<=0) then
-suitability(i,zz)=-1
+suitability(i,zz)=suitability(i-1,zz)
 else
 suitability(i,zz)=hs(i)
 end if
