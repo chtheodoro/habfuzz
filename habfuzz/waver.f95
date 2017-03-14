@@ -50,8 +50,8 @@ suitability(i,zz)=(xint(i)/yint(i))/5
 else if (l==2) then
 s(i,zz)=(xint(i)/yint(i))/5
 else
-suitability(i,zz)=-1
-s(i,zz)=-1
+suitability(i,zz)=suitability(i-1,zz)
+s(i,zz)=s(i-1,zz)
 end if
 end if
 end do
