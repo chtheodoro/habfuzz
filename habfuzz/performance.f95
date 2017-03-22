@@ -18,6 +18,16 @@ comatrix(i,1,zz)=3
 end if
 end do
 
+!do i=1,z
+!if (suitability(i,zz)<=0.3) then
+!comatrix(i,1,zz)=1
+!else if (suitability(i,zz)>0.3 .and. suitability(i,zz)<=0.6) then
+!comatrix(i,1,zz)=2
+!else if (suitability(i,zz)>0.6 .and. suitability(i,zz)<=1) then
+!comatrix(i,1,zz)=3
+!end if
+!end do
+
 do i=1,z
 if (co1matrix(i,zz)<=0.2) then
 comatrix(i,2,zz)=1
@@ -32,31 +42,12 @@ comatrix(i,2,zz)=3
 end if
 end do
 
-!For 3 classes of IHS
 !do i=1,z
-!if (suitability(i,zz)<=0.2) then
-!comatrix(i,1,zz)=1
-!else if (suitability(i,zz)>0.2 .and. suitability(i,zz)<=0.3) then
-!comatrix(i,1,zz)=1
-!else if (suitability(i,zz)>0.3 .and. suitability(i,zz)<=0.6) then
-!comatrix(i,1,zz)=2
-!else if (suitability(i,zz)>0.6 .and. suitability(i,zz)<=0.8) then
-!comatrix(i,1,zz)=3
-!else if (suitability(i,zz)>0.8) then
-!comatrix(i,1,zz)=3
-!end if
-!end do
-
-!do i=1,z
-!if (co1matrix(i,zz)<=0.2) then
-!comatrix(i,2,zz)=1
-!else if (co1matrix(i,zz)>0.2 .and. co1matrix(i,zz)<=0.3) then
+!if (co1matrix(i,zz)<=0.3) then
 !comatrix(i,2,zz)=1
 !else if (co1matrix(i,zz)>0.3 .and. co1matrix(i,zz)<=0.6) then
 !comatrix(i,2,zz)=2
-!else if (co1matrix(i,zz)>0.6 .and. co1matrix(i,zz)<=0.8) then
-!comatrix(i,2,zz)=3
-!else if (co1matrix(i,zz)>0.8) then
+!else if (co1matrix(i,zz)>0.6 .and. co1matrix(i,zz)<=1) then
 !comatrix(i,2,zz)=3
 !end if
 !end do

@@ -17,7 +17,7 @@ bad(1:n)=(/0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.333, 0.000, 0.000,
 
 call centroid
 do i=1,n
-call assert_equals(ref(i), suitability(i)*0.2, 0.02)
+call assert_equals(ref(i), suitability(i,1)*0.2, 0.02)
 end do
 
 
