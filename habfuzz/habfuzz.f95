@@ -33,7 +33,6 @@ write(*,*) 'of the instream hydraulic habitat suitability'
 write(*,*) ' '
 write(*,*) 'Fully automated with 10-fold cross-validation capability'
 write(*,*) 'Just provide your input data matrix and get the resulting suitability'
-write(*,*)
 write(*,*) 'If you need assistance contact us at ctheodor@hcmr.gr'
 write(*,*)
 write(*,*) 'Press ENTER to start'
