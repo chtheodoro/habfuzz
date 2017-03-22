@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/68698452.svg)](https://zenodo.org/badge/latestdoi/68698452)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/version-2.0-green and.svg)
+![](https://img.shields.io/badge/version-2.0-green.svg)
 ![](https://img.shields.io/badge/topic-Habitat_modelling-blue.svg)
 
 ### What’s new on version 2.0?
