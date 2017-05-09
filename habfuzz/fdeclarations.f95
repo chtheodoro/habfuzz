@@ -10,7 +10,7 @@ co1matrix, aa
 real, dimension(:,:,:), allocatable :: bmatrix, fmatrix, mmatrix, p11matrix, comatrix
 
 !The maximum array size - this should be re-defined if the elements of the input arrays exceed 3000
-integer, parameter :: rsize = 3000, w = 5
+integer, parameter :: rsize = 5170, w = 5
 
 !------------------------------------------------------------------------------------------------!
 !Trapezoidal-shaped membership functions for flow velocity (V), water depth (D), temperature (T) !
