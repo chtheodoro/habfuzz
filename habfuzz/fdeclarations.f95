@@ -39,7 +39,7 @@ real, parameter :: tvha = 25, tvhb = 27                           !The VERY HIGH
 
 !Internal variables
 real, dimension(rsize) :: uvl, ul, um, uh, uvh
-real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4
+real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi
 real, dimension(rsize) :: dvs, ds, dm, dd, dvd
 real, dimension(rsize) :: tvl, tl, tm, th, tvh
 integer :: proc, scenario, dfuzz, cci

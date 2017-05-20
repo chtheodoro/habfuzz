@@ -28,8 +28,8 @@ write(*,*) '@@   @@  @@   @@  @@@@@   @@       @@@@@@   @@@@@@  @@@@@@'
 write(*,*) ' '
 write(*,*) 'Habfuzz+ 2.0'
 write(*,*) ' '
-write(*,*) 'Fuzzy logic and fuzzy Bayesian inference for the calculation'
-write(*,*) 'of the instream hydraulic habitat suitability'
+write(*,*) 'The open software for data-driven fuzzy aquatic'
+write(*,*) 'habitat suitability modelling'
 write(*,*) ' '
 write(*,*) 'Fully automated with 10-fold cross-validation capability'
 write(*,*) 'Just provide your input data matrix and get the resulting suitability'
@@ -338,6 +338,7 @@ z=n
 zz=1
 call tester
 end if
+osi=real(sum(s))
 
 open (unit=39, file='bmatrix.txt', status='old', action='read')
 close (39, status='delete')
@@ -349,6 +350,8 @@ write(*,*) ' '
 write(*,*) 'Finished!'
 write(*,*) ' '
 write(*,*) 'Overall model performance', cci, '%'
+write(*,100) ' Overall suitability index        ', osi
+100 format (a,10f10.3)
 write(*,*) ' '
 print *, 'Writing results to files...'
 print *, ' '
