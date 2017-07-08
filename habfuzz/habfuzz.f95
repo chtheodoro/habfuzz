@@ -338,7 +338,17 @@ z=n
 zz=1
 call tester
 end if
+allocate(cs(ee))
+do i=1,ee
+if (s(i,zz)>0) then
+cs(i)=1
+else
+cs(i)=0
+end if
+end do
 osi=real(sum(s))
+nosi=osi/(sum(cs))
+print *, cs
 
 open (unit=39, file='bmatrix.txt', status='old', action='read')
 close (39, status='delete')
@@ -350,7 +360,8 @@ write(*,*) ' '
 write(*,*) 'Finished!'
 write(*,*) ' '
 write(*,*) 'Overall model performance', cci, '%'
-write(*,100) ' Overall suitability index        ', osi
+write(*,100) ' Overall Suitability Index - OSI  ', osi
+write(*,100) ' Normalized OSI                ', nosi
 100 format (a,10f10.3)
 write(*,*) ' '
 print *, 'Writing results to files...'
