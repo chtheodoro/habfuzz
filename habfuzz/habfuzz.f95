@@ -348,7 +348,6 @@ end if
 end do
 osi=real(sum(s))
 nosi=osi/(sum(cs))
-print *, cs
 
 open (unit=39, file='bmatrix.txt', status='old', action='read')
 close (39, status='delete')
