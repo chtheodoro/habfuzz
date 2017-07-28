@@ -120,6 +120,21 @@ print *, 'Calculating suitability...'
 call sleep(2)
 write(*,*) ' '
 
+do i=1,ee
+if (testmat(i,2)>0) then
+if (high(i)<=0 .and. good(i)<=0 .and. moderate(i)<=0 .and. poor(i)<=0 .and. bad(i)<=0) then
+s(i,zz)=s(i-1,zz)
+cer(i,zz)=0
+else
+s(i,zz)=hs(i)
+cer(i,zz)=1
+end if
+else
+s(i,zz)=0
+cer(i,zz)=1
+end if
+end do
+
 open(19, file='suitability.txt', action='write', status='replace')
 do i=1,ee
 write(*,*) 'Habitat suitability calculation for test microhabitat', i, 'successful'

@@ -103,7 +103,7 @@ cmatrix(i,4)=5
 end if
 end do
 
-!T classification in 2 classes
+!T classification in 1 class
 !tcl1=(tvla+tvlb)/2
 !tcl2=(tlc+tld)/2
 !tcl3=(tmc+tmd)/2
@@ -116,9 +116,9 @@ end do
 !else if (dmatrix(i,4)>tcl2 .and. dmatrix(i,4)<=tcl3) then
 !cmatrix(i,4)=1
 !else if (dmatrix(i,4)>tcl3 .and. dmatrix(i,4)<=tcl4) then
-!cmatrix(i,4)=2
+!cmatrix(i,4)=1
 !else if (dmatrix(i,4)>tcl4) then
-!cmatrix(i,4)=2
+!cmatrix(i,4)=1
 !end if
 !end do
 

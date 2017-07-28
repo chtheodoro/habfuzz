@@ -6,7 +6,7 @@ real, dimension(:), allocatable :: icci
 integer :: z,zz,ff,i,n,k,j,jj,e,ee,f,nn,ii,col1,col2,col3,col4,l,o
 real, dimension(:,:), allocatable :: matrix, cmatrix, rmatrix, amatrix, pmatrix, p1matrix, &
 p2matrix, p22matrix, uf, df, tf, sf, imatrix, dmatrix, ematrix, suitability, testmat, s, &
-co1matrix, aa
+co1matrix, aa, cer
 real, dimension(:,:,:), allocatable :: bmatrix, fmatrix, mmatrix, p11matrix, comatrix
 
 !The maximum array size - this should be re-defined if the elements of the input arrays exceed 3000
@@ -42,13 +42,13 @@ real, dimension(rsize) :: uvl, ul, um, uh, uvh
 real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi, nosi
 real, dimension(rsize) :: dvs, ds, dm, dd, dvd
 real, dimension(rsize) :: tvl, tl, tm, th, tvh
-integer :: proc, scenario, dfuzz, cci
+integer :: proc, scenario, dfuzz, cci, cert, habc, haba
 real, dimension(rsize) :: hs
 real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs
 real, dimension(rsize) :: bayh1, bayg1, baym1, bayp1, bayb1
 real, dimension(rsize) :: bayh2, bayg2, baym2, bayp2, bayb2
 real, dimension(:,:), allocatable :: bayh, bayg, baym, bayp, bayb
-real, dimension(:), allocatable :: high, good, moderate, poor, bad, cs 
+real, dimension(:), allocatable :: high, good, moderate, poor, bad, cs, habcon, gwet 
 
 !Variables of the defuzzification process
 real, dimension(rsize) :: xbad, x1bad, x2bad, xpoor, x1poor, x2poor, xmod, x1mod, x2mod, xgood, x1good, x2good

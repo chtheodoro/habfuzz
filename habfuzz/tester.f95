@@ -6,6 +6,7 @@ open (unit=79, file='testdata.txt', status='old', action='read')
 read (79,*) ee
 
 allocate(s(ee,zz))
+allocate(cer(ee,zz))
 allocate(testmat(ee,w-1))
 
 do i=1,ee
@@ -180,16 +181,21 @@ do i=1,ee
 write(49,10) (bayb2(i))
 end do
 
+s(:,:)=0.01
+s(0,:)=0.01
 do i=1,ee
 hs(i)=bhigh(i)+bgood(i)+bmoderate(i)+bpoor(i)+bbad(i)
 if (testmat(i,2)>0) then
 if (bayg1(i)<=0 .and. bayh1(i)<=0 .and. baym1(i)<=0 .and. bayp1(i)<=0 .and. bayb1(i)<=0) then
 s(i,zz)=s(i-1,zz)
+cer(i,zz)=0
 else
 s(i,zz)=hs(i)
+cer(i,zz)=1
 end if
 else
 s(i,zz)=0
+cer(i,zz)=1
 end if
 end do
 

@@ -26,7 +26,7 @@ write(*,*) '@@@@@@@  @@@@@@@  @@@@@   @@@@@   @@    @@   @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@  @@  @@      @@    @@  @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@@@@   @@       @@@@@@   @@@@@@  @@@@@@'
 write(*,*) ' '
-write(*,*) 'Habfuzz+ 2.0'
+write(*,*) 'Habfuzz 2.2'
 write(*,*) ' '
 write(*,*) 'The open software for data-driven fuzzy aquatic'
 write(*,*) 'habitat suitability modelling'
@@ -34,7 +34,11 @@ write(*,*) ' '
 write(*,*) 'Fully automated with 10-fold cross-validation capability'
 write(*,*) 'Just provide your input data matrix and get the resulting suitability'
 write(*,*) 'If you need assistance contact us at ctheodor@hcmr.gr'
-write(*,*)
+write(*,*) ' '
+write(*,*) 'This version includes temperature in the calculations'
+write(*,*) 'If you do not need to include temperature, please download Habfuzz at'
+write(*,*) 'https://github.com/chtheodoro/habfuzz'
+write(*,*) ' '
 write(*,*) 'Press ENTER to start'
 read(*,*)
 
@@ -339,6 +343,9 @@ zz=1
 call tester
 end if
 allocate(cs(ee))
+allocate(habcon(ee))
+allocate(gwet(ee))
+
 do i=1,ee
 if (s(i,zz)>0) then
 cs(i)=1
@@ -346,8 +353,29 @@ else
 cs(i)=0
 end if
 end do
+
+!Habitat connectivity (habcon and habc)
+do i=1,ee
+if (testmat(i,2)>0 .and. s(i,zz)>0.6) then
+gwet(i)=1
+else
+gwet(i)=0
+end if
+end do
+
+do i=1,ee
+if (s(i-1,zz)>0.6 .and. s(i,zz)>0.6) then
+habcon(i)=1
+else
+habcon(i)=0
+end if
+end do
+
 osi=real(sum(s))
 nosi=osi/(sum(cs))
+cert=anint((sum(cer)/ee)*100)
+habc=anint((sum(habcon)/sum(gwet))*100)
+haba=anint((sum(habcon)/ee)*100)
 
 open (unit=39, file='bmatrix.txt', status='old', action='read')
 close (39, status='delete')
@@ -359,8 +387,12 @@ write(*,*) ' '
 write(*,*) 'Finished!'
 write(*,*) ' '
 write(*,*) 'Overall model performance', cci, '%'
+write(*,*) 'Certainty of prediction  ', cert, '%'
+write(*,*) 'Habitat connectivity     ', habc, '%'
+write(*,*) 'Habitat availability     ', haba, '%'
 write(*,100) ' Overall Suitability Index - OSI  ', osi
 write(*,100) ' Normalized OSI                ', nosi
+
 100 format (a,10f10.3)
 write(*,*) ' '
 print *, 'Writing results to files...'
@@ -371,6 +403,7 @@ print *, 'End of process'
 print *, 'Please check the created file suitability.txt'
 print *, ' '
 write(*,*) 'Thank you for using HABFUZZ!'
+print *, char(7)
 write(*,*) 'Press ENTER to exit'
 read(*,*)
 10 format (10f7.3)
