@@ -9,17 +9,17 @@
 ### What’s new on Habfuzz+ 2.2?
 a. Habfuzz+ is fully automated! Input your data and get the results! The software is data-driven and calculates everything it needs internally!
 
-b. Plus-version includes temperature (or shading) in the habitat suitability calculations (if you only intend to include flow velocity, water depth and substrate type, please download the original version of Habfuzz 2.2 at https://github.com/chtheodoro/habfuzz.
+b. Plus-version includes temperature (or shading) in the habitat suitability calculations (if you only intend to include flow velocity, water depth and substrate type, please download the 'original' version at https://github.com/chtheodoro/habfuzz.
 
 c. Ten-fold cross validation is also internally applied to calculate model performance as the percentage of correctly classified instances.
 
 d. New habitat suitability metrics added:  
-i.  Overall Suitability Index (OSI) - The sum of all habitat suitability values of the computational mesh    
-ii. Normalized OSI (nOSI) - OSI normalized by dividing with the number of wetted nodes in the mesh  
-iii.Certainty of prediction (COP): The ratio of the No. of microhabitat combinations actually found in the training dataset to the total No. of cells in the computational mesh; Habfuzz applies a trick when a microhabitat combination is not found in the training dataset and instead of returning some arbitrary K value for a particular cell (e.g. -1), it uses the K value of its neighboring cell in the domain  
-iv.Percentage of wetted cells in the computational mesh at each Q scenario (w)  
-v. Habitat connectivity (C): The ratio of connected (neighboring) cells with habitat suitability higher than 0.6 to the total number of wetted cells with habitat suitability higher than 0.6  
-vi.Habitat availability (A): The ratio of connected (neighboring) cells with habitat suitability higher than 0.6 to the total number of cells in the study reach (wetted and dry)  
+i.   Overall Suitability Index (OSI) - The sum of all habitat suitability values of the computational mesh    
+ii.  Normalized OSI (nOSI) - OSI normalized by dividing with the number of wetted nodes in the mesh  
+iii. Certainty of prediction (COP): The ratio of the No. of microhabitat combinations actually found in the training dataset to the total No. of cells in the computational mesh; Habfuzz applies a trick when a microhabitat combination is not found in the training dataset and instead of returning some arbitrary K value for a particular cell (e.g. -1), it uses the K value of its neighboring cell in the domain  
+iv.  Percentage of wetted cells in the computational mesh at each Q scenario (w)  
+v.   Habitat connectivity (C): The ratio of connected (neighboring) cells with habitat suitability higher than 0.6 to the total number of wetted cells with habitat suitability higher than 0.6  
+vi.  Habitat availability (A): The ratio of connected (neighboring) cells with habitat suitability higher than 0.6 to the total number of cells in the study reach (wetted and dry)  
  
 ### Why Habfuzz?
 Habfuzz is a fully automated software, which calculates the instream habitat suitability by utilizing
