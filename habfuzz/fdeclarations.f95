@@ -1,9 +1,9 @@
 module fdeclarations
 implicit none
 
-integer, dimension(:), allocatable :: a, bins, iimatrix
+integer, dimension(:), allocatable :: a, bins, iimatrix, a1
 real, dimension(:), allocatable :: icci
-integer :: z,zz,ff,i,n,k,j,jj,e,ee,f,nn,ii,col1,col2,col3,col4,l,o
+integer :: z,zz,ff,i,n,k,j,jj,e,ee,f,nn,ii,col1,col2,col3,col4,l,o,v
 real, dimension(:,:), allocatable :: matrix, cmatrix, rmatrix, amatrix, pmatrix, p1matrix, &
 p2matrix, p22matrix, uf, df, tf, sf, imatrix, dmatrix, ematrix, suitability, testmat, s, &
 co1matrix, aa, cer
@@ -42,7 +42,7 @@ real, dimension(rsize) :: uvl, ul, um, uh, uvh
 real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi, nosi
 real, dimension(rsize) :: dvs, ds, dm, dd, dvd
 real, dimension(rsize) :: tvl, tl, tm, th, tvh
-integer :: proc, scenario, dfuzz, cci, cert, habc, haba
+integer :: proc, scenario, dfuzz, cci, cert, habc, haba, cross
 real, dimension(rsize) :: hs
 real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs
 real, dimension(rsize) :: bayh1, bayg1, baym1, bayp1, bayb1

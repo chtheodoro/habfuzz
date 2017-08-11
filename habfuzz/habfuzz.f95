@@ -1,4 +1,4 @@
-!HABFUZZ+ 2.0
+!HABFUZZ+ 2.3
 !Copyright © 2017 Christos Theodoropoulos
     
 !Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +26,7 @@ write(*,*) '@@@@@@@  @@@@@@@  @@@@@   @@@@@   @@    @@   @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@  @@  @@      @@    @@  @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@@@@   @@       @@@@@@   @@@@@@  @@@@@@'
 write(*,*) ' '
-write(*,*) 'Habfuzz+ 2.2'
+write(*,*) 'Habfuzz+ 2.3'
 write(*,*) ' '
 write(*,*) 'The open software for data-driven fuzzy aquatic'
 write(*,*) 'habitat suitability modelling'
@@ -48,8 +48,8 @@ read (99,*) n
 open (unit=89, file='refdata.txt', status='old', action='read') !The reference data matrix to acquire all class combinations
 read (89,*) e
 
-allocate(rmatrix(e,w-1))
-allocate(matrix(n,w))
+allocate(rmatrix(e,w-1)) !Allocate the data matrix
+allocate(matrix(n,w)) !Allocate the reference data matrix
 allocate(cmatrix(n,w)) !This initiates the matrix where the train data are classified row by row
 o=90*n
 if (mod(o,100)==0) then
@@ -58,6 +58,7 @@ else
 ii=int(o)/100
 end if
 z=n-ii
+allocate(a1(n*10))
 allocate(suitability(z,10))
 allocate(aa(z,10))
 allocate(comatrix(z,3,10))
@@ -76,11 +77,17 @@ print *, 'Select modelling method'
 print *, '1: Fuzzy logic'
 print *, '2: Fuzzy Bayesian inference'
 read *, proc
+print *, ' '
+print *, 'Select cross-validation scheme'
+print *, '1: Monte Carlo'
+print *, '2: Ten fold'
+read *, cross
 
 if (proc==1) then
 call fuzzy
 else
 
+if (cross==1) then
 write(*,*) ' '
 write(*,*) 'Initializing fuzzy Bayesian inference...'
 call sleep(2)
@@ -313,6 +320,9 @@ end do
 write(*,*) ' '
 write(*,*) 'End of cross-validation process!'
 write(*,*) ' '
+else if (cross==2) then
+call tencrossval
+end if
 
 !open(119, file='loga.txt', action='write', status='replace')
 !open(109, file='logb.txt', action='write', status='replace')
