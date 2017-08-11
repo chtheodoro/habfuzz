@@ -6,12 +6,12 @@
 ![](https://img.shields.io/badge/version-2.2-green.svg)
 ![](https://img.shields.io/badge/topic-Habitat_modelling-blue.svg)
 
-### What’s new on Habfuzz+ 2.2?
+### What’s new on Habfuzz+ 2.3?
 a. Habfuzz+ is fully automated! Input your data and get the results! The software is data-driven and calculates everything it needs internally!
 
 b. Plus-version includes temperature (or shading) in the habitat suitability calculations (if you only intend to include flow velocity, water depth and substrate type, please download the 'original' version at https://github.com/chtheodoro/habfuzz.
 
-c. Ten-fold cross validation is also internally applied to calculate model performance as the percentage of correctly classified instances.
+c. Option to select between Monte Carlo and ten-fold cross validation to calculate model's performance as the percentage of correctly classified instances.
 
 d. New habitat suitability metrics added:  
 i.   Overall Suitability Index (OSI) - The sum of all habitat suitability values of the computational mesh.  
