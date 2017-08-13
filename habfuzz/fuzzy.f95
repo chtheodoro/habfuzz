@@ -253,7 +253,7 @@ write(*,*) ' '
 !end do
 !write(*,*) 'icci'
 !write(*,*) icci
-cci=anint((sum(icci(1:10))/10)*100)
+cci=(sum(icci(1:10))/10)*100
 !write(*,*) cci
 
 call sleep(2)
