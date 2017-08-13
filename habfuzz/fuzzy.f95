@@ -228,7 +228,7 @@ close(59, status='keep')
 !close(19, status='keep')
 
 call performance
-write(*,*) 'Performance - CCI', int(icci(zz)*100), '%'
+write(*,44) ' Performance - CCI  ', icci(zz)*100, ' %'
 
 end do
 write(*,*) ' '
@@ -260,7 +260,7 @@ call sleep(2)
 z=n
 zz=1
 call tester
-
+44 format (a,f6.2,a)
 10 format (8f7.3)
 
 end subroutine fuzzy

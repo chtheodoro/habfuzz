@@ -314,7 +314,7 @@ close(59, status='keep')
 !close(19, status='keep')
 call performance
 
-write(*,*) 'Performance - CCI', int(icci(zz)*100), '%'
+write(*,44) ' Performance - CCI  ', icci(zz)*100, ' %'
 
 end do
 write(*,*) ' '
@@ -344,7 +344,7 @@ end if
 !end do
 !write(109,*) 'icci'
 !write(109,*) icci
-cci=anint((sum(icci(1:10))/10)*100)
+cci=(sum(icci(1:10))/10)*100
 !write(109,*) cci
 !close(109, status='keep')
 call sleep(2)
@@ -396,7 +396,7 @@ close (59, status='delete')
 write(*,*) ' '
 write(*,*) 'Finished!'
 write(*,*) ' '
-write(*,*) 'Overall model performance', cci, '%'
+write(*,44) ' Overall model performance      ', cci, ' %'
 write(*,*) 'Certainty of prediction  ', cert, '%'
 write(*,*) 'Habitat connectivity     ', habc, '%'
 write(*,*) 'Habitat availability     ', haba, '%'
@@ -404,6 +404,7 @@ write(*,100) ' Overall Suitability Index - OSI  ', osi
 write(*,100) ' Normalized OSI                ', nosi
 
 100 format (a,10f10.3)
+44 format (a,f6.2,a)
 write(*,*) ' '
 print *, 'Writing results to files...'
 print *, ' '
