@@ -60,5 +60,4 @@ comatrix(i,3,zz)=0
 end if
 icci(zz)=(sum(comatrix(1:z,3,zz)))/z
 end do
-
 end subroutine performance

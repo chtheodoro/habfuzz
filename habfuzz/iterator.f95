@@ -27,6 +27,7 @@ end do
 !end do
 !read(*,*)
 
+
 !do f=1,z
 !write(*,10) (ematrix(f,k), k=1,w)
 !end do

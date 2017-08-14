@@ -126,7 +126,7 @@ if (high(i)<=0 .and. good(i)<=0 .and. moderate(i)<=0 .and. poor(i)<=0 .and. bad(
 s(i,zz)=s(i-1,zz)
 cer(i,zz)=0
 else
-s(i,zz)=hs(i)
+s(i,zz)=s(i,zz)
 cer(i,zz)=1
 end if
 else
