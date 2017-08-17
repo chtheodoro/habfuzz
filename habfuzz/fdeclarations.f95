@@ -47,6 +47,7 @@ real, dimension(rsize) :: hs
 real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs
 real, dimension(rsize) :: bayh1, bayg1, baym1, bayp1, bayb1
 real, dimension(rsize) :: bayh2, bayg2, baym2, bayp2, bayb2
+real, dimension(rsize) :: ab, ap, am, ag, ah, cb, cp, cm, cg, ch
 real, dimension(:,:), allocatable :: bayh, bayg, baym, bayp, bayb
 real, dimension(:), allocatable :: high, good, moderate, poor, bad, cs, habcon, gwet 
 
@@ -54,6 +55,11 @@ real, dimension(:), allocatable :: high, good, moderate, poor, bad, cs, habcon, 
 real, dimension(rsize) :: xbad, x1bad, x2bad, xpoor, x1poor, x2poor, xmod, x1mod, x2mod, xgood, x1good, x2good
 real, dimension(rsize) :: xhigh, x1high, x2high, ybad, ypoor, ymod, ygood, yhigh, yint
 real, dimension(rsize) :: xint, xint2, xint3, xint4, xint5
+real, dimension(rsize) :: a1b, a2b, a3b, a1p, a2p, a3p, a4p, a5p, a1m, a2m, a3m, a4m, a5m, a1g, a2g, a3g, a4g, a5g, a1h, a2h, a3h
+real, dimension(rsize) :: c1b, c2b, c3b, c1p, c2p, c3p, c4p, c5p, c1m, c2m, c3m, c4m, c5m, c1g, c2g, c3g, c4g, c5g, c1h, c2h, c3h
+real, dimension(rsize) :: ibp, ipm, img, igh, actb, actp, actm, actg, acth, atb, atp, atm, atg, ath, ibpx, ipmx, imgx, ighx
+real, dimension(rsize) :: interb, interp1, interp2, interm1, interm2, interg1, interg2, interh
+real, dimension(rsize) :: slopeb, slopeh, slopep1, slopep2, slopem1, slopem2, slopeg1, slopeg2
 real :: ba=0, bm=0.5, bb=1, pa=1, pm=1.5, pb=2, ma=2, mm=2.5, mb=3, ga=3, gm=3.5, gb=4, ha=4, hm=4.5, hb=5
 
 end module fdeclarations
