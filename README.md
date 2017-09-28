@@ -16,10 +16,10 @@ c. Option to select between Monte Carlo and ten-fold cross validation to calcula
 d. New habitat suitability metrics added:  
 i.   Overall Suitability Index (OSI) - The sum of all habitat suitability values of the computational mesh.  
 ii.  Normalized OSI (nOSI) - OSI normalized by dividing with the number of wetted nodes in the mesh.  
-iii. Certainty of prediction (COP): The ratio of the No. of microhabitat combinations actually found in the training dataset to the total No. of cells in the computational mesh; Habfuzz applies a trick when a microhabitat combination is not found in the training dataset and instead of returning some arbitrary habitat suitability value for a particular cell (e.g. -1), it uses the value of its neighboring cell in the domain.  
-iv.  Percentage of wetted cells in the computational mesh at each Q scenario (w).  
-v.  Habitat connectivity (C): The ratio of connected (neighboring) cells with habitat suitability higher than 0.6 to the total number of wetted cells with habitat suitability higher than 0.6.  
-vi.  Habitat availability (A): The ratio of connected (neighboring) cells with habitat suitability higher than 0.6 to the total number of cells in the study reach (wetted and dry).  
+iii. Certainty of prediction (COP): The ratio of the No. of microhabitat combinations actually 'found' in the training dataset to the total No. of nodes in the computational mesh; Habfuzz applies a trick when a microhabitat combination is not found in the training dataset and instead of returning some arbitrary habitat suitability value for a particular node (e.g. -1), it uses the value of its neighboring node in the domain.  
+iv.  Percentage of wetted nodes in the computational mesh at each Q scenario (w).  
+v.  Habitat connectivity (C): The ratio of connected (neighboring) nodes with habitat suitability higher than 0.6 to the total number of wetted nodes with habitat suitability higher than 0.6.  
+vi.  Habitat availability (A): The ratio of connected (neighboring) nodes with habitat suitability higher than 0.6 to the total number of nodes in the study reach (wetted and dry).  
  
 ### Why Habfuzz?
 Habfuzz is a fully automated software, which calculates the instream habitat suitability by utilizing
