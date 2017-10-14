@@ -355,6 +355,7 @@ end if
 allocate(cs(ee))
 allocate(habcon(ee))
 allocate(gwet(ee))
+allocate(wet(ee))
 
 do i=1,ee
 if (s(i,zz)>0) then
@@ -381,6 +382,16 @@ habcon(i)=0
 end if
 end do
 
+!Wetted nodes
+do i=1,ee
+if (testmat(i,2)>0) then
+wet(i)=1
+else
+wet(i)=0
+end if
+end do
+
+pwet=sum(((wet)/ee)*100)
 osi=real(sum(s))
 nosi=osi/(sum(cs))
 cert=anint((sum(cer)/ee)*100)
@@ -397,9 +408,11 @@ write(*,*) ' '
 write(*,*) 'Finished!'
 write(*,*) ' '
 write(*,44) ' Overall model performance      ', cci, ' %'
+write(*,44) ' Percent wetted nodes           ', pwet, ' %'
 write(*,*) 'Certainty of prediction  ', cert, '%'
 write(*,*) 'Habitat connectivity     ', habc, '%'
 write(*,*) 'Habitat availability     ', haba, '%'
+
 write(*,100) ' Overall Suitability Index - OSI  ', osi
 write(*,100) ' Normalized OSI                ', nosi
 

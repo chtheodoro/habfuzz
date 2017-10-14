@@ -2,6 +2,7 @@ subroutine iterator10
 use fdeclarations
 
 implicit none
+
 j=90*n
 if (mod(j,100)==0) then
 ii=j/100
@@ -29,17 +30,16 @@ do i=1,z
 co1matrix(i,zz)=ematrix(i,5)
 end do
 
-!write(*,*) 'dmatrix'
+!open(69, file='dmatrix.txt', action='write', status='replace')!!!!!!!!!!!
+!write(69,*) 'dmatrix'
 !do f=1,ii
-!write(*,10) (dmatrix(f,k), k=1,w)
+!write(69,10) (dmatrix(f,k), k=1,w)
 !end do
-!read(*,*)
 
-!write(*,*) 'ematrix'
-!do f=1,z
-!write(*,10) (ematrix(f,k), k=1,w)
+!write(69,*) 'ematrix'
+!do fff=1,z
+!write(69,10) (ematrix(fff,k), k=1,w)
 !end do
-!read(*,*)
 
 !10 format (8f7.3)
 

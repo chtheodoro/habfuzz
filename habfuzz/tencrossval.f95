@@ -196,6 +196,7 @@ suitability(i,zz)=suitability(i-1,zz)
 else
 suitability(i,zz)=hs(i)
 end if
+
 end do
 
 !open(19, file='suitability.txt', action='write', status='replace')

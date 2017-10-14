@@ -39,7 +39,7 @@ real, parameter :: tvha = 25, tvhb = 27                           !The VERY HIGH
 
 !Internal variables
 real, dimension(rsize) :: uvl, ul, um, uh, uvh
-real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi, nosi, cci
+real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi, nosi, cci, pwet
 real, dimension(rsize) :: dvs, ds, dm, dd, dvd
 real, dimension(rsize) :: tvl, tl, tm, th, tvh
 integer :: proc, scenario, dfuzz, cert, habc, haba, cross
@@ -49,7 +49,7 @@ real, dimension(rsize) :: bayh1, bayg1, baym1, bayp1, bayb1
 real, dimension(rsize) :: bayh2, bayg2, baym2, bayp2, bayb2
 real, dimension(rsize) :: ab, ap, am, ag, ah, cb, cp, cm, cg, ch
 real, dimension(:,:), allocatable :: bayh, bayg, baym, bayp, bayb
-real, dimension(:), allocatable :: high, good, moderate, poor, bad, cs, habcon, gwet 
+real, dimension(:), allocatable :: high, good, moderate, poor, bad, cs, habcon, gwet, wet 
 
 !Variables of the defuzzification process
 real, dimension(rsize) :: xbad, x1bad, x2bad, xpoor, x1poor, x2poor, xmod, x1mod, x2mod, xgood, x1good, x2good

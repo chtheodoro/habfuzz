@@ -56,8 +56,8 @@ a1(10*n-(9*z-1):10*n)=a(1:9*z)
 !end do
 !write(*,*) ' '
 !read(*,*) 
-
 !10 format(8I7)
+
 contains
 
 subroutine init_random_seed()
