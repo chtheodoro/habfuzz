@@ -35,10 +35,6 @@ write(*,*) 'Fully automated with Monte Carlo and 10-fold cross-validation capabi
 write(*,*) 'Just provide your input data matrix and get the resulting suitability'
 write(*,*) 'If you need assistance contact us at ctheodor@hcmr.gr'
 write(*,*) ' '
-write(*,*) 'This version includes temperature in the calculations'
-write(*,*) 'If you do not need to include temperature, please download Habfuzz at'
-write(*,*) 'https://github.com/chtheodoro/habfuzz'
-write(*,*) ' '
 write(*,*) 'Press ENTER to start'
 read(*,*)
 
