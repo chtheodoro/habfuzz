@@ -3,13 +3,13 @@
 [![DOI](https://zenodo.org/badge/68698452.svg)](https://zenodo.org/badge/latestdoi/68698452)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/version-+2.3-red.svg)
+![](https://img.shields.io/badge/version-2.3-red.svg)
 ![](https://img.shields.io/badge/topic-Habitat_modelling-blue.svg)
 
 ### What’s new on Habfuzz 2.3?
 a. Habfuzz is fully automated! Input your data and get the results! The software is data-driven and calculates everything it needs internally!
 
-b. Plus-version includes temperature (or shading) in the habitat suitability calculations (if you only intend to include flow velocity, water depth and substrate type, contact us at ctheodor@hcmr.gr to provide you with the solution).
+b. This version includes temperature (or shading) in the habitat suitability calculations (if you only intend to include flow velocity, water depth and substrate type, contact us at ctheodor@hcmr.gr to provide you with the solution).
 
 c. Option to select between Monte Carlo and ten-fold cross validation to calculate model's performance as the percentage of correctly classified instances.
 
