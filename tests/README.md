@@ -1,4 +1,4 @@
-## Automated unit tests
+## Automated unit tests (working only in version 1)
 
 The GNU Make tool (https://www.gnu.org/software/make/) is necessary to apply the automated unit tests.
 
