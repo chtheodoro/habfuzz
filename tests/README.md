@@ -1,7 +1,6 @@
 ## Automated unit tests
 
-The tests work only with version 1. For testing the newer versions, a benchmark dataset will be soon provided.
-The GNU Make tool (https://www.gnu.org/software/make/) is necessary to apply the automated unit tests.
+The tests work only with version 1. For testing the newer versions, a benchmark dataset will be soon provided.  The GNU Make tool (https://www.gnu.org/software/make/) is necessary to apply the automated unit tests.
 
 For the subroutine 'fuzzifier', the test calculates the sum of the fuzzified inputs (V, D and S)  giving a 'pass' if the sum equals 1. For the subroutine 'rules', the test calculates the total probability of all observations (VxDxSxHS) giving a 'pass' if the sum of all probability observations equals 1.
 
