@@ -5,19 +5,19 @@ implicit none
 
 print *, ' '
 print *, 'Select the preferred scenario to implement'
-print *, '1: Average'
-print *, '2: Worst'
-print *, '3: Optimum'
-print *, '4: Default'
+print *, '[1] Average'
+print *, '[2] Worst'
+print *, '[3] Optimum'
+print *, '[4] Default'
 read *, scenario
 
 print *, ' '
 print *, 'Select the preferred defuzzification method'
-print *, '1: Centroid'
-print *, '2: Max membership'
-print *, '3: Weighted average'
-print *, '4: Mean-max membership'
-print *, '5: Default'
+print *, '[1] Centroid'
+print *, '[2] Max membership'
+print *, '[3] Weighted average'
+print *, '[4] Mean-max membership'
+print *, '[5] Default'
 read *, dfuzz
 write(*,*) ' '
 

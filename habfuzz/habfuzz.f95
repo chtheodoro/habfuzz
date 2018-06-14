@@ -26,13 +26,20 @@ write(*,*) '@@@@@@@  @@@@@@@  @@@@@   @@@@@   @@    @@   @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@  @@  @@      @@    @@  @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@@@@   @@       @@@@@@   @@@@@@  @@@@@@'
 write(*,*) ' '
-write(*,*) 'Habfuzz v2.3.1'
-write(*,*) 'The open software for data-driven fuzzy habitat modelling'
-!write(*,*) ' '
-!write(*,*) 'Fully automated with Monte Carlo and 10-fold cross-validation capability'
-!write(*,*) 'Just provide your input data and get the resulting suitability'
-!write(*,*) 'If you need assistance contact us at ctheodor@hcmr.gr'
+write(*,*) 'A COMMAND-LINE TOOL FOR DATA-DRIVEN FUZZY HABITAT MODELLING'
 write(*,*) ' '
+write(*,*) 'Habfuzz requires two inputs'
+write(*,*) '-----------------------------'
+write(*,*) '1. A training dataset with samples of known habitat suitability' 
+write(*,*) '2. A test dataset with samples of unknown habitat suitability'
+write(*,*) 'Habitat suitability in the test dataset will be automatically'
+write(*,*) 'predicted based on fuzzy rule-based algorithms and will be'
+write(*,*) 'exported in a txt file named suitability.txt'
+write(*,*) '----------------------------------------------'
+write(*,*) 'You are not required to learn how the algorithms work but it would' 
+write(*,*) 'be wise to consult the manual of the program before running HABFUZZ.'
+write(*,*) 'If you need assistance just contact us at ctheodor@hcmr.gr'
+write(*,*) '----------------------'
 write(*,*) 'Press ENTER to start'
 read(*,*)
 
@@ -68,13 +75,13 @@ read(89,*) (rmatrix(i,j), j=1,w-1)
 end do
 
 print *, 'Select modelling method'
-print *, '1: Fuzzy logic'
-print *, '2: Fuzzy Bayesian inference'
+print *, '[1] Fuzzy logic algorithms'
+print *, '[2] Fuzzy Bayesian algorithm'
 read *, proc
 print *, ' '
 print *, 'Select cross-validation scheme'
-print *, '1: Monte Carlo'
-print *, '2: Ten fold'
+print *, '[1] Monte Carlo'
+print *, '[2] Ten fold'
 read *, cross
 
 if (proc==1) then
