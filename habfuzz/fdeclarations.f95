@@ -15,26 +15,31 @@ integer, parameter :: rsize = 5170, w = 5
 !------------------------------------------------------------------------------------------------!
 !Trapezoidal-shaped membership functions for flow velocity (V), water depth (D), temperature (T) !
 !------------------------------------------------------------------------------------------------!
-!FLOW VELOCITY                                                                                   !                                                                     !
+!FLOW VELOCITY (or PREDICTOR 1)                                                                  !                                                                     !
 real, parameter :: uvla = 0.05, uvlb = 0.10                       !VERY LOW V class              !
 real, parameter :: ula = 0.05, ulb = 0.10, ulc = 0.15, uld = 0.20 !LOW V class                   !
 real, parameter :: uma = 0.15, umb = 0.20, umc = 0.40, umd = 0.50 !MODERATE V class              !
 real, parameter :: uha = 0.40, uhb = 0.50, uhc = 0.70, uhd = 0.80 !HIGH V class                  !
 real, parameter :: uvha = 0.7, uvhb = 0.80                        !VERY HIGH V class             !
 !------------------------------------------------------------------------------------------------!
-!WATER DEPTH                                                                                     !                                                                        !
+!WATER DEPTH (or PREDICTOR 2)                                                                    !                                                                        !
 real, parameter :: dvla = 0.10, dvlb = 0.15                       !The VERY SHALLOW D class      !
 real, parameter :: dla = 0.15, dlb = 0.20, dlc = 0.30, dld = 0.35 !The SHALLOW D class           !
 real, parameter :: dma = 0.30, dmb = 0.35, dmc = 0.55, dmd = 0.60 !The MODERATE D class          !
 real, parameter :: dda = 0.55, ddb = 0.60, ddc = 0.70, ddd = 0.75 !The DEEP D class              !
 real, parameter :: dvda = 0.75, dvdb = 0.80                       !The VERY DEEP D class         !
 !------------------------------------------------------------------------------------------------!                                                                                    !
-!TEMPERATURE                                                                                     !
-real, parameter :: tvla = 9, tvlb = 10                           !The VERY LOW T class           !
-real, parameter :: tla = 9, tlb = 10, tlc = 13, tld = 15         !The LOW T class                !
+!TEMPERATURE (or PREDICTOR 3)                                                                    !
+real, parameter :: tvla = 9, tvlb = 10                            !The VERY LOW T class          !
+real, parameter :: tla = 9, tlb = 10, tlc = 13, tld = 15          !The LOW T class               !
 real, parameter :: tma = 13, tmb = 15, tmc = 17, tmd = 19         !The MODERATE T class          !
 real, parameter :: tha = 19, thb = 20, thc = 23, thd = 25         !The HIGH T class              !
 real, parameter :: tvha = 25, tvhb = 27                           !The VERY HIGH T class         !
+!------------------------------------------------------------------------------------------------!
+!SUBSTRATE (or PREDICTOR 4)                                                                      !
+real, parameter :: boulders = 0.070, large_stones = 0.050, small_stones = 0.040                  !
+real, parameter :: large_gravel = 0.030, medium_gravel = 0.026, fine_gravel = 0.024              !
+real, parameter :: sand = 0.022, silt = 0.020                                                    !
 !------------------------------------------------------------------------------------------------!
 
 !Internal variables

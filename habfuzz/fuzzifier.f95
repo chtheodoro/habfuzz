@@ -213,21 +213,21 @@ end do
               
 !Substrate in 8 classes
 do i=1,z
-if (ematrix(i,3)==0.020) then
+if (ematrix(i,3)==silt) then
 sf(i,1)=1
-else if (ematrix(i,3)==0.022) then
+else if (ematrix(i,3)==sand) then
 sf(i,2)=1
-else if (ematrix(i,3)==0.024) then
+else if (ematrix(i,3)==fine_gravel) then
 sf(i,3)=1
-else if (ematrix(i,3)==0.026) then
+else if (ematrix(i,3)==medium_gravel) then
 sf(i,4)=1
-else if (ematrix(i,3)==0.030) then
+else if (ematrix(i,3)==large_gravel) then
 sf(i,5)=1
-elseif (ematrix(i,3)==0.040) then
+elseif (ematrix(i,3)==small_stones) then
 sf(i,6)=1
-else if (ematrix(i,3)==0.050) then
+else if (ematrix(i,3)==large_stones) then
 sf(i,7)=1
-else if (ematrix(i,3)==0.070) then
+else if (ematrix(i,3)==boulders) then
 sf(i,8)=1
 end if
 end do
