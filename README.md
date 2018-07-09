@@ -6,6 +6,8 @@
 ![](https://img.shields.io/badge/version-2.3-red.svg)
 ![](https://img.shields.io/badge/topic-Habitat_modelling-blue.svg)
 
+A video tutorial is available at https://www.youtube.com/watch?v=ed9snGdnlr4
+
 ### What’s new on Habfuzz 2.3?
 a. Habfuzz is fully automated! Input your data and get the results! The software is data-driven and calculates everything it needs internally!
 
