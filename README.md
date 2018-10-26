@@ -8,42 +8,31 @@
 
 A video tutorial is available at https://www.youtube.com/watch?v=ed9snGdnlr4
 
-### What’s new on Habfuzz 2.3?
-a. Habfuzz is fully automated! Input your data and get the results! The software is data-driven and calculates everything it needs internally!
+### New feature in HABFUZZ 2.3.3
+The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability of each rule (combination of flow velocity, water depth and substrate type -temperature not included in this version-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
+Simply add the habitat suitability values for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run the HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
 
-b. This version includes temperature (or shading) in the habitat suitability calculations (if you only intend to include flow velocity, water depth and substrate type, contact us at ctheodor@hcmr.gr to provide you with the solution).
-
-c. Option to select between Monte Carlo and ten-fold cross validation to calculate model's performance as the percentage of correctly classified instances.
-
-d. New habitat suitability metrics added:  
-i.   Overall Suitability Index (OSI) - The sum of all habitat suitability values of the computational mesh.  
-ii.  Normalized OSI (nOSI) - OSI normalized by dividing with the number of wetted nodes in the mesh.  
-iii. Certainty of prediction (COP): The ratio of the No. of microhabitat combinations actually 'found' in the training dataset to the total No. of nodes in the computational mesh; Habfuzz applies a trick when a microhabitat combination is not found in the training dataset and instead of returning some arbitrary habitat suitability value for a particular node (e.g. -1), it uses the value of its neighboring node in the domain.  
-iv.  Percentage of wetted nodes in the computational mesh at each Q scenario (w).  
-v.  Habitat connectivity (C): The ratio of connected (neighboring) nodes with habitat suitability higher than 0.6 to the total number of wetted nodes with habitat suitability higher than 0.6.  
-vi.  Habitat availability (A): The ratio of connected (neighboring) nodes with habitat suitability higher than 0.6 to the total number of nodes in the study reach (wetted and dry).  
- 
-### Why Habfuzz?
-Habfuzz is a fully automated software, which calculates the instream habitat suitability by utilizing
+### HABFUZZ
+HABFUZZ is a fully automated software, which calculates the aquatic habitat suitability by implementing
 
 a. Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
-It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bayesian-based instream habitat suitability for fish or freshwater macroinvertebrates along a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
+It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bayesian-based habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
 
-Habfuzz has been designed to be a one-click tool, for those researchers with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydrodynamically simulated river reach, based on fuzzy logic. Or for those self-studying researchers who need a very comprehensive, step-by-step, yet short tutorial to enable them quickly run a tool for a specific part of their project.
+HABFUZZ has been designed as a one-click tool, for users with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydraulically simulated river reach, based on fuzzy rule-based algorithms.
 
 ### Dependencies
 
-It is advised to install the GNU Fortran Compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries) to quickly compile Habfuzz through the relevant Windows and OS X files (however, experienced users may also use their preferred compilers).
+It is advised to install the GNU Fortran Compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries) to quickly compile HABFUZZ through the relevant Windows and OS X files (however, experienced users may also use their preferred compilers).
 
 For Mac users, Xcode (download at https://developer.apple.com/xcode/) with its relevant Command Line Tools should be installed to enable compiling through the GNU Fortran Compiler.
 
 ### Installing
-Habfuzz has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run Habfuzz.
+HABFUZZ has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run HABFUZZ.
 
 #### Windows users
-If the user needs to modify the source code of Habfuzz, re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands:
+If the user needs to modify the source code of HABFUZZ, re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands:
 
 ###### gfortran -c fdeclarations.f95
 
@@ -85,7 +74,7 @@ Habfuzz can then be executed from the command line by typing
 ###### ./habfuzz
 
 ### Usage
-Please consult the Habfuzz manual.
+Please consult the HABFUZZ manual.
 
 ### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
