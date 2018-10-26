@@ -24,16 +24,16 @@ real, parameter :: uvha = 0.7, uvhb = 0.80                        !VERY HIGH V c
 !------------------------------------------------------------------------------------------------!
 !WATER DEPTH (or PREDICTOR 2)                                                                    !                                                                        !
 real, parameter :: dvla = 0.10, dvlb = 0.15                       !The VERY SHALLOW D class      !
-real, parameter :: dla = 0.15, dlb = 0.20, dlc = 0.30, dld = 0.35 !The SHALLOW D class           !
+real, parameter :: dla = 0.10, dlb = 0.15, dlc = 0.30, dld = 0.35 !The SHALLOW D class           !
 real, parameter :: dma = 0.30, dmb = 0.35, dmc = 0.55, dmd = 0.60 !The MODERATE D class          !
 real, parameter :: dda = 0.55, ddb = 0.60, ddc = 0.70, ddd = 0.75 !The DEEP D class              !
-real, parameter :: dvda = 0.75, dvdb = 0.80                       !The VERY DEEP D class         !
+real, parameter :: dvda = 0.70, dvdb = 0.75                       !The VERY DEEP D class         !
 !------------------------------------------------------------------------------------------------!                                                                                    !
 !TEMPERATURE (or PREDICTOR 3)                                                                    !
 real, parameter :: tvla = 9, tvlb = 10                            !The VERY LOW T class          !
 real, parameter :: tla = 9, tlb = 10, tlc = 13, tld = 15          !The LOW T class               !
 real, parameter :: tma = 13, tmb = 15, tmc = 17, tmd = 19         !The MODERATE T class          !
-real, parameter :: tha = 19, thb = 20, thc = 23, thd = 25         !The HIGH T class              !
+real, parameter :: tha = 17, thb = 19, thc = 23, thd = 25         !The HIGH T class              !
 real, parameter :: tvha = 25, tvhb = 27                           !The VERY HIGH T class         !
 !------------------------------------------------------------------------------------------------!
 !SUBSTRATE (or PREDICTOR 4)                                                                      !
