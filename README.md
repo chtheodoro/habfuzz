@@ -10,7 +10,7 @@ A video tutorial is available at https://www.youtube.com/watch?v=ed9snGdnlr4
 
 ### New feature in HABFUZZ 2.3.3
 The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability of each rule (combination of flow velocity, water depth and substrate type -temperature not included in this version-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
-Simply add the habitat suitability values for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run the HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
+Simply add the habitat suitability values for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
 
 ### HABFUZZ - A command-line tool for data-driven fuzzy habitat modelling
 HABFUZZ is a fully automated software, which calculates the aquatic habitat suitability by implementing
