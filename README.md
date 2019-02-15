@@ -1,4 +1,4 @@
-![habfuzz_dos_small](https://user-images.githubusercontent.com/21544603/32095917-7bce3b6e-bb0d-11e7-88f2-6ae9b04f08e7.png)
+![habfuzz_plus_small](https://user-images.githubusercontent.com/21544603/52857330-82408080-312f-11e9-95a0-193a3b93106a.png)
 
 [![DOI](https://zenodo.org/badge/68698452.svg)](https://zenodo.org/badge/latestdoi/68698452)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
