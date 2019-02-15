@@ -6,10 +6,8 @@
 ![](https://img.shields.io/badge/version-2.3-red.svg)
 ![](https://img.shields.io/badge/topic-Habitat_modelling-blue.svg)
 
-A video tutorial is available at https://www.youtube.com/watch?v=ed9snGdnlr4
-
 ### I'm sorry, did you say command-line? So, there's no Graphical User Interface?
-Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! 
+Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! I have made it even easier for you, a video tutorial is now available at https://www.youtube.com/watch?v=ed9snGdnlr4 
 
 ### New feature in HABFUZZ 2.3.3
 The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability of each rule (combination of flow velocity, water depth and substrate type -temperature not included in this version-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
