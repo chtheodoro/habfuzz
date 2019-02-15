@@ -23,13 +23,13 @@ It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bay
 
 HABFUZZ has been designed as a one-click tool, for users with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydraulically simulated river reach, based on fuzzy rule-based algorithms.
 
-### Dependencies
+#### Dependencies
 
 It is advised to install the GNU Fortran Compiler (download at https://gcc.gnu.org/wiki/GFortranBinaries) to quickly compile HABFUZZ through the relevant Windows and OS X files (however, experienced users may also use their preferred compilers).
 
 For Mac users, Xcode (download at https://developer.apple.com/xcode/) with its relevant Command Line Tools should be installed to enable compiling through the GNU Fortran Compiler.
 
-### Installing
+#### Installing
 HABFUZZ has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run HABFUZZ.
 
 #### Windows users
@@ -74,10 +74,10 @@ HaABFUZZ can then be executed from the command line by typing
 
 ###### ./habfuzz
 
-### Usage
+#### Usage
 Please consult the HABFUZZ manual.
 
-### References
+#### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
 
 Mamdani E.H. and Assilian S. 1975. An experiment in linguistic synthesis with a fuzzy logic controller. International Journal of Man-Machine Studies 7: 1-13.
@@ -86,7 +86,7 @@ Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John W
 
 Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
-### Contact Information
+#### Contact Information
 
 Hellenic Centre for Marine Research  
 Institute of Marine Biological Resources and Inland Waters  
@@ -110,5 +110,5 @@ Fax. +30 210 7722814
 Email. stamou@central.ntua.gr  
 URL. https://www.hydro.ntua.gr/?set_language=en  
 
-### Contributing
+#### Contributing
 To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
