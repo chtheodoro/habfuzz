@@ -8,7 +8,6 @@
 
 #### I'm sorry, did you say command-line? So, there's no Graphical User Interface?
 Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! Check out the manual https://github.com/chtheodoro/habfuzz/blob/master/The_HABFUZZ_manual.pdf.
-
 I have made it even easier for you, a video tutorial is now available at https://www.youtube.com/watch?v=ed9snGdnlr4 
 
 #### New feature in HABFUZZ 2.3.3
