@@ -13,7 +13,7 @@ We have made it even easier for you, a video tutorial is now available at https:
 #### HABFUZZ - A command-line tool for data-driven fuzzy habitat modelling
 HABFUZZ predicts the value of any response variable, given a set of up to four predictors, using fuzzy logic and fuzzy rule-based Bayesian algorithms.
 
-It has been specifically structured to quickly calculate the habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach, given the flow velocity, the water depth, the substrate and the water temperature. However, it can be applied to any topic that requires fuzzy logic to be addressed. 
+It has been specifically structured to quickly calculate the habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach, given the flow velocity, the water depth, the substrate and the water temperature. However, it can be applied to any topic that requires fuzzy logic to be addressed.
 
 ![habfuzz_flow](https://user-images.githubusercontent.com/21544603/53083039-d15b2c80-3506-11e9-877b-00e06a4da724.png)
 
