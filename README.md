@@ -99,7 +99,7 @@ Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
 Hellenic Centre for Marine Research  
 Institute of Marine Biological Resources and Inland Waters  
-46.7 km Athens-Sounio ave.  
+46.7 km Athens-Sounio Ave.  
 19013  
 Anavyssos  
 Greece  
@@ -110,7 +110,7 @@ URL. http://www.hcmr.gr/en/
 
 National Technical University of Athens  
 Department of Water Resources and Environmental Engineering  
-Iroon Polytechniou 5  
+5 Iroon Polytechniou Str.  
 15780  
 Athens  
 Greece  
