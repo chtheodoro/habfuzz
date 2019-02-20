@@ -12,7 +12,7 @@ We have made it even easier for you, a video tutorial is now available at https:
 
 #### HABFUZZ - A command-line tool for data-driven fuzzy habitat modelling
 
-![habfuzz_flow](https://user-images.githubusercontent.com/21544603/53084682-03ba5900-350a-11e9-9cfd-0b92676a1a28.png)
+![habfuzz_flow](https://user-images.githubusercontent.com/21544603/53092460-87317580-351d-11e9-9c36-f49ad15c3193.png)
 
 HABFUZZ predicts the value of any response variable, given a set of up to four predictors, using fuzzy logic and fuzzy rule-based Bayesian algorithms.
 
