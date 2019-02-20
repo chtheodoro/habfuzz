@@ -11,7 +11,9 @@ Yes, it's quicker this way. You just need to prepare a single input file with yo
 We have made it even easier for you, a video tutorial is now available at https://www.youtube.com/watch?v=ed9snGdnlr4 
 
 #### HABFUZZ - A command-line tool for data-driven fuzzy habitat modelling
+
 ![habfuzz_flow2](https://user-images.githubusercontent.com/21544603/53084576-c9e95280-3509-11e9-8345-0545cce25849.png)
+
 HABFUZZ predicts the value of any response variable, given a set of up to four predictors, using fuzzy logic and fuzzy rule-based Bayesian algorithms.
 
 It has been specifically structured to quickly calculate the habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach, given the flow velocity, the water depth, the substrate and the water temperature. However, it can be applied to any topic that requires fuzzy logic to be addressed.
