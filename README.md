@@ -15,6 +15,8 @@ HABFUZZ predicts the value of any response variable, given a set of up to four p
 
 It has been specifically structured to quickly calculate the habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach, given the flow velocity, the water depth, the substrate and the water temperature. However, it can be applied to any topic that requires fuzzy logic to be addressed. 
 
+![habfuzz_flow](https://user-images.githubusercontent.com/21544603/53082908-880add00-3506-11e9-80d4-5eeb4be78c09.png)
+
 The algorithms implemented in HABFUZZ are  
 a. Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
