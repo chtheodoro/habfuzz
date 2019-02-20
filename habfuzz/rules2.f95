@@ -10,10 +10,10 @@ bayp2(i)=bayp1(i)/(bayh1(i)+bayg1(i)+baym1(i)+bayp1(i)+bayb1(i))
 bayb2(i)=bayb1(i)/(bayh1(i)+bayg1(i)+baym1(i)+bayp1(i)+bayb1(i))
 end do
 
-bgood=0.7*bayg2
-bmoderate=0.5*baym2
-bhigh=0.9*bayh2
-bpoor=0.3*bayp2
-bbad=0.1*bayb2
+bgood=eud*bayg2
+bmoderate=euc*baym2
+bhigh=eue*bayh2
+bpoor=eub*bayp2
+bbad=eua*bayb2
 
 end subroutine rules2

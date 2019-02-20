@@ -39,6 +39,11 @@ real, parameter :: tma = 13, tmb = 15, tmc = 17, tmd = 19 !The MODERATE T class
 real, parameter :: tha = 17, thb = 19, thc = 23, thd = 25 !The HIGH T class
 real, parameter :: tvha = 25, tvhb = 27 !The VERY HIGH T class
 
+!RESPONSE VARIABLE 5-CLASS VALUES
+real, parameter :: ka = 0.2, kb = 0.4, kc = 0.6, kd = 0.8
+!EXPECTED UTILITY VALUES FOR RULES2.F95
+real, parameter :: eua = 0.1, eub = 0.3, euc = 0.5, eud = 0.7, eue = 0.9
+
 !Internal variables
 real, dimension(rsize) :: uvl, ul, um, uh, uvh
 real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi, nosi, cci, pwet

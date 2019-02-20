@@ -124,15 +124,15 @@ end do
 
 !Classification of IHS in 5 classes
 do i=1,ii
-if (dmatrix(i,5)<=0.2) then
+if (dmatrix(i,5)<=ka) then
 cmatrix(i,5)=1
-else if (dmatrix(i,5)>0.2 .and. dmatrix(i,5)<=0.4) then
+else if (dmatrix(i,5)>ka .and. dmatrix(i,5)<=kb) then
 cmatrix(i,5)=2
-else if (dmatrix(i,5)>0.4 .and. dmatrix(i,5)<=0.6) then
+else if (dmatrix(i,5)>kb .and. dmatrix(i,5)<=kc) then
 cmatrix(i,5)=3
-else if (dmatrix(i,5)>0.6 .and. dmatrix(i,5)<=0.8) then
+else if (dmatrix(i,5)>kc .and. dmatrix(i,5)<=kd) then
 cmatrix(i,5)=4
-else if (dmatrix(i,5)>0.8) then
+else if (dmatrix(i,5)>kd) then
 cmatrix(i,5)=5
 end if
 end do
