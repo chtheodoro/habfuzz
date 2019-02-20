@@ -12,17 +12,17 @@ We have made it even easier for you, a video tutorial is now available at https:
 
 #### HABFUZZ - A command-line tool for data-driven fuzzy habitat modelling
 
-![habfuzz_flow](https://user-images.githubusercontent.com/21544603/53092460-87317580-351d-11e9-9c36-f49ad15c3193.png)
+![habfuzz_flow](https://user-images.githubusercontent.com/21544603/53111372-9e845900-3545-11e9-8028-6e1b32ee1c0a.png)
 
 HABFUZZ predicts the value of any response variable, given a set of up to four predictors, using fuzzy logic and fuzzy rule-based Bayesian algorithms.
 
-It has been specifically structured to quickly calculate the habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach, given the flow velocity, the water depth, the substrate and the water temperature. However, it can be applied to any topic that requires fuzzy logic to be addressed.
+It has been initially structured to quickly calculate the habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach, given the flow velocity, the water depth, the substrate and the water temperature. But it can now be applied to any topic that requires the prediction of a response variable using fuzzy logic and up to four predictors.
 
 The algorithms implemented in HABFUZZ are  
 a. Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
-#### New feature in HABFUZZ 2.3.3
+#### New habitat feature in HABFUZZ 2.3.3
 The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability of each rule (combination of flow velocity, water depth and substrate type -temperature not included in this version-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
 Simply add the habitat suitability values for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
 
@@ -81,7 +81,7 @@ HaABFUZZ can then be executed from the command line by typing
 Please consult the HABFUZZ manual.
 
 #### Visualization
-As HABFUZZ is a command-line tool, we suggest the free Blue Kenue software available at https://www.nrc-cnrc.gc.ca/eng/solutions/advisory/blue_kenue_index.html for visualizing the output of HABFUZZ. As an example, HABFUZZ was used in this case study https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3284. The habitat suitability was predicted using the fuzzy rule-based Bayesian algorithm of HABFUZZ, the results were visualized in Blue Kenue and the following image was produced:
+As HABFUZZ is a command-line tool, habitat modellers (and not only) can use the free Blue Kenue software available at https://www.nrc-cnrc.gc.ca/eng/solutions/advisory/blue_kenue_index.html for visualizing the output of HABFUZZ. As an example, HABFUZZ was used in this case study https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3284. The habitat suitability was predicted using the fuzzy rule-based Bayesian algorithm of HABFUZZ, the results were visualized in Blue Kenue and the following image was produced:
 
 
 ![fig_4b](https://user-images.githubusercontent.com/21544603/53016930-7fa79900-3457-11e9-89e6-3c8c6252ec3e.png)
