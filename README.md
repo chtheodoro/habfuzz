@@ -10,7 +10,7 @@
 Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! Check out the manual https://github.com/chtheodoro/habfuzz/blob/master/The_HABFUZZ_manual.pdf.
 We have made it even easier for you, a video tutorial is now available at https://www.youtube.com/watch?v=ed9snGdnlr4 
 
-#### HABFUZZ - A command-line tool for data-driven fuzzy habitat modelling
+#### HABFUZZ - A command-line tool for data-driven fuzzy modelling
 
 ![habfuzz_flow](https://user-images.githubusercontent.com/21544603/53111372-9e845900-3545-11e9-8028-6e1b32ee1c0a.png)
 
