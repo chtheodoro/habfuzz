@@ -10,19 +10,18 @@
 Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! Check out the manual https://github.com/chtheodoro/habfuzz/blob/master/The_HABFUZZ_manual.pdf.
 We have made it even easier for you, a video tutorial is now available at https://www.youtube.com/watch?v=ed9snGdnlr4 
 
-#### New feature in HABFUZZ 2.3.3
-The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability of each rule (combination of flow velocity, water depth and substrate type -temperature not included in this version-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
-Simply add the habitat suitability values for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
-
 #### HABFUZZ - A command-line tool for data-driven fuzzy habitat modelling
-HABFUZZ is a fully automated software, which calculates the aquatic habitat suitability by implementing
+HABFUZZ predicts the value of any response variable, given a set of up to four predictors, using fuzzy logic and fuzzy rule-based Bayesian algorithms.
 
+It has been specifically structured to quickly calculate the habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach, given the flow velocity, the water depth, the substrate and the water temperature. However, it can be applied to any topic that requires fuzzy logic to be addressed. 
+
+The algorithms implemented in HABFUZZ are  
 a. Τhe Mamdani - Assilian fuzzy inference process (Mamdani and Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
-It is specifically structured to quickly calculate the fuzzy-logic- or fuzzy-Bayesian-based habitat suitability for freshwater macroinvertebrates in a hydraulically simulated river reach. However, if appropriately modified, it can be applied to wider research topics requiring fuzzy logic to be addressed.
-
-HABFUZZ has been designed as a one-click tool, for users with no or very minor programming knowledge, in need of an easy-to-use software to calculate the habitat suitability along a hydraulically simulated river reach, based on fuzzy rule-based algorithms.
+#### New feature in HABFUZZ 2.3.3
+The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability of each rule (combination of flow velocity, water depth and substrate type -temperature not included in this version-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
+Simply add the habitat suitability values for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
 
 #### Dependencies
 
