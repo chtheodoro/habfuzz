@@ -84,7 +84,7 @@ Please consult the HABFUZZ manual at https://github.com/chtheodoro/habfuzz/blob/
 As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the free Blue Kenue software available at https://www.nrc-cnrc.gc.ca/eng/solutions/advisory/blue_kenue_index.html for visualizing the output of HABFUZZ. As an example, HABFUZZ was used in this case study https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3284. The habitat suitability was predicted using the fuzzy rule-based Bayesian algorithm of HABFUZZ, the results were visualized in Blue Kenue and the following image was produced:
 
 
-![fig_4b](https://user-images.githubusercontent.com/21544603/53016930-7fa79900-3457-11e9-89e6-3c8c6252ec3e.png)
+![fig_4](https://user-images.githubusercontent.com/21544603/53172876-1195da00-35ef-11e9-98f2-789019da2991.png)
 
 #### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
