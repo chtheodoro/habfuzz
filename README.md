@@ -22,9 +22,9 @@ The algorithms implemented in HABFUZZ are
 a. Τhe classic Mamdani - Assilian fuzzy inference process (Mamdani & Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
-#### New feature in HABFUZZ 2.3.3
-The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the response variable for each rule (combination of predictors), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
-Simply add the values of the response variable for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
+#### New habitat feature in HABFUZZ 2.3.3
+The user can now add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability for each rule (combination of flow velocity, water depth and substrate -temperature is not currently included-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
+Simply add the values of the habitat suitability for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
 
 #### Dependencies
 
