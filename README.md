@@ -4,7 +4,7 @@
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
 ![](https://img.shields.io/badge/version-2.3-red.svg)
-![](https://img.shields.io/badge/topic-Habitat_modelling-blue.svg)
+![](https://img.shields.io/badge/topic-Fuzzy_modelling-blue.svg)
 
 #### Wait, did you say command-line? So, there's no Graphical User Interface?
 Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! Check out the manual https://github.com/chtheodoro/habfuzz/blob/master/The_HABFUZZ_manual.pdf.
