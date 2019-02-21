@@ -26,7 +26,7 @@ write(*,*) '@@@@@@@  @@@@@@@  @@@@@   @@@@@   @@    @@   @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@  @@  @@      @@    @@  @@      @@ '
 write(*,*) '@@   @@  @@   @@  @@@@@   @@       @@@@@@   @@@@@@  @@@@@@'
 write(*,*) ' '
-write(*,*) 'A COMMAND-LINE TOOL FOR DATA-DRIVEN FUZZY HABITAT MODELLING'
+write(*,*) 'A COMMAND-LINE TOOL FOR DATA-DRIVEN FUZZY MODELLING'
 write(*,*) ' '
 write(*,*) 'HABFUZZ requires two inputs'
 write(*,*) '-----------------------------'
@@ -34,7 +34,7 @@ write(*,*) '1. A training dataset with observations of known response variable'
 write(*,*) '2. A test dataset with observtions of unknown response variable'
 write(*,*) 'The response variable in the test dataset will be predicted'
 write(*,*) 'based on fuzzy rule-based algorithms and will be'
-write(*,*) 'exported in the suitability.txt file'
+write(*,*) 'exported in the output.txt file'
 write(*,*) '----------------------------------------------'
 write(*,*) 'You can run the software without any prior knowledge but it would' 
 write(*,*) 'be wise to consult the manual before running HABFUZZ.'
@@ -204,7 +204,7 @@ baym(j,i)=product(fmatrix(j,:,i))*p2matrix(j,3)
 bayp(j,i)=product(fmatrix(j,:,i))*p2matrix(j,4)
 bayb(j,i)=product(fmatrix(j,:,i))*p2matrix(j,5)
 end do
-write(*,*) 'Rules application for microhabitat', i, 'successful'
+write(*,*) 'Rules application for observation', i, 'successful'
 end do
 write(*,*) ' '
 write(*,*) 'Rules application successful!'
@@ -218,11 +218,11 @@ call sleep(2)
 !end do
 write(*,*) 'Joint probability calculation successful!'
 write(*,*) ' '
-print *, 'Calculating suitability...'
+print *, 'Calculating response variable...'
 call sleep(2)
 write(*,*) ' '
 do i=1,z
-write(*,*) 'Habitat suitability calculation for microhabitat', i, 'successful'
+write(*,*) 'Response variable calculation for observation', i, 'successful'
 bayg1(i)=sum(bayg(1:nn,i))
 baym1(i)=sum(baym(1:nn,i))
 bayh1(i)=sum(bayh(1:nn,i))
@@ -230,7 +230,7 @@ bayp1(i)=sum(bayp(1:nn,i))
 bayb1(i)=sum(bayb(1:nn,i))
 end do
 write(*,*) ' '
-write(*,*) 'Habitat suitability calculation successful!'
+write(*,*) 'Response variable calculation successful!'
 
 call rules2
 !write(49,*) ' '
@@ -425,7 +425,7 @@ print *, ' '
 call sleep(2)
 print *, 'Results ready'
 print *, 'End of process'
-print *, 'Please check the created file suitability.txt'
+print *, 'Please check the created file output.txt'
 print *, ' '
 write(*,*) 'Thank you for using HABFUZZ!'
 print *, char(7)

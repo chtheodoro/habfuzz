@@ -63,7 +63,7 @@ write(49,*) ' H      G      M      P      B'
 do jj=1,nn
 write(49,10) (mmatrix(jj,j,i), j=1,w)
 end do
-write(*,*) 'Rules application for microhabitat', i, 'successful'
+write(*,*) 'Rules application for observation', i, 'successful'
 end do !!!!!!!!!!!!
 write(*,*) ' '
 write(*,*) 'Rules application successful!'
@@ -116,7 +116,7 @@ end if
 print *, 'Defuzzification successful!'
 print *, ' '
 
-print *, 'Calculating suitability...'
+print *, 'Calculating response variable...'
 call sleep(2)
 write(*,*) ' '
 
@@ -135,13 +135,13 @@ cer(i,zz)=1
 end if
 end do
 
-open(19, file='suitability.txt', action='write', status='replace')
+open(19, file='output.txt', action='write', status='replace')
 do i=1,ee
-write(*,*) 'Habitat suitability calculation for test microhabitat', i, 'successful'
+write(*,*) 'Response variable calculation for test observation', i, 'successful'
 write(19,10) (s(i,zz))
 end do
 write(*,*) ' '
-write(*,*) 'Habitat suitability calculation successful!'
+write(*,*) 'Response variable calculation successful!'
 10 format (8f7.3)
 
 end subroutine ftester

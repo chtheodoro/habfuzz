@@ -110,7 +110,7 @@ baym(j,i)=product(fmatrix(j,:,i))*p2matrix(j,3)
 bayp(j,i)=product(fmatrix(j,:,i))*p2matrix(j,4)
 bayb(j,i)=product(fmatrix(j,:,i))*p2matrix(j,5)
 end do
-write(*,*) 'Rules application for microhabitat', i, 'successful'
+write(*,*) 'Rules application for observation', i, 'successful'
 end do
 write(*,*) ' '
 write(*,*) 'Rules application successful!'
@@ -124,11 +124,11 @@ call sleep(2)
 !end do
 write(*,*) 'Joint probability calculation succesful!'
 write(*,*) ' '
-print *, 'Calculating suitability...'
+print *, 'Calculating response variable...'
 call sleep(2)
 write(*,*) ' '
 do i=1,ee
-write(*,*) 'Habitat suitability calculation for test microhabitat', i, 'successful'
+write(*,*) 'Response variable calculation for test observation', i, 'successful'
 bayg1(i)=sum(bayg(1:nn,i))
 baym1(i)=sum(baym(1:nn,i))
 bayh1(i)=sum(bayh(1:nn,i))
@@ -136,7 +136,7 @@ bayp1(i)=sum(bayp(1:nn,i))
 bayb1(i)=sum(bayb(1:nn,i))
 end do
 write(*,*) ' '
-write(*,*) 'Habitat suitability calculation successful!'
+write(*,*) 'Response variable calculation successful!'
 z=ee
 call rules2
 !write(49,*) ' '
@@ -199,7 +199,7 @@ cer(i,zz)=1
 end if
 end do
 
-open(19, file='suitability.txt', action='write', status='replace')
+open(19, file='output.txt', action='write', status='replace')
 do i=1,ee
 write(19,10) (s(i,zz))
 end do

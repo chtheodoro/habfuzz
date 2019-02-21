@@ -136,7 +136,7 @@ write(49,*) ' H      G      M      P      B'
 do jj=1,nn
 write(49,10) (mmatrix(jj,j,i), j=1,w)
 end do
-write(*,*) 'Rules application for microhabitat', i, 'successful'
+write(*,*) 'Rules application for observation', i, 'successful'
 end do !!!!!!!!!!!!
 write(*,*) ' '
 write(*,*) 'Rules application successful!'
@@ -188,17 +188,17 @@ end if
 print *, 'Defuzzification successful!'
 print *, ' '
 
-print *, 'Calculating suitability...'
+print *, 'Calculating response variable...'
 write(*,*) ' '
 call sleep(2)
 
 !open(19, file='suitability.txt', action='write', status='replace')
 do i=1,z
-write(*,*) 'Habitat suitability calculation for microhabitat', i, 'successful'
+write(*,*) 'Response variable calculation for observation', i, 'successful'
 !write(19,10) (suitability(i,ff), ff=1,10)
 end do
 write(*,*) ' '
-write(*,*) 'Habitat suitability calculation successful!'
+write(*,*) 'Response variable calculation successful!'
 
 deallocate(a)
 deallocate(bins)
