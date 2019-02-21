@@ -78,7 +78,7 @@ HaABFUZZ can then be executed from the command line by typing
 ###### ./habfuzz
 
 #### Usage
-Please consult the HABFUZZ manual at https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.3.3_manual.pdf.
+Please consult the HABFUZZ manual at https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.3.3_manual.pdf
 
 #### Visualization
 As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the free Blue Kenue software available at https://www.nrc-cnrc.gc.ca/eng/solutions/advisory/blue_kenue_index.html for visualizing the output of HABFUZZ. As an example, HABFUZZ was used in this case study https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3284. The habitat suitability was predicted using the fuzzy rule-based Bayesian algorithm of HABFUZZ, the results were visualized in Blue Kenue and the following image was produced:
