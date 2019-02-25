@@ -83,7 +83,6 @@ Please consult the HABFUZZ manual at https://github.com/chtheodoro/habfuzz/blob/
 #### Visualization
 As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the free Blue Kenue software available at https://www.nrc-cnrc.gc.ca/eng/solutions/advisory/blue_kenue_index.html for visualizing the output of HABFUZZ. As an example, HABFUZZ was used in this case study https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3284. The habitat suitability was predicted using the fuzzy rule-based Bayesian algorithm of HABFUZZ, the results were visualized in Blue Kenue and the following image was produced:
 
-
 ![fig_4](https://user-images.githubusercontent.com/21544603/53172876-1195da00-35ef-11e9-98f2-789019da2991.png)
 
 #### References
@@ -94,10 +93,6 @@ Mamdani E.H. and Assilian S. 1975. An experiment in linguistic synthesis with a 
 Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John Wiley and Sons, UK.
 
 Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
-
-#### What's next
-1. Option to include 4 fuzzy predictors
-2. Option to bypass the cross-validation process
 
 #### Contact Information
 
