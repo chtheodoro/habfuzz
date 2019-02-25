@@ -20,7 +20,7 @@ It has been initially structured to quickly calculate the habitat suitability fo
 
 The algorithms implemented in HABFUZZ are  
 a. Τhe classic Mamdani - Assilian fuzzy inference process (Mamdani & Assilian, 1975) and  
-b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
+b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
 #### New habitat feature since HABFUZZ 2.3.3
 The user can add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability for each rule (combination of flow velocity, water depth and substrate -temperature is not currently included-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
@@ -94,6 +94,10 @@ Mamdani E.H. and Assilian S. 1975. An experiment in linguistic synthesis with a 
 Ross T.J. 2010. Fuzzy logic with engineering applications. Third Edition, John Wiley and Sons, UK.
 
 Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
+
+#### What's next
+1. Option to include 4 fuzzy predictors
+2. Option to bypass the cross-validation process
 
 #### Contact Information
 
