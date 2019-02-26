@@ -86,8 +86,7 @@ As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the 
 ![fig_4](https://user-images.githubusercontent.com/21544603/53172876-1195da00-35ef-11e9-98f2-789019da2991.png)
 
 #### What's next
-We are currently working on  
-1. Including an option for a fourth fuzzy input  
+We are currently working on  1. Including an option for a fourth fuzzy input  
 2. Including an option to bypass the cross-validation process and start directly with predicting the response variable in the test dataset.
 
 #### References
