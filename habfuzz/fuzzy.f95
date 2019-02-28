@@ -21,9 +21,9 @@ print *, '[5] Default'
 read *, dfuzz
 write(*,*) ' '
 
+if (cross==1) then
 write(*,*) 'Initializing fuzzy logic...'
 call sleep(2)
-
 do zz=1,10
 write(*,*) ' '
 write(*,*) 'ITERATION', zz
@@ -255,10 +255,13 @@ write(*,*) ' '
 !write(*,*) icci
 cci=(sum(icci(1:10))/10)*100
 !write(*,*) cci
-
 call sleep(2)
+else
+GOTO 299
+299 CONTINUE
 z=n
 zz=1
+end if
 call tester
 44 format (a,f6.2,a)
 10 format (8f7.3)

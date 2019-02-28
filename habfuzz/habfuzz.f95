@@ -79,15 +79,20 @@ print *, '[1] Fuzzy logic algorithms'
 print *, '[2] Fuzzy Bayesian algorithm'
 read *, proc
 print *, ' '
+
+if (proc==1) then
+print *, 'Select cross-validation scheme'
+print *, '[1] Monte Carlo'
+print *, '[2] Do not cross-validate'
+read *, cross
+call fuzzy
+
+else
 print *, 'Select cross-validation scheme'
 print *, '[1] Monte Carlo'
 print *, '[2] Ten fold'
+print *, '[3] Do not cross-validate'
 read *, cross
-
-if (proc==1) then
-call fuzzy
-else
-
 if (cross==1) then
 write(*,*) ' '
 write(*,*) 'Initializing fuzzy Bayesian inference...'
@@ -323,6 +328,9 @@ write(*,*) 'End of cross-validation process!'
 write(*,*) ' '
 else if (cross==2) then
 call tencrossval
+else if (cross==3) then
+write(*,*) ' '
+GOTO 199
 end if
 
 !open(119, file='loga.txt', action='write', status='replace')
@@ -349,6 +357,7 @@ cci=(sum(icci(1:10))/10)*100
 !write(109,*) cci
 !close(109, status='keep')
 call sleep(2)
+199 CONTINUE
 z=n
 zz=1
 call tester
