@@ -86,7 +86,7 @@ As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the 
 ![fig_4](https://user-images.githubusercontent.com/21544603/53172876-1195da00-35ef-11e9-98f2-789019da2991.png)
 
 #### What's next
-We are currently working on including the option for a fourth fuzzy input
+We are currently working on including the option for a fourth fuzzy input.
 
 #### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
