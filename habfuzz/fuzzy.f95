@@ -258,11 +258,12 @@ cci=(sum(icci(1:10))/10)*100
 call sleep(2)
 else
 GOTO 299
+end if
 299 CONTINUE
 z=n
 zz=1
-end if
 call tester
+
 44 format (a,f6.2,a)
 10 format (8f7.3)
 
