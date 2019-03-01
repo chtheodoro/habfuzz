@@ -43,6 +43,7 @@ write(*,*) '----------------------'
 write(*,*) 'Press ENTER to start'
 read(*,*)
 
+call cpu_time(ta)
 !Opening the data to develop the rules
 open (unit=99, file='traindata.txt', status='old', action='read') !The data matrix
 read (99,*) n
@@ -436,6 +437,8 @@ print *, 'Results ready'
 print *, 'End of process'
 print *, 'Please check the created file output.txt'
 print *, ' '
+call cpu_time(tb)
+write(*,44) ' Elapsed time', tb-ta, ' seconds'
 write(*,*) 'Thank you for using HABFUZZ!'
 print *, char(7)
 write(*,*) 'Press ENTER to exit'

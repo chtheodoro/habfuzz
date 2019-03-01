@@ -8,6 +8,7 @@ real, dimension(:,:), allocatable :: matrix, cmatrix, rmatrix, amatrix, pmatrix,
 p2matrix, p22matrix, uf, df, tf, sf, imatrix, dmatrix, ematrix, suitability, testmat, s, &
 co1matrix, aa, cer
 real, dimension(:,:,:), allocatable :: bmatrix, fmatrix, mmatrix, p11matrix, comatrix
+real :: ta, tb
 
 !The maximum array size - this should be re-defined if the elements of the input arrays exceed 3000
 integer, parameter :: rsize = 5170, w = 5
