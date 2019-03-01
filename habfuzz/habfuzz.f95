@@ -438,7 +438,7 @@ print *, 'End of process'
 print *, 'Please check the created file output.txt'
 print *, ' '
 call cpu_time(tb)
-write(*,44) ' Elapsed time', tb-ta, ' seconds'
+write(*,44) ' Elapsed time ', (tb-ta)/60, ' minutes'
 write(*,*) 'Thank you for using HABFUZZ!'
 print *, char(7)
 write(*,*) 'Press ENTER to exit'
