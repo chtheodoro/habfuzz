@@ -11,7 +11,8 @@ eua=0.1, eub=0.3, euc=0.5, eud=0.7, eue=0.9
 for the expected utility function of the fuzzy rule-based Bayesian algorithm.
 
 If your response variable ranges from 0 to 1000 for example,
-the easiest way would be to normalize it by dividing with the maximum value observed and run HABFUZZ or,
+the easiest way would be to normalize it by
+dividing with the maximum value observed and run HABFUZZ or,
 you could change the relevant parameters, that is,
 ka=200, kb=400, kc=600, kd=800
 eua=100, eub=300, euc=500, eud=700, eue=900,
