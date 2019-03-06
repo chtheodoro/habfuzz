@@ -88,7 +88,7 @@ As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the 
 #### What's next
 We are currently working on  
 a. Including an option for a fourth fuzzy input variable  
-b. Expanding the option to model response variables outside the 0-1 range for all algorithms (currently, this is applied only using the fuzzy rule-based Bayesian algorithm). 
+b. Expanding the option to model response variables outside the 0-1 range for all algorithms (currently, this is applied only using the fuzzy rule-based Bayesian algorithm) 
 
 #### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
