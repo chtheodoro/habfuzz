@@ -1,6 +1,0 @@
-﻿New features in HABFUZZ 2.4.2
-
-1. Elapsed time now displayed after the end of the program.
-2. Cross validation can be bypassed to reduce computational time
-   by selecting the 'Do not cross-validate' option.
-3. Bugs fixed   

@@ -46,6 +46,7 @@ read(*,*)
 
 call cpu_time(ta)
 !Opening the data to develop the rules
+call reader
 open (unit=99, file='traindata.txt', status='old', action='read') !The data matrix
 read (99,*) n
 open (unit=89, file='refdata.txt', status='old', action='read') !The reference data matrix to acquire all class combinations

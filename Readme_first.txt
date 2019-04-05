@@ -2,7 +2,7 @@
 for both the predictor and response variables.
 
 To run the software for your data, you may need to appropriately
-modify each fuzzy set.
+modify each fuzzy set (through the STEERING FILE).
 
 For example, the response variable is set to a 0-1 range and its relevant
 parameters are set in the fdeclarations.f95 file as

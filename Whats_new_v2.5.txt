@@ -1,0 +1,8 @@
+﻿New features in HABFUZZ 2.5
+
+1. The fuzzy set parameters are now handled using the
+   STEERING FILE, located in the steering folder
+2. No FORTRAN compiler required and no recompilation unless you
+   need to change the source code. HABFUZZ is now completely
+   stand-alone
+3. Bugs fixed   
