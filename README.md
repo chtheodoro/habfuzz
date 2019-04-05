@@ -8,7 +8,7 @@
 
 #### Wait, did you say command-line? So, there's no Graphical User Interface?
 Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! Check out the manual https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf.
-We have made it even easier for you, a video tutorial is now available at https://www.youtube.com/watch?v=ed9snGdnlr4 
+We have made it even easier for you, a video tutorial is now available at https://www.youtube.com/watch?v=ZA_NADMyMsM.
 
 #### HABFUZZ - A command-line tool for data-driven fuzzy modelling
 
