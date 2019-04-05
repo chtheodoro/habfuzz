@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2582117.svg)](https://doi.org/10.5281/zenodo.2582117)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/version-2.4.2-red.svg)
+![](https://img.shields.io/badge/version-2.5-red.svg)
 ![](https://img.shields.io/badge/topic-Fuzzy_modelling-blue.svg)
 
 #### Wait, did you say command-line? So, there's no Graphical User Interface?
@@ -22,9 +22,9 @@ The algorithms implemented in HABFUZZ are
 a. Τhe classic Mamdani - Assilian fuzzy inference process (Mamdani & Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
-#### New habitat feature since HABFUZZ 2.3.3
-The user can add expert-judgment-based rules. Using the ExpertRules.xlsx file available in the 'extras' subfolder, the user can define the habitat suitability for each rule (combination of flow velocity, water depth and substrate -temperature is not currently included-), save the file as traindata.txt and replace the old traindata.txt with the new one containing the expert-defined rules.
-Simply add the values of the habitat suitability for each rule in the first spreadsheet, then navigate to the second spreadsheet and save as traindata.txt, replace the old traindata.txt in the 'habfuzz' folder with the new one and run HABFUZZ. Relevant guidance can be found in the ExpertRules.xlsx itself.
+#### What's new in HABFUZZ v2.5
+HABFUZZ 2.5 is completely stand-alone! No re-compilation is necessary and thus, no FORTRAN compiler is required.
+All input files, (i) traindata.txt, (ii) testdata.txt and (iii) user-adjusted fuzzy sets can now be created from the STEERING FILE, located in the steering folder. Follow the instructions given in the HABFUZZ v2.5 manual (https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf).
 
 #### Dependencies
 
@@ -40,7 +40,7 @@ If the user needs to modify the source code of HABFUZZ, re-compilation is necess
 
 ###### gfortran -c fdeclarations.f95
 
-###### gfortran -o habfuzz.f95 fdeclarations.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 iterator10.f95 tester.f95 ftester.f95 performance.f95 tencrossval.f95
+###### gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 reader.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 iterator10.f95 tester.f95 ftester.f95 performance.f95 tencrossval.f95
 
 ###### del *.o
 ###### del *.mod
@@ -56,7 +56,7 @@ to install the compiler. Having gfortran installed, the commands necessary to co
 
 ###### gfortran -c fdeclarations.f95
 
-###### gfortran habfuzz.f95 fdeclarations.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 iterator10.f95 tester.f95 ftester.f95 performance.f95 tencrossval.f95 –o habfuzz
+###### gfortran habfuzz.f95 fdeclarations.f95 reader.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 iterator10.f95 tester.f95 ftester.f95 performance.f95 tencrossval.f95 –o habfuzz
 
 Be careful to write exactly the abovementioned commands, arranging the source files in the order given above. Then you can run HABFUZZ by typing
 
@@ -71,14 +71,14 @@ or manually type the commands
 
 ###### gfortran -c fdeclarations.f95
 
-###### gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 iterator10.f95 tester.f95 ftester.f95 performance.f95 tencrossval.f95
+###### gfortran -o habfuzz habfuzz.f95 fdeclarations.f95 reader.f95 classifier.f95 combinations.f95 ruler.f95 fuzzifier.f95 permutator.f95 rules2.f95 fuzzy.f95 fruler.f95 rules1.f95 centroid.f95 meanmax.f95 maxmem.f95 waver.f95 randomizer.f95 iterator.f95 iterator10.f95 tester.f95 ftester.f95 performance.f95 tencrossval.f95
 
 HABFUZZ can then be executed from the command line by typing
 
 ###### ./habfuzz
 
 #### Usage
-Please consult the HABFUZZ manual at https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.3.3_manual.pdf
+Please consult the HABFUZZ manual at https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf
 
 #### Visualization
 As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the free Blue Kenue software available at https://www.nrc-cnrc.gc.ca/eng/solutions/advisory/blue_kenue_index.html for visualizing the output of HABFUZZ. As an example, HABFUZZ was used in this case study https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3284. The habitat suitability was predicted using the fuzzy rule-based Bayesian algorithm of HABFUZZ, the results were visualized in Blue Kenue and the following image was produced:
