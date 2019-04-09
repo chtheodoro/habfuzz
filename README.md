@@ -36,7 +36,7 @@ For Mac users, Xcode (download at https://developer.apple.com/xcode/) with its r
 HABFUZZ has been tested on Windows 10 - 32 bit and 64 bit operating systems, Ubuntu 16.04 and OS X 10.11 El Capitan (with Xcode 7.3.1 and Xcode 7.3.1. Command Line Tools), using the GNU Fortran Compiler. Depending on your operating system, follow the relevant instructions to run HABFUZZ.
 
 #### Windows users
-Just download the software and run habfuzz.exe
+Just download the software and run habfuzz.exe  
 If you need to modify the source code of HABFUZZ, re-compilation is necessary. Using the GNU Fortran Compiler, you can either run the wcompile.bat file, or open a command window, navigate to the ‘habfuzz’ subfolder and type the relevant commands:
 
 ###### gfortran -c fdeclarations.f95
