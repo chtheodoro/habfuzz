@@ -126,3 +126,6 @@ URL. https://www.hydro.ntua.gr/?set_language=en
 
 #### Contributing
 To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
+
+If you use HABFUZZ, please cite it as follows:  
+Theodoropoulos C., Stamou A., Skoulikidis N., 2016. HABFUZZ: A tool to calculate the instream hydraulic habitat suitability using fuzzy logic and fuzzy Bayesian inference. Journal of Open Source Software 1(6), 82, DOI:10.21105/joss.00082
