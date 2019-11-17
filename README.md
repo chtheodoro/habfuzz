@@ -1,4 +1,4 @@
-![habfuzz](https://user-images.githubusercontent.com/21544603/69011533-12884c00-0974-11ea-935d-7cdada9a2889.jpg)
+![habfuzz](https://user-images.githubusercontent.com/21544603/69011560-8e829400-0974-11ea-99d8-52de0c83a846.jpg)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2582117.svg)](https://doi.org/10.5281/zenodo.2582117)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
