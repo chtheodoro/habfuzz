@@ -150,6 +150,10 @@ do i=1,nn
 write(49,10) (p2matrix(i,j), j=1,w)
 end do
 
+do i=1,nn
+write(49,10) (amatrix(i,j), j=1,w-1)
+end do
+
 write(*,*) 'Development of rules successful!'
 write(*,*) ' '
 call sleep(2)
