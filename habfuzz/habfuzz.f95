@@ -19,17 +19,60 @@ use fdeclarations
 implicit none
 
 write(*,*) ' '
-write(*,*) ' __    __    __    _____  ________   ________________'   
+write(*,*) ' __    __    __    _____  ________   ________________ '   
 write(*,*) '|  |  |  |  /  \  |     \|   __   | |   ___   |___   |'
 write(*,*) '|  |__|  | / [] \ |  []  \  |_ |  | |  |  /  /   /  / '
 write(*,*) '|   __   |/  __  \|      /   _||  | |  | /  /   /  /  '
 write(*,*) '|  |  |  |  /  \  |  []  \  |  |  |_|  |/  /___/  /__ '
-write(*,*) '|__|  |____/    \________/__|   \_____//__________2.5|'  
+write(*,*) '|__|  |____/    \________/__|   \_____//__________2.6|'  
 write(*,*) '                                                      '
-write(*,*) 'Press Enter to start'
+write(*,*) '[1] Run HABFUZZ'
+write(*,*) '[2] I need some help'
+read *, start
+print *, ' '
+if (start==2) then
+print *, 'With HABFUZZ, you can predict/calculate the value of a'
+print *, 'variable (response variable), based on the values of other'
+print *, 'variables (predictors) using fuzzy logic and fuzzy rule-based'
+print *, 'Bayesian algorithms'
+print *, ' '
+print *, 'Press Enter to Continue...'
 read(*,*)
-
+print *, 'You need an input file with known predictor/response'
+print *, 'values, e.g.:'
+print *, '| WATER DEPTH | FLOW VELOCITY | SUBSTRATE | -> | SUITABILITY|'
+print *, '| 0.5         | 0.3           | Boulders  | -> | 0.6        |'
+print *, '| 0.4         | 0.8           | Gravel    | -> | 0.5        |'
+print *, '| 0.7         | 0.2           | Cobbles   | -> | 0.8        |'
+print *, '| 0.2         | 1.2           | Cobbles   | -> | 1.0        |'
+print *, '| 1.2         | 1.1           | Boulders  | -> | 0.9        |'
+print *, ' '
+print *, 'Press Enter to Continue...'
+read(*,*)
+print *, 'HABFUZZ will use this file as a training dataset and will run'
+print *, 'fuzzy rule-based algorithms to predict the response variable'
+print *, 'in a dataset with known predictors but unknown response'
+print *, 'variable, e.g.:'
+print *, ' '
+print *, '| WATER DEPTH | FLOW VELOCITY | SUBSTRATE | -> | SUITABILITY|'
+print *, '| 0.1         | 0.2           | Gravel    | -> | Unknown    |'
+print *, '| 0.2         | 0.5           | Gravel    | -> | Unknown    |'
+print *, '| 0.7         | 0.1           | Boulders  | -> | Unknown    |'
+print *, '| 0.3         | 0.2           | Cobbles   | -> | Unknown    |'
+print *, '| 1.1         | 0.6           | Boulders  | -> | Unknown    |'
+print *, ' '
+print *, 'Press Enter to Continue...'
+read(*,*)
+print *, 'You can do this for thousands of predictor combinations.'
+print *, 'Look at the very detailed HABFUZZ manual for how to prepare'
+print *, 'your two input files. Once you do this, HABFUZZ will do all'
+print *, 'the hard work for you with only a couple of clicks.'
+print *, ' '
+print *, 'Press Enter to run HABFUZZ'
+read(*,*)
+else
 call cpu_time(ta)
+end if
 !Opening the data to develop the rules
 call reader
 open (unit=99, file='traindata.txt', status='old', action='read') !The data matrix
