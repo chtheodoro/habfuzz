@@ -18,30 +18,15 @@ use fdeclarations
 
 implicit none
 
-write(*,*)
-write(*,*) '@@   @@   @@@@@   @@@@@   @@@@@@  @@    @@  @@@@@@  @@@@@@ '
-write(*,*) '@@   @@  @@   @@  @@  @@  @@      @@    @@     @@      @@ '   
-write(*,*) '@@@@@@@  @@@@@@@  @@@@@   @@@@@   @@    @@    @@      @@ '
-write(*,*) '@@@@@@@  @@@@@@@  @@@@@   @@@@@   @@    @@   @@      @@ '
-write(*,*) '@@   @@  @@   @@  @@  @@  @@      @@    @@  @@      @@ '
-write(*,*) '@@   @@  @@   @@  @@@@@   @@       @@@@@@   @@@@@@  @@@@@@'
 write(*,*) ' '
-write(*,*) 'A COMMAND-LINE TOOL FOR DATA-DRIVEN FUZZY MODELLING'
-write(*,*) ' '
-write(*,*) 'HABFUZZ requires two inputs'
-write(*,*) '-----------------------------'
-write(*,*) '1. A training dataset with observations of known response variable' 
-write(*,*) '2. A test dataset with observations of unknown response variable'
-write(*,*) 'The response variable will be predicted based on fuzzy rule-based'
-write(*,*) 'algorithms and will be exported in the output.txt file'
-write(*,*) '------------------------------------------------------'
-write(*,*) 'You can run the software without any prior knowledge but it' 
-write(*,*) 'would be wise to consult the manual before running HABFUZZ.'
-write(*,*) 'If you need assistance just contact us at ctheodor@hcmr.gr'
-write(*,*) '--------------------------------------------'
-write(*,*) 'Make sure that you have the latest version available at'
-write(*,*) 'https://github.com/chtheodoro/habfuzz'
-write(*,*) 'Press ENTER to start'
+write(*,*) ' __    __    __    _____  ________   ________________'   
+write(*,*) '|  |  |  |  /  \  |     \|   __   | |   ___   |___   |'
+write(*,*) '|  |__|  | / [] \ |  []  \  |_ |  | |  |  /  /   /  / '
+write(*,*) '|   __   |/  __  \|      /   _||  | |  | /  /   /  /  '
+write(*,*) '|  |  |  |  /  \  |  []  \  |  |  |_|  |/  /___/  /__ '
+write(*,*) '|__|  |____/    \________/__|   \_____//__________2.5|'  
+write(*,*) '                                                      '
+write(*,*) 'Press Enter to start'
 read(*,*)
 
 call cpu_time(ta)
