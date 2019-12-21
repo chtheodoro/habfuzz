@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2582117.svg)](https://doi.org/10.5281/zenodo.2582117)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/version-2.5-red.svg)
+![](https://img.shields.io/badge/version-2.6-red.svg)
 ![](https://img.shields.io/badge/topic-Fuzzy_modelling-blue.svg)
 
 #### Wait, did you say command-line? So, there's no Graphical User Interface?
