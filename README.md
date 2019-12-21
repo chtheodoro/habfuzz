@@ -8,7 +8,7 @@
 
 Windows users: Locate habfuzz.exe at the habfuzz subfolder and run  
 Mac users: Locate mcompile.sh at the habfuzz subfolder, click to compile, and run habfuzz  
-Linux users: Compile the software following the belomentioned instructions and run habfuzz
+Linux users: Compile the software following the below-mentioned instructions and run habfuzz
 
 #### Wait, did you say command-line? So, there's no Graphical User Interface?
 Yes, it's quicker this way. You just need to prepare a single input file with your data, run the program and get the results in a single output file! Check out the manual https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf.
