@@ -315,10 +315,16 @@ do i=1,z
 write(49,10) (bayb2(i))
 end do
 
+ik=1
 do i=1,z
 hs(i)=bhigh(i)+bgood(i)+bmoderate(i)+bpoor(i)+bbad(i)
 if (bayg1(i)<=0 .and. bayh1(i)<=0 .and. baym1(i)<=0 .and. bayp1(i)<=0 .and. bayb1(i)<=0) then
-suitability(i,zz)=suitability(i-1,zz)
+134 if (suitability(i-ik,zz)<=0) then
+ik=ik+1
+goto 134
+else
+suitability(i,zz)=suitability(i-ik,zz)
+end if
 else
 suitability(i,zz)=hs(i)
 end if

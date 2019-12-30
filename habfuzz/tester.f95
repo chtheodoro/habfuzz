@@ -183,12 +183,19 @@ end do
 
 s(:,:)=0.01
 s(0,:)=0.01
+ik=1
 do i=1,ee
 hs(i)=bhigh(i)+bgood(i)+bmoderate(i)+bpoor(i)+bbad(i)
 if (testmat(i,2)>0) then
 if (bayg1(i)<=0 .and. bayh1(i)<=0 .and. baym1(i)<=0 .and. bayp1(i)<=0 .and. bayb1(i)<=0) then
-s(i,zz)=s(i-1,zz)
+!Loop to find the previous non-zero value
+134 if (s(i-ik,zz)<=0) then ! and add it to the current array cell
+ik=ik+1
+goto 134
+else
+s(i,zz)=s(i-ik,zz)
 cer(i,zz)=0
+end if
 else
 s(i,zz)=hs(i)
 cer(i,zz)=1

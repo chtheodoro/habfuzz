@@ -3,7 +3,7 @@ implicit none
 
 integer, dimension(:), allocatable :: a, bins, iimatrix, a1
 real, dimension(:), allocatable :: icci
-integer :: z,zz,ff,i,n,k,j,jj,e,ee,f,nn,ii,col1,col2,col3,col4,l,o,v
+integer :: z,zz,ff,i,n,k,j,jj,e,ee,f,nn,ii,col1,col2,col3,col4,l,o,v,ik
 real, dimension(:,:), allocatable :: matrix, cmatrix, rmatrix, amatrix, pmatrix, p1matrix, &
 p2matrix, p22matrix, uf, df, tf, sf, imatrix, dmatrix, ematrix, suitability, testmat, s, &
 co1matrix, aa, cer
