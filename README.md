@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2582117.svg)](https://doi.org/10.5281/zenodo.2582117)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/version-2.6-red.svg)
+![](https://img.shields.io/badge/version-2.6.1-red.svg)
 ![](https://img.shields.io/badge/topic-Fuzzy_modelling-blue.svg)
 
 Windows users: Locate habfuzz.exe at the habfuzz subfolder and run  
@@ -26,7 +26,7 @@ The algorithms implemented in HABFUZZ are
 a. Τhe classic Mamdani - Assilian fuzzy inference process (Mamdani & Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
-#### What's new in HABFUZZ v2.5
+#### What's new since HABFUZZ 2.5
 HABFUZZ 2.5 is completely stand-alone! No re-compilation is necessary and thus, no FORTRAN compiler is required.
 All input files, (i) traindata.txt, (ii) testdata.txt and (iii) user-adjusted fuzzy sets can now be created from the STEERING FILE, located in the steering folder. Follow the instructions given in the HABFUZZ v2.5 manual (https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf).
 
