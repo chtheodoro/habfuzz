@@ -4,7 +4,8 @@ implicit none
 integer, dimension(:), allocatable :: a, bins, iimatrix, a1
 real, dimension(:), allocatable :: icci
 integer :: z,zz,ff,i,n,k,j,jj,e,ee,f,nn,ii,col1,col2,col3,col4,l,o,v,ik
-real, dimension(:,:), allocatable :: matrix, cmatrix, rmatrix, amatrix, pmatrix, p1matrix, &
+real, dimension(:,:), allocatable :: bayh, bayg, baym, bayp, bayb, &
+c1matrix, c2matrix, matrix, cmatrix, rmatrix, amatrix, pmatrix, p1matrix, &
 p2matrix, p22matrix, uf, df, tf, sf, imatrix, dmatrix, ematrix, suitability, testmat, s, &
 co1matrix, aa, cer
 real, dimension(:,:,:), allocatable :: bmatrix, fmatrix, mmatrix, p11matrix, comatrix
@@ -15,35 +16,7 @@ large_stones,small_stones,large_gravel,medium_gravel,fine_gravel,sand,silt,tvla,
 tla,tlb,tlc,tld,tma,tmb,tmc,tmd,tha,thb,thc,thd,tvha,tvhb
 
 !The maximum array size - this should be re-defined if the elements of the input arrays exceed 3000
-integer, parameter :: rsize = 5170, w = 5
-
-!Trapezoidal-shaped fuzzy sets for flow velocity (V), water depth (D), temperature (T)
-!FLOW VELOCITY (or PREDICTOR 1)
-!real, parameter :: uvla = 0.05, uvlb = 0.10 !VERY LOW V class
-!real, parameter :: ula = 0.05, ulb = 0.10, ulc = 0.15, uld = 0.20 !LOW V class
-!real, parameter :: uma = 0.15, umb = 0.20, umc = 0.40, umd = 0.50 !MODERATE V class
-!real, parameter :: uha = 0.40, uhb = 0.50, uhc = 0.70, uhd = 0.80 !HIGH V class
-!real, parameter :: uvha = 0.7, uvhb = 0.80 !VERY HIGH V class
-
-!WATER DEPTH (or PREDICTOR 2)
-!real, parameter :: dvla = 0.10, dvlb = 0.15 !The VERY SHALLOW D class
-!real, parameter :: dla = 0.10, dlb = 0.15, dlc = 0.30, dld = 0.35 !The SHALLOW D class
-!real, parameter :: dma = 0.30, dmb = 0.35, dmc = 0.55, dmd = 0.60 !The MODERATE D class
-!real, parameter :: dda = 0.55, ddb = 0.60, ddc = 0.70, ddd = 0.75 !The DEEP D class
-!real, parameter :: dvda = 0.70, dvdb = 0.75 !The VERY DEEP D class
-
-!SUBSTRATE (or PREDICTOR 3)
-!real, parameter :: boulders = 0.070, large_stones = 0.050, small_stones = 0.040
-!real, parameter :: large_gravel = 0.030, medium_gravel = 0.026, fine_gravel = 0.024
-!real, parameter :: sand = 0.022, silt = 0.020                                                                                  !
-
-!TEMPERATURE (or PREDICTOR 4)
-!real, parameter :: tvla = 9, tvlb = 10 !The VERY LOW T class
-!real, parameter :: tla = 9, tlb = 10, tlc = 13, tld = 15 !The LOW T class
-!real, parameter :: tma = 13, tmb = 15, tmc = 17, tmd = 19 !The MODERATE T class
-!real, parameter :: tha = 17, thb = 19, thc = 23, thd = 25 !The HIGH T class
-!real, parameter :: tvha = 25, tvhb = 27 !The VERY HIGH T class
-
+integer, parameter :: rsize = 50000, w = 5
 !RESPONSE VARIABLE 5-CLASS VALUES
 real, parameter :: ka = 0.2, kb = 0.4, kc = 0.6, kd = 0.8
 !EXPECTED UTILITY VALUES FOR RULES2.F95
@@ -60,7 +33,7 @@ real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs
 real, dimension(rsize) :: bayh1, bayg1, baym1, bayp1, bayb1
 real, dimension(rsize) :: bayh2, bayg2, baym2, bayp2, bayb2
 real, dimension(rsize) :: ab, ap, am, ag, ah, cb, cp, cm, cg, ch
-real, dimension(:,:), allocatable :: bayh, bayg, baym, bayp, bayb
+real, dimension(:), allocatable :: tbayh, tbayg, tbaym, tbayp, tbayb
 real, dimension(:), allocatable :: high, good, moderate, poor, bad, cs, habcon, gwet, wet 
 
 !Variables of the defuzzification process

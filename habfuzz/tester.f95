@@ -22,7 +22,7 @@ dmatrix=matrix
 !do i=1,n
 !write(*,10) (dmatrix(i,j), j=1,w)
 !end do
-write(*,*) 'Developing rules database...'
+write(*,*) 'Developing rules database ...'
 call classifier
 
 open(49, file='log.txt', action='write', status='replace')
@@ -70,7 +70,7 @@ write(*,*) 'Development of rules successful!'
 write(*,*) ' '
 call sleep(2)
 
-write(*,*) 'Fuzzifying inputs...'
+write(*,*) 'Fuzzifying inputs ...'
 
 ematrix=testmat
 z=ee
@@ -78,65 +78,56 @@ call fuzzifier
 write(*,*) 'Fuzzification successful!'
 write(*,*) ' '
 
-write(*,*) 'Applying Bayesian joint probability rules...'
+write(*,*) 'Applying the fuzzy rule-based Bayesian algorithm ...'
 write(*,*) ' '
 call sleep(2)
-
-allocate(bmatrix(e**(w-1),w-1,ee))
-allocate(bayh(nn,ee))
-allocate(bayg(nn,ee))
-allocate(baym(nn,ee))
-allocate(bayp(nn,ee))
-allocate(bayb(nn,ee))
-allocate(fmatrix(nn,w-1,ee))
-
 do i=1,ee
-open(29, file='bmatrix.txt', action='write', status='replace')
+allocate(c1matrix(e**(w-1),w-1))
+allocate(tbayh(nn))
+allocate(tbayg(nn))
+allocate(tbaym(nn))
+allocate(tbayp(nn))
+allocate(tbayb(nn))
+allocate(c2matrix(nn,w-1))
+
+open(29, file='dmatrix.txt', action='write', status='replace')
 write(29,*) nn
 call permutator
 close(29, status='keep')
 
-open (unit=39, file='bmatrix.txt', status='old', action='read')
+open (unit=39, file='dmatrix.txt', status='old', action='read')
 read (39,*) nn
 do jj=1,nn
-read(39,*) (fmatrix(jj,j,i), j=1,w-1)
+read(39,*) (c2matrix(jj,j), j=1,w-1)
 end do
 close(39, status='keep')
 
 do j=1,nn
-bayh(j,i)=product(fmatrix(j,:,i))*p2matrix(j,1)
-bayg(j,i)=product(fmatrix(j,:,i))*p2matrix(j,2)
-baym(j,i)=product(fmatrix(j,:,i))*p2matrix(j,3)
-bayp(j,i)=product(fmatrix(j,:,i))*p2matrix(j,4)
-bayb(j,i)=product(fmatrix(j,:,i))*p2matrix(j,5)
+tbayh(j)=product(c2matrix(j,:))*p2matrix(j,1)
+tbayg(j)=product(c2matrix(j,:))*p2matrix(j,2)
+tbaym(j)=product(c2matrix(j,:))*p2matrix(j,3)
+tbayp(j)=product(c2matrix(j,:))*p2matrix(j,4)
+tbayb(j)=product(c2matrix(j,:))*p2matrix(j,5)
 end do
-write(*,*) 'Rules application for observation', i, 'successful'
-end do
-write(*,*) ' '
-write(*,*) 'Rules application successful!'
-write(*,*) ' '
-write(*,*) 'Calculating Bayesian joint probabilities...'
-call sleep(2)
 !write(49,*) ' '
 !write(49,*) 'fmatrix'
 !do i=1,nn
 !write(49,10) (fmatrix(i,j,jj), j=1,w-1)
 !end do
-write(*,*) 'Joint probability calculation succesful!'
-write(*,*) ' '
-print *, 'Calculating response variable...'
-call sleep(2)
-write(*,*) ' '
-do i=1,ee
-write(*,*) 'Response variable calculation for test observation', i, 'successful'
-bayg1(i)=sum(bayg(1:nn,i))
-baym1(i)=sum(baym(1:nn,i))
-bayh1(i)=sum(bayh(1:nn,i))
-bayp1(i)=sum(bayp(1:nn,i))
-bayb1(i)=sum(bayb(1:nn,i))
+write(*,*) 'Output calculation for observation', i, 'successful'
+bayg1(i)=sum(tbayg(1:nn))
+baym1(i)=sum(tbaym(1:nn))
+bayh1(i)=sum(tbayh(1:nn))
+bayp1(i)=sum(tbayp(1:nn))
+bayb1(i)=sum(tbayb(1:nn))
+deallocate(c1matrix)
+deallocate(c2matrix)
+deallocate(tbayh)
+deallocate(tbayg)
+deallocate(tbaym)
+deallocate(tbayp)
+deallocate(tbayb)
 end do
-write(*,*) ' '
-write(*,*) 'Response variable calculation successful!'
 z=ee
 call rules2
 !write(49,*) ' '
@@ -217,4 +208,6 @@ call ftester
 end if
 10 format (8f7.3)
 
+open (unit=39, file='dmatrix.txt', status='old', action='read')
+close (39, status='delete')
 end subroutine tester
