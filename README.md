@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2582117.svg)](https://doi.org/10.5281/zenodo.2582117)
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
-![](https://img.shields.io/badge/version-2.6.1-red.svg)
+![](https://img.shields.io/badge/version-2.7-red.svg)
 ![](https://img.shields.io/badge/topic-Fuzzy_modelling-blue.svg)
 
 Windows users: Locate habfuzz.exe at the habfuzz subfolder and run  
