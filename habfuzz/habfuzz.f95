@@ -449,10 +449,14 @@ cert=anint((sum(cer)/ee)*100)
 habc=anint((sum(habcon)/sum(gwet))*100)
 haba=anint((sum(habcon)/ee)*100)
 
+if (cross .ne. 3) then
 open (unit=39, file='bmatrix.txt', status='old', action='read')
 close (39, status='delete')
+else
+goto 599
+end if
 
-open (unit=59, file='amatrix.txt', status='old', action='read')
+599 open (unit=59, file='amatrix.txt', status='old', action='read')
 close (59, status='delete')
 
 write(*,*) ' '

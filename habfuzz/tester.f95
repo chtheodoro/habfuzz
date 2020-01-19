@@ -208,6 +208,10 @@ call ftester
 end if
 10 format (8f7.3)
 
+if (proc==2) then
 open (unit=39, file='dmatrix.txt', status='old', action='read')
 close (39, status='delete')
-end subroutine tester
+else
+goto 699
+end if
+699 end subroutine tester
