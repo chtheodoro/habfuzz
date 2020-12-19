@@ -212,6 +212,7 @@ end do
 !end do
               
 !Substrate in 8 classes
+if (vers==1) then
 do i=1,z
 if (ematrix(i,3)==silt) then
 sf(i,1)=1
@@ -232,25 +233,56 @@ sf(i,8)=1
 end if
 end do
 
-!Substrate in 3 classes
-!do i=1,z
-!if (ematrix(i,3)==0.020) then
-!sf(i,1)=1
-!else if (ematrix(i,3)==0.022) then
-!sf(i,1)=1
-!else if (ematrix(i,3)==0.024) then
-!sf(i,2)=1
-!else if (ematrix(i,3)==0.026) then
-!sf(i,2)=1
-!else if (ematrix(i,3)==0.030) then
-!sf(i,2)=1
-!else if (ematrix(i,3)==0.040) then
-!sf(i,2)=1
-!else if (ematrix(i,3)==0.050) then
-!sf(i,3)=1
-!else if (ematrix(i,3)==0.070) then
-!sf(i,3)=1
-!end if
-!end do
+else
+do i=1,z
+if (ematrix(i,3)<=svla) then
+sf(i,1)=1
+else if (ematrix(i,3)>svla .and. (ematrix(i,3)<=svlb)) then
+sf(i,1)=(svlb-ematrix(i,3))/(svlb-svla)
+else
+sf(i,1)=0
+end if
+if (ematrix(i,3)<=sla) then
+sf(i,2)=0
+else if (ematrix(i,3)>sla .and. (ematrix(i,3)<=slb)) then
+sf(i,2)=(ematrix(i,3)-sla)/(slb-sla)
+else if (ematrix(i,3)>slb .and. ematrix(i,3)<=slc) then
+sf(i,2)=1
+else if (ematrix(i,3)>slc .and. ematrix(i,3)<=sld) then
+sf(i,2)=(sld-ematrix(i,3))/(sld-slc)
+else
+sf(i,2)=0
+end if
+if (ematrix(i,3)<=sma) then
+sf(i,3)=0
+else if (ematrix(i,3)>sma .and. ematrix(i,3)<=smb) then
+sf(i,3)=(ematrix(i,3)-sma)/(smb-sma)
+else if (ematrix(i,3)>smb .and. ematrix(i,3)<=smc) then
+sf(i,3)=1
+else if (ematrix(i,3)>smc .and. ematrix(i,3)<=smd) then
+sf(i,3)=(smd-ematrix(i,3))/(smd-smc)
+else
+sf(i,3)=0
+end if
+if (ematrix(i,3)<=sda) then
+sf(i,4)=0
+else if (ematrix(i,3)>sda .and. ematrix(i,3)<=sdb) then
+sf(i,4)=(ematrix(i,3)-sda)/(sdb-sda)
+else if (ematrix(i,3)>sdb .and. ematrix(i,3)<=sdc) then
+sf(i,4)=1
+else if (ematrix(i,3)>sdc .and. ematrix(i,3)<=sdd) then
+sf(i,4)=(sdd-ematrix(i,3))/(sdd-sdc)
+else
+sf(i,4)=0
+end if
+if (ematrix(i,3)<=svda) then
+sf(i,5)=0
+else if (ematrix(i,3)>svda .and. ematrix(i,3)<=svdb) then
+sf(i,5)=(ematrix(i,3)-svda)/(svdb-svda)
+else
+sf(i,5)=1
+end if
+end do
+endif
 
 end subroutine fuzzifier

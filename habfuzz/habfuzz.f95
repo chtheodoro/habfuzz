@@ -1,5 +1,5 @@
-!HABFUZZ+ 2.3
-!Copyright © 2017 Christos Theodoropoulos
+!HABFUZZ 2.8
+!Copyright © 2020 Christos Theodoropoulos
     
 !Licensed under the Apache License, Version 2.0 (the "License");
 !you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ write(*,*) '|  |  |  |  /  \  |     \|   __   | |   ___   |___   |'
 write(*,*) '|  |__|  | / [] \ |  []  \  |_ |  | |  |  /  /   /  / '
 write(*,*) '|   __   |/  __  \|      /   _||  | |  | /  /   /  /  '
 write(*,*) '|  |  |  |  /  \  |  []  \  |  |  |_|  |/  /___/  /__ '
-write(*,*) '|__|  |____/    \________/__|   \_____//__________2.7|'  
+write(*,*) '|__|  |____/    \________/__|   \_____//__________2.8|'  
 write(*,*) '                                                      '
 write(*,*) '[1] Run HABFUZZ'
 write(*,*) '[2] I need some help'
@@ -74,11 +74,22 @@ else
 call cpu_time(ta)
 end if
 !Opening the data to develop the rules
+print *, 'Select HABFUZZ version'
+print *, '[1] HABFUZZ classic: 5-5-8-5 fuzzy inputs'
+print *, '[2] HABFUZZ fuzzy: 5-5-5-5 full fuzzy inputs'
+read *, vers
+print *, ' '
+
 call reader
 open (unit=99, file='traindata.txt', status='old', action='read') !The data matrix
 read (99,*) n
-open (unit=89, file='refdata.txt', status='old', action='read') !The reference data matrix to acquire all class combinations
+if (vers==1) then
+open (unit=89, file='refdata_hc.txt', status='old', action='read') !The reference data matrix to acquire all class combinations
 read (89,*) e
+else
+open (unit=89, file='refdata_hff.txt', status='old', action='read') !The reference data matrix to acquire all class combinations
+read (89,*) e
+end if
 
 allocate(rmatrix(e,w-1)) !Allocate the data matrix
 allocate(matrix(n,w)) !Allocate the reference data matrix
@@ -104,6 +115,7 @@ end do
 do i=1,e
 read(89,*) (rmatrix(i,j), j=1,w-1)
 end do
+
 
 print *, 'Select modelling method'
 print *, '[1] Fuzzy logic algorithms'

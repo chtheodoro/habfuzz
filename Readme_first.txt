@@ -1,8 +1,23 @@
 ﻿﻿Before running HABFUZZ, note that it has pre-defined fuzzy sets
 for both the predictor and response variables.
 
+Since version 2.8, there are two versions available:
+1. The classic HABFUZZ:
+Input 1: Fuzzy input with 5 membership functions (either trapezoidal or triangular)
+Input 2: Fuzzy input with 5 membership functions (either trapezoidal or triangular)
+Input 3: Crisp input with 8 classes
+Input 4: Fuzzy input with 5 membership functions (either trapezoidal or triangular)
+Output: Fuzzy output with 5 membership functions (ranging from 0 to 1)
+
+2. The full fuzzy HABFUZZ:
+Input 1: Fuzzy input with 5 membership functions (either trapezoidal or triangular)
+Input 2: Fuzzy input with 5 membership functions (either trapezoidal or triangular)
+Input 3: Fuzzy input with 5 membership functions (either trapezoidal or triangular)
+Input 4: Fuzzy input with 5 membership functions (either trapezoidal or triangular)
+Output: Fuzzy output with 5 membership functions (ranging from 0 to 1)
+
 To run the software for your data, you may need to appropriately
-modify each fuzzy set (through the STEERING FILE).
+modify each fuzzy set (through the STEERING files).
 
 For example, the response variable is set to a 0-1 range and its relevant
 parameters are set in the fdeclarations.f95 file as

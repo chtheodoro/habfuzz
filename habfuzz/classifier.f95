@@ -42,6 +42,7 @@ cmatrix(i,2)=5
 end if
 end do
 
+if (vers==1) then
 !Classification of S in 8 categories
 do i=1,ii
 if (dmatrix(i,3) .eq. 0.020) then
@@ -62,27 +63,25 @@ else if (dmatrix(i,3) .eq. 0.070) then
 cmatrix(i,3)=8
 end if
 end do
-
-!Classification of S in 3 categories (Sand / Gravel-Pebbles / Large Stones)
-!do i=1,ii
-!if (dmatrix(i,3) .eq. 0.020) then
-!cmatrix(i,3)=1
-!else if (dmatrix(i,3) .eq. 0.022) then
-!cmatrix(i,3)=1
-!else if (dmatrix(i,3) .eq. 0.024) then
-!cmatrix(i,3)=2
-!else if (dmatrix(i,3) .eq. 0.026) then
-!cmatrix(i,3)=2
-!else if (dmatrix(i,3) .eq. 0.030) then
-!cmatrix(i,3)=2
-!else if (dmatrix(i,3) .eq. 0.040) then
-!cmatrix(i,3)=2
-!else if (dmatrix(i,3) .eq. 0.050) then
-!cmatrix(i,3)=3
-!else if (dmatrix(i,3) .eq. 0.070) then
-!cmatrix(i,3)=3
-!end if
-!end do
+else
+scl1=(svla+svlb)/2
+scl2=(slc+sld)/2
+scl3=(smc+smd)/2
+scl4=(sdc+sdd)/2
+do i=1,ii
+if (dmatrix(i,3)<=scl1) then
+cmatrix(i,3)=1
+else if (dmatrix(i,3)>scl1 .and. dmatrix(i,3)<=scl2) then
+cmatrix(i,3)=2
+else if (dmatrix(i,3)>scl2 .and. dmatrix(i,3)<=scl3) then
+cmatrix(i,3)=3
+else if (dmatrix(i,3)>scl3 .and. dmatrix(i,3)<=scl4) then
+cmatrix(i,3)=4
+else if (dmatrix(i,3)>scl4) then
+cmatrix(i,3)=5
+end if
+end do
+end if
 
 !T classification in 5 classes
 tcl1=(tvla+tvlb)/2
@@ -103,25 +102,6 @@ cmatrix(i,4)=5
 end if
 end do
 
-!T classification in 1 class
-!tcl1=(tvla+tvlb)/2
-!tcl2=(tlc+tld)/2
-!tcl3=(tmc+tmd)/2
-!tcl4=(thc+thd)/2
-!do i=1,ii
-!if (dmatrix(i,4)<=tcl1) then
-!cmatrix(i,4)=1
-!else if (dmatrix(i,4)>tcl1 .and. dmatrix(i,4)<=tcl2) then
-!cmatrix(i,4)=1
-!else if (dmatrix(i,4)>tcl2 .and. dmatrix(i,4)<=tcl3) then
-!cmatrix(i,4)=1
-!else if (dmatrix(i,4)>tcl3 .and. dmatrix(i,4)<=tcl4) then
-!cmatrix(i,4)=1
-!else if (dmatrix(i,4)>tcl4) then
-!cmatrix(i,4)=1
-!end if
-!end do
-
 !Classification of IHS in 5 classes
 do i=1,ii
 if (dmatrix(i,5)<=ka) then
@@ -136,20 +116,5 @@ else if (dmatrix(i,5)>kd) then
 cmatrix(i,5)=5
 end if
 end do
-
-!Classification of IHS in 3 classes
-!do i=1,ii
-!if (dmatrix(i,5)<=0.2) then
-!cmatrix(i,5)=1
-!else if (dmatrix(i,5)>0.2 .and. dmatrix(i,5)<=0.3) then
-!cmatrix(i,5)=1
-!else if (dmatrix(i,5)>0.3 .and. dmatrix(i,5)<=0.6) then
-!cmatrix(i,5)=2
-!else if (dmatrix(i,5)>0.6 .and. dmatrix(i,5)<=0.8) then
-!cmatrix(i,5)=3
-!else if (dmatrix(i,5)>0.8) then
-!cmatrix(i,5)=3
-!end if
-!end do
 
 end subroutine classifier

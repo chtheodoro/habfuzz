@@ -1,0 +1,17 @@
+﻿New features in HABFUZZ 2.8
+
+1. The fuzzy set parameters are now handled using the
+   STEERING file, located in the steering folder
+2. HABFUZZ now asks wether the user will run the classic version
+   or the full fuzzy version (see below and the Readme_first file) 
+3. There are two STEERING files, one for the classic
+   HABFUZZ with 5-5-8-5 (fuzzy-fuzzy-crisp-fuzzy) inputs
+   (3 fuzzy variables with five fuzzy sets each +
+   1 crisp variable with eight classes) and 
+   one for the full fuzzy 5-5-5-5 HABFUZZ version with 4 fuzzy
+   variables and five fuzzy sets (membership functions)
+   per variable.
+4. No FORTRAN compiler required and no recompilation unless you
+   need to change the source code. HABFUZZ is now completely
+   stand-alone
+5. Bugs fixed   

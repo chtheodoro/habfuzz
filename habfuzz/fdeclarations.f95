@@ -13,6 +13,7 @@ real :: ta, tb
 real :: uvla,uvlb,ula,ulb,ulc,uld,uma,umb,umc,umd,uha,uhb,uhc,uhd,uvha, &
 uvhb,dvla,dvlb,dla,dlb,dlc,dld,dma,dmb,dmc,dmd,dda,ddb,ddc,ddd,dvda,dvdb,boulders, &
 large_stones,small_stones,large_gravel,medium_gravel,fine_gravel,sand,silt,tvla,tvlb, &
+svla,svlb,sla,slb,slc,sld,sma,smb,smc,smd,sda,sdb,sdc,sdd,svda,svdb, &
 tla,tlb,tlc,tld,tma,tmb,tmc,tmd,tha,thb,thc,thd,tvha,tvhb
 
 !The maximum array size - this should be re-defined if the elements of the input arrays exceed 3000
@@ -24,10 +25,12 @@ real, parameter :: eua = 0.1, eub = 0.3, euc = 0.5, eud = 0.7, eue = 0.9
 
 !Internal variables
 real, dimension(rsize) :: uvl, ul, um, uh, uvh
-real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi, nosi, cci, pwet
+real :: ucl1, ucl2, ucl3, ucl4, dcl1, dcl2, dcl3, dcl4, tcl1, tcl2, tcl3, tcl4, osi, nosi, cci, pwet, &
+scl1, scl2, scl3, scl4
 real, dimension(rsize) :: dvs, ds, dm, dd, dvd
+real, dimension(rsize) :: svs, ss, sm, sd, svd
 real, dimension(rsize) :: tvl, tl, tm, th, tvh
-integer :: start, proc, scenario, dfuzz, cert, habc, haba, cross
+integer :: start, proc, scenario, dfuzz, cert, habc, haba, cross, vers
 real, dimension(rsize) :: hs
 real, dimension(rsize) :: bhigh, bgood, bmoderate, bpoor, bbad, bayhs
 real, dimension(rsize) :: bayh1, bayg1, baym1, bayp1, bayb1

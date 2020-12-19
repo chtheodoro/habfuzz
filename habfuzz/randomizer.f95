@@ -21,7 +21,7 @@ call shuffle(a)
 where (a == imatrix(:,1)) bins = bins + 1  ! skew tester
 end do
 
-!Sorry, I am just an ecologist and I found this way to create the various fold for the process 
+!Sorry, I am just an ecologist and I found this way to create the various folds for the process 
 a1(1:n)=a(1:n)
 
 a1(n+1:2*n-z)=a(1+z:n)
