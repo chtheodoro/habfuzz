@@ -68,6 +68,15 @@ print *, 'Look at the very detailed HABFUZZ manual for how to prepare'
 print *, 'your two input files. Once you do this, HABFUZZ will do all'
 print *, 'the hard work for you with only a couple of clicks.'
 print *, ' '
+print *, 'Press Enter to Continue...'
+read(*,*)
+print *, 'You can explore the accuracy of all fuzzy logic algorithms'
+print *, 'but still, I prefer the fuzzy Bayesian one, it is faster and'
+print *, 'most times more accurate.'
+print *, ' '
+print *, 'If you need any help contact me at ctheodor@hcmr.gr'
+print *, 'Christos Theodoropoulos'
+print *, ' '
 print *, 'Press Enter to run HABFUZZ'
 read(*,*)
 else
