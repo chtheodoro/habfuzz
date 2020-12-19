@@ -26,9 +26,10 @@ The algorithms implemented in HABFUZZ are
 a. Τhe classic Mamdani - Assilian fuzzy inference process (Mamdani & Assilian, 1975) and  
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
-#### What's new since HABFUZZ 2.5
-HABFUZZ 2.5 is completely stand-alone! No re-compilation is necessary and thus, no FORTRAN compiler is required.
-All input files, (i) traindata.txt, (ii) testdata.txt and (iii) user-adjusted fuzzy sets can now be created from the STEERING FILE, located in the steering folder. Follow the instructions given in the HABFUZZ v2.5 manual (https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf).
+#### What's new since HABFUZZ 2.8
+As since the 2.5 version, HABFUZZ 2.8 is completely stand-alone! No re-compilation is necessary and thus, no FORTRAN compiler is required.
+All input files, (i) traindata.txt, (ii) testdata.txt and (iii) user-adjusted fuzzy sets can now be created from the STEERING file, located in the steering folder. Follow the instructions given in the HABFUZZ v2.5 manual (https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf).
+HABFUZZ 2.8 offers two versions to choose: (i) the classic HABFUZZ with three fuzzy and one crisp input, (ii) the full fuzzy HABFUZZ with four fuzzy inputs (see the Readme_first file for details).
 
 #### Dependencies
 
@@ -91,9 +92,7 @@ As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the 
 ![fig_4](https://user-images.githubusercontent.com/21544603/53172876-1195da00-35ef-11e9-98f2-789019da2991.png)
 
 #### What's next
-We are currently working on  
-a. Including an option for a fourth fuzzy input variable  
-b. Expanding the option to model response variables outside the 0-1 range for all algorithms (currently, this is applied only using the fuzzy rule-based Bayesian algorithm) 
+We are currently working on expanding the option to model response variables outside the 0-1 range for all algorithms (currently, this is applied only using the fuzzy rule-based Bayesian algorithm) 
 
 #### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
