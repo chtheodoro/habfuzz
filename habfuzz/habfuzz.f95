@@ -31,10 +31,10 @@ write(*,*) '[2] I need some help'
 read *, start
 print *, ' '
 if (start==2) then
-print *, 'With HABFUZZ, you can predict/calculate the value of a'
+print *, 'With HABFUZZ, you can calculate the value of a'
 print *, 'variable (response variable), based on the values of other'
 print *, 'variables (predictors) using fuzzy logic and fuzzy rule-based'
-print *, 'Bayesian algorithms'
+print *, 'Bayesian algorithms.' 
 print *, ' '
 print *, 'Press Enter to Continue...'
 read(*,*)
@@ -65,8 +65,9 @@ print *, 'Press Enter to Continue...'
 read(*,*)
 print *, 'You can do this for thousands of predictor combinations.'
 print *, 'Look at the very detailed HABFUZZ manual for how to prepare'
-print *, 'your two input files. Once you do this, HABFUZZ will do all'
-print *, 'the hard work for you with only a couple of clicks.'
+print *, 'your input files (traindata.txt, testdata.txt, fuzzysets.txt).' 
+print *, 'Once you do this, HABFUZZ will do all the hard work for you'
+print *, 'with only a couple of clicks.'
 print *, ' '
 print *, 'Press Enter to Continue...'
 read(*,*)
@@ -74,6 +75,7 @@ print *, 'You can explore the accuracy of all fuzzy logic algorithms'
 print *, 'but still, I prefer the fuzzy Bayesian one, it is faster and'
 print *, 'most times more accurate.'
 print *, ' '
+print *, 'Train, cross-validate and test using HABFUZZ fuzzy logic.'
 print *, 'If you need any help contact me at ctheodor@hcmr.gr'
 print *, 'Christos Theodoropoulos'
 print *, ' '
@@ -83,13 +85,47 @@ else
 call cpu_time(ta)
 end if
 !Opening the data to develop the rules
-print *, 'Select HABFUZZ version'
+256 print *, 'Select HABFUZZ version'
 print *, '[1] HABFUZZ classic: 5-5-8-5 fuzzy inputs'
 print *, '[2] HABFUZZ fuzzy: 5-5-5-5 full fuzzy inputs'
+print *, '[3] I have no idea, please help!'
 read *, vers
 print *, ' '
 
-call reader
+if (vers==3) then
+print *, 'HABFUZZ classic includes three 5-class fuzzy inputs and one'
+print *, '8-class crisp input (not fuzzy). You can select this HABFUZZ'
+print *, 'version as, for example, a habitat model, in which the first'
+print *, 'fuzzy input is flow velocity, the second fuzzy input is the'
+print *, 'water depth, the third input (not fuzzy) is the substrate'
+print *, 'type, and the fourth fuzzy input is water temperature.'
+print *, ' '
+print *, 'Press Enter to Continue'
+read(*,*)
+print *, 'HABFUZZ fuzzy includes four 5-class fuzzy inputs. You can'
+print *, 'select this version for every other use, in which a response'
+print *, 'variable is to be calculated using fuzzy logic or fuzzy.'
+print *, 'Bayesian algorithms.'
+print *, ' '
+print *, 'Press Enter to Continue'
+read(*,*)
+print *, 'Make sure you have properly prepared yout training dataset'
+print *, '(traindata.txt), your test dataset (testdata.txt) and the'
+print *, 'fuzzy membership functions (fuzzysets.txt).'
+print *, ' '
+print *, 'If you need any help contact me at ctheodor@hcmr.gr'
+print *, 'Christos Theodoropoulos'
+print *, ' '
+print *, 'Press Enter to run HABFUZZ'
+read(*,*)
+end if
+if (vers==3) then
+GOTO 256
+else
+GOTO 257
+end if
+
+257 call reader
 open (unit=99, file='traindata.txt', status='old', action='read') !The data matrix
 read (99,*) n
 if (vers==1) then
