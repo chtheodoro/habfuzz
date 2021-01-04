@@ -104,7 +104,7 @@ print *, 'Press Enter to Continue'
 read(*,*)
 print *, 'HABFUZZ fuzzy includes four 5-class fuzzy inputs. You can'
 print *, 'select this version for every other use, in which a response'
-print *, 'variable is to be calculated using fuzzy logic or fuzzy.'
+print *, 'variable is to be calculated using fuzzy logic or fuzzy'
 print *, 'Bayesian algorithms.'
 print *, ' '
 print *, 'Press Enter to Continue'
