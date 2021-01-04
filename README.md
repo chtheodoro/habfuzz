@@ -27,7 +27,7 @@ a. Τhe classic Mamdani - Assilian fuzzy inference process (Mamdani & Assilian, 
 b. The Bayesian joint probability inference process as described in Brookes et al. (2010), with fuzzified inputs.  
 
 #### What's new since HABFUZZ 2.8
-As since the 2.5 version, HABFUZZ 2.8 is completely stand-alone! No re-compilation is necessary and thus, no FORTRAN compiler is required.
+As per the 2.5 version, HABFUZZ 2.8 is completely stand-alone! No re-compilation is necessary and thus, no FORTRAN compiler is required.
 All input files, (i) traindata.txt, (ii) testdata.txt and (iii) user-adjusted fuzzy sets can now be created from the STEERING file, located in the steering folder. Follow the instructions given in the HABFUZZ v2.5 manual (https://github.com/chtheodoro/habfuzz/blob/master/HABFUZZ_v2.5_manual.pdf).
 HABFUZZ 2.8 offers two versions to choose: (i) the classic HABFUZZ with three fuzzy and one crisp input, (ii) the full fuzzy HABFUZZ with four fuzzy inputs (see the Readme_first file for details).
 
