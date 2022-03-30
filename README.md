@@ -92,7 +92,7 @@ As HABFUZZ is a command-line tool, habitat modellers -and not only- can use the 
 ![fig_4](https://user-images.githubusercontent.com/21544603/53172876-1195da00-35ef-11e9-98f2-789019da2991.png)
 
 #### What's next
-We are currently working on expanding the option to model response variables outside the 0-1 range for all algorithms (currently, this is applied only using the fuzzy rule-based Bayesian algorithm) 
+Nothing... HABFUZZ is what it is, a tool that quickly implements a complex fuzzy rule-based algorithm. You need to study a bit in order to properly use it, but once you understand the advantages of this algorithm, you may appreciate the use of HABFUZZ.
 
 #### References
 Brookes C.J., Kumar V. and Lane S.N. 2010. A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model. Proceedings of the International Congress on Environmental Modelling and Software, 5-8 Jul 2010, Ottawa, Canada.
