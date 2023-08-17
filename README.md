@@ -107,6 +107,7 @@ Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
 Dr. Christos Theodoropoulos  
 Biologist, PhD Ecohydraulics  
+---------------------------  
 Email: chtheodoro@yahoo.gr  
 YouTube: www.youtube.com/@thchristo  
 Web: chtheodoro.wixsite.com/ctheodoropoulos
