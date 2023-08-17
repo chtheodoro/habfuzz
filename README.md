@@ -105,15 +105,12 @@ Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
 #### Contact Information
 
-Dr. Christos Theodoropoulos
-Biologist, PhD Ecohydraulics
----------------------------
-Email: chtheodoro@yahoo.gr
-YouTube: www.youtube.com/@thchristo
-Web: chtheodoro.wixsite.com/ctheodoropoulos
+Email: chtheodoro@yahoo.gr  
+YouTube: www.youtube.com/@thchristo  
+Web: chtheodoro.wixsite.com/ctheodoropoulos  
 
 #### Contributing
-To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
+To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at chtheodoro@yahoo.gr. Pull requests are highly welcomed.
 
 If you use HABFUZZ, please cite it as follows:  
 Theodoropoulos C., Stamou A., Skoulikidis N., 2016. HABFUZZ: A tool to calculate the instream hydraulic habitat suitability using fuzzy logic and fuzzy Bayesian inference. Journal of Open Source Software 1(6), 82, DOI:10.21105/joss.00082
