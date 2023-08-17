@@ -105,27 +105,12 @@ Zadeh L.A. 1965. Fuzzy sets. Information and Control 8: 338–353.
 
 #### Contact Information
 
-Hellenic Centre for Marine Research  
-Institute of Marine Biological Resources and Inland Waters  
-46.7 km Athens-Sounio Ave.  
-19013  
-Anavyssos  
-Greece  
-Tel. +30 22910 76335  
-Fax. +30 22910 76419  
-Email. ctheodor@hcmr.gr  
-URL. http://www.hcmr.gr/en/  
-
-National Technical University of Athens  
-Department of Water Resources and Environmental Engineering  
-5 Iroon Polytechniou Str.  
-15780  
-Athens  
-Greece  
-Tel. +30 210 7722809  
-Fax. +30 210 7722814  
-Email. stamou@central.ntua.gr  
-URL. https://www.hydro.ntua.gr/?set_language=en  
+Dr. Christos Theodoropoulos
+Biologist, PhD Ecohydraulics
+---------------------------
+Email: chtheodoro@yahoo.gr
+YouTube: www.youtube.com/@thchristo
+Web: chtheodoro.wixsite.com/ctheodoropoulos
 
 #### Contributing
 To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at ctheodor@hcmr.gr. Pull requests are highly welcomed.
