@@ -4,7 +4,7 @@
 [![status](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2/status.svg)](http://joss.theoj.org/papers/1ad27db8f0976c28a75e20d34eba5ee2)
 ![](http://www.repostatus.org/badges/latest/active.svg)
 ![](https://img.shields.io/badge/version-2.8-red.svg)
-![](https://img.shields.io/badge/topic-Fuzzy_habitat modelling-blue.svg)
+![](https://img.shields.io/badge/topic-Fuzzy_habitat_modelling-blue.svg) 
 
 Windows users: Locate habfuzz.exe at the habfuzz subfolder and run  
 Mac users: Locate mcompile.sh at the habfuzz subfolder, click to compile, and run habfuzz  
