@@ -110,7 +110,7 @@ Biologist, PhD Ecohydraulics
 
 Email: chtheodoro@yahoo.gr  
 YouTube: www.youtube.com/@thchristo  
-Web: chtheodoro.wixsite.com/ctheodoropoulos
+Web: chtheodoro.wixsite.com/ctheodoropoulos 
 
 #### Contributing
 To report bugs, possible amendments or anything else you would like to discuss, please file a GitHub issue or contact Mr. Christos Theodoropoulos at chtheodoro@yahoo.gr. Pull requests are highly welcomed.
