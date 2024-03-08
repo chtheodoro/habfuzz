@@ -6,7 +6,8 @@
 ![](https://img.shields.io/badge/version-2.8.3-red.svg)
 ![](https://img.shields.io/badge/topic-Fuzzy_habitat_modelling-blue.svg) 
 
-Update on v2.8.3: I was told that in some windows PCs habfuzz.exe returns an error code "0xc000007b". If this is your case, I have included a new executable "habfuzz-alt.exe", which will run on these machines. Still, if anything doesn't work, just email me at chtheodoro@yahoo.gr   
+#### Update on v2.8.3
+I was told that in some windows PCs habfuzz.exe returns an error code "0xc000007b". If this is your case, I have included a new executable "habfuzz-alt.exe", which will run on these machines. Still, if anything doesn't work, just email me at chtheodoro@yahoo.gr   
 Windows users: Locate habfuzz.exe at the habfuzz subfolder and run  
 Mac users: Locate mcompile.sh at the habfuzz subfolder, click to compile, and run habfuzz  
 Linux users: Compile the software following the below-mentioned instructions and run habfuzz
